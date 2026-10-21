@@ -1,1 +1,45 @@
+name: Update prices
 
+on:
+  # ทุก 30 นาที วันจันทร์-ศุกร์ (เวลา UTC) ครอบคลุมตลาดไทย เวียดนาม ยุโรป สหรัฐ
+  schedule:
+    - cron: "*/30 * * * 1-5"
+  # รันทันทีเมื่อแก้รายชื่อหุ้นใน symbols.json
+  push:
+    paths:
+      - "symbols.json"
+  # กดรันเองได้จากหน้า Actions
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch prices from Yahoo Finance
+        run: python fetch_prices.py
+
+      - name: Commit prices.json if changed
+        run: |
+          git config user.name "price-bot"
+          git config user.email "price-bot@users.noreply.github.com"
+          git add prices.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "update prices"
+            git pull --rebase
+            git push
+          fi
