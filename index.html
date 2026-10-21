@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f6b43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Portfolio</title>
+<style>
+:root{
+  --bg:#2a2d2c; --row:#2a2d2c; --card:#343837; --card2:#3f4443;
+  --bar:#1f6b43; --bar-dark:#185536; --bar-text:#ffffff; --bar-dim:#b7d9c5;
+  --text:#eceff1; --muted:#9aa5a0; --line:#3d4140;
+  --up:#5fd47c; --down:#ff7a6b; --accent:#7fe0a5;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Thai",sans-serif;
+  -webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--text)}
+.sub{color:var(--muted)}
+
+#app{display:flex;flex-direction:column;height:100vh;height:100dvh;max-width:640px;margin:0 auto;
+  background:var(--bg)}
+
+/* ---------- ส่วนที่ตรึง ---------- */
+#bar{flex:none;display:flex;align-items:center;gap:2px;background:var(--bar);color:var(--bar-text);
+  padding:calc(6px + env(safe-area-inset-top)) 6px 6px 10px;min-height:56px}
+#bar h1{flex:1;min-width:0;margin:0;font-size:20px;font-weight:500;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;padding-left:6px}
+.ib{width:44px;height:44px;border:0;background:transparent;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--bar-text)}
+.ib:active{background:rgba(255,255,255,.18)}
+.ib svg{width:24px;height:24px;fill:currentColor}
+.spin svg{animation:sp 0.9s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+#tabs{flex:none;display:flex;background:var(--bar)}
+#tabs button{flex:1;border:0;background:transparent;padding:12px 0;font-size:14px;font-weight:600;
+  letter-spacing:.5px;color:var(--bar-dim);border-bottom:3px solid transparent}
+#tabs button.on{color:#fff;border-bottom-color:#fff}
+#status{flex:none;display:flex;align-items:center;gap:8px;justify-content:space-between;
+  padding:0 14px;font-size:12px;color:var(--muted);background:#232625;height:32px}
+#status .warn{color:#ffcf6b;background:none;border:0;padding:2px 0;text-decoration:underline;font-size:12px}
+#colhead{flex:none;margin:8px 8px 0;padding:8px 10px;background:var(--card);border-radius:10px 10px 0 0;
+  font-size:12px}
+#main{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:0 8px;background:var(--bg)}
+#foot{flex:none;margin:0 8px calc(8px + env(safe-area-inset-bottom));padding:10px;background:var(--card);
+  border-radius:0 0 10px 10px;font-size:13px}
+#colhead[hidden],#foot[hidden],#tabs[hidden]{display:none}
+
+/* ---------- ตาราง ---------- */
+.grid{display:grid;grid-template-columns:27fr 29fr 21fr 23fr;column-gap:6px;align-items:start}
+.grid .c{min-width:0}
+.grid .r{text-align:right}
+#colhead .c{display:flex;flex-direction:column;gap:1px;color:var(--text);cursor:pointer;line-height:1.25}
+#colhead .c.r{align-items:flex-end}
+#colhead b{font-weight:600}
+#colhead small{color:var(--muted);font-size:11px}
+#colhead .arrow{color:var(--accent);margin-left:3px;font-size:10px}
+.row{padding:11px 10px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13.5px;line-height:1.35}
+.row:active{background:#323634}
+.row .nm{font-weight:600;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .sub{font-size:12px}
+.row .num{white-space:nowrap}
+.row .line3{grid-column:1/-1;font-size:12px;color:var(--muted);margin-top:3px}
+.tag{font-size:10px;border:1px solid var(--muted);border-radius:4px;padding:0 3px;margin-left:4px;color:var(--muted)}
+.nop{color:#ffcf6b}
+.empty{padding:36px 16px;text-align:center;color:var(--muted);line-height:1.8;font-size:14px}
+#foot .c.r div{white-space:nowrap}
+#foot .lbl{font-weight:600}
+#foot .sub{font-size:12px}
+
+/* ---------- Details ---------- */
+.det{padding:14px 6px 24px}
+.pie{width:100%;max-width:340px;display:block;margin:0 auto}
+.pie text{font-family:inherit}
+.legend{margin-top:16px}
+.lg{display:grid;grid-template-columns:14px 1fr auto auto;gap:4px 10px;align-items:center;
+  padding:9px 6px;border-bottom:1px solid var(--line);font-size:14px}
+.lg i{width:12px;height:12px;border-radius:3px;display:block}
+.lg .p{font-weight:600;min-width:56px;text-align:right}
+.lg .v{color:var(--muted);font-size:12.5px;min-width:80px;text-align:right}
+
+/* ---------- เมนู / dialog / toast ---------- */
+#menu{position:fixed;right:8px;top:calc(54px + env(safe-area-inset-top));z-index:30;background:var(--card2);
+  border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.55);min-width:230px;padding:6px 0;overflow:hidden}
+#menu[hidden]{display:none}
+#menu button{display:block;width:100%;text-align:left;background:transparent;border:0;padding:13px 18px;font-size:15px}
+#menu button:active{background:rgba(255,255,255,.08)}
+#menu hr{border:0;border-top:1px solid var(--line);margin:4px 0}
+#menu .danger{color:var(--down)}
+#scrim{position:fixed;inset:0;z-index:25;background:transparent}
+#scrim[hidden]{display:none}
+dialog{border:0;border-radius:16px;background:var(--card);color:var(--text);width:min(92vw,420px);padding:0;
+  max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.62)}
+.dlg{padding:18px}
+.dlg h2{margin:0 0 6px;font-size:18px}
+.dlg label{display:block;font-size:12.5px;color:var(--muted);margin:12px 0 4px}
+.dlg input[type=text],.dlg input[type=number],.dlg select,.dlg textarea{width:100%;padding:11px;border-radius:10px;
+  border:1px solid var(--line);background:var(--card2);color:var(--text);font-size:16px;font-family:inherit}
+.dlg textarea{min-height:150px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.dlg .chk{display:flex;align-items:center;gap:8px;color:var(--text);font-size:14px;margin-top:14px}
+.dlg .chk input{width:20px;height:20px}
+.dlg .hint{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.55}
+.dlg .acts{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.dlg .acts button{flex:1 1 0;min-width:84px;padding:12px 8px;border:0;border-radius:12px;font-size:15px;
+  font-weight:600;background:var(--card2)}
+.dlg .acts .pri{background:var(--bar);color:#fff}
+.dlg .acts .dng{background:#6b2a26;color:#ffd5d0}
+.dlg .acts .row2{flex-basis:100%}
+.dlg .pv{margin-top:12px;padding:10px;border-radius:10px;background:var(--card2);font-size:13.5px;line-height:1.7}
+#toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
+  background:#101312;color:#fff;padding:10px 16px;border-radius:22px;font-size:14px;max-width:88vw;
+  opacity:0;pointer-events:none;transition:opacity .2s;text-align:center}
+#toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="bar">
+    <button class="ib" id="btnBack" aria-label="กลับ" hidden>
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+    </button>
+    <h1 id="title">Overview</h1>
+    <button class="ib" id="btnRefresh" aria-label="รีเฟรชราคา">
+      <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
+    </button>
+    <button class="ib" id="btnAdd" aria-label="เพิ่ม">
+      <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>
+    </button>
+    <button class="ib" id="btnMenu" aria-label="เมนู">
+      <svg viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+    </button>
+  </header>
+  <nav id="tabs" hidden>
+    <button data-tab="holdings">HOLDINGS</button>
+    <button data-tab="details">DETAILS</button>
+  </nav>
+  <div id="status"></div>
+  <div id="colhead" class="grid" hidden></div>
+  <main id="main"></main>
+  <footer id="foot" class="grid" hidden></footer>
+</div>
+<div id="scrim" hidden></div>
+<div id="menu" hidden></div>
+<div id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ====================== ค่าคงที่ ====================== */
+var KEY = "pf.v1";
+var CSYM = {THB:"฿",USD:"$",EUR:"€",GBP:"£",VND:"₫",JPY:"¥",CNY:"¥",HKD:"HK$",SGD:"S$",KRW:"₩",TWD:"NT$"};
+var CURS = ["THB","USD","EUR","VND","GBP","JPY","CNY","HKD","SGD","KRW","TWD"];
+var SUFCUR = {".BK":"THB",".PA":"EUR",".DE":"EUR",".AS":"EUR",".MI":"EUR",".MC":"EUR",".BR":"EUR",
+  ".LS":"EUR",".HE":"EUR",".VI":"EUR",".IR":"EUR",".L":"GBP",".VN":"VND",".T":"JPY",".HK":"HKD",
+  ".SI":"SGD",".SS":"CNY",".SZ":"CNY",".KS":"KRW",".TW":"TWD"};
+
+/* ====================== ตัวช่วย ====================== */
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s).replace(/[&<>"']/g,function(m){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m];});}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+function csym(c){return CSYM[c]||(c+" ");}
+function z(n){return Math.abs(n)<0.005?0:n;}
+function fmt(n){
+  var a=Math.abs(n), d=a>=10000?0:((a>0&&a<1)?4:2);
+  return a.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
+}
+function money(n,cur,sign){
+  if(n==null||!isFinite(n)) return "—";
+  if(sign) n=z(n);
+  var s=n<0?"-":(sign&&n>0?"+":"");
+  return s+(cur?csym(cur):"")+fmt(n);
+}
+function pct(n,sign){
+  if(n==null||!isFinite(n)) return "—";
+  n=z(n);
+  return (n<0?"-":(sign&&n>0?"+":""))+Math.abs(n).toFixed(2)+"%";
+}
+function cls(n){n=z(n||0);return n>0?"up":(n<0?"down":"flat");}
+function qtyTxt(q){return Number(Number(q).toFixed(4)).toLocaleString("en-US",{maximumFractionDigits:4});}
+function guessCur(sym){
+  var i=sym.lastIndexOf(".");
+  if(i>0){var c=SUFCUR[sym.slice(i).toUpperCase()]; if(c) return c;}
+  return "USD";
+}
+function toast(msg){
+  var t=$("toast"); t.textContent=msg; t.classList.add("on");
+  clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("on");},2600);
+}
+
+/* ====================== ข้อมูล (เก็บในเครื่องเท่านั้น) ====================== */
+var db = loadDB();
+function loadDB(){
+  try{
+    var v=JSON.parse(localStorage.getItem(KEY)||"null");
+    if(v && Array.isArray(v.portfolios)) return v;
+  }catch(e){}
+  return {portfolios:[]};
+}
+function saveDB(){
+  try{localStorage.setItem(KEY,JSON.stringify(db));}
+  catch(e){toast("บันทึกลงเครื่องไม่ได้ โปรดตรวจสอบพื้นที่/โหมดส่วนตัวของเบราว์เซอร์");}
+}
+function getP(id){return db.portfolios.filter(function(p){return p.id===id;})[0];}
+
+/* ====================== ราคา (อ่านจาก prices.json) ====================== */
+var prices = {updated:null, fx:{THB:1}, quotes:{}};
+var lastLoad = 0;
+function applyPrices(j){
+  prices = {updated:j.updated||null, fx:Object.assign({THB:1}, j.fx||{}), quotes:j.quotes||{}};
+}
+function loadPrices(manual){
+  var btn=$("btnRefresh"); btn.classList.add("spin");
+  return fetch("prices.json?t="+Date.now(),{cache:"no-store"})
+    .then(function(r){if(!r.ok)throw new Error("http "+r.status);return r.json();})
+    .then(function(j){
+      applyPrices(j); lastLoad=Date.now();
+      try{localStorage.setItem("pf.prices",JSON.stringify(j));}catch(e){}
+      if(manual) toast("โหลดราคาล่าสุดแล้ว");
+    })
+    .catch(function(){
+      if(!prices.updated){
+        try{var c=JSON.parse(localStorage.getItem("pf.prices")||"null"); if(c) applyPrices(c);}catch(e){}
+      }
+      if(manual) toast("โหลดราคาไม่ได้ ใช้ราคาที่เก็บไว้ในเครื่อง");
+    })
+    .then(function(){btn.classList.remove("spin"); render();});
+}
+function latestQuoteTime(){
+  var t=0, q=prices.quotes;
+  Object.keys(q).forEach(function(k){if(q[k].t && q[k].t>t) t=q[k].t;});
+  return t;
+}
+function rateOf(cur){return cur==="THB"?1:(prices.fx[cur]||null);}
+
+/* ====================== การคำนวณ ====================== */
+function calc(h){
+  var q=h.manual?null:prices.quotes[h.sym];
+  var cur=h.manual?h.manual.cur:(q?q.currency:guessCur(h.sym));
+  var price=h.manual?h.manual.price:(q?q.price:null);
+  var prev=(q&&q.prevClose!=null)?q.prevClose:null;
+  var value=price==null?null:h.qty*price;
+  var cost=h.qty*h.cost;
+  var day=(price!=null&&prev!=null)?h.qty*(price-prev):0;
+  var rate=rateOf(cur);
+  var miss=(price==null)||(rate==null);
+  return {
+    h:h, cur:cur, price:price, value:value, cost:cost, noQuote:(price==null), noFx:(rate==null),
+    pl: value==null?null:value-cost,
+    plPct: (value!=null&&cost>0)?(value-cost)/cost*100:0,
+    day: day, dayPct:(price!=null&&prev)?(price/prev-1)*100:0,
+    valueTHB: miss?null:value*rate, costTHB: rate==null?null:cost*rate, dayTHB: miss?null:day*rate,
+    missing: miss
+  };
+}
+function totals(cs){
+  var t={v:0,c:0,d:0,miss:0};
+  cs.forEach(function(x){
+    if(x.missing){t.miss++;return;}
+    t.v+=x.valueTHB; t.c+=x.costTHB; t.d+=x.dayTHB;
+  });
+  t.pl=t.v-t.c; t.plPct=t.c>0?t.pl/t.c*100:0;
+  var base=t.v-t.d; t.dayPct=base>0?t.d/base*100:0;
+  return t;
+}
+function portfolioCalcs(p){return p.holdings.map(calc);}
+
+/* ====================== สถานะหน้าจอ ====================== */
+var view={name:"overview", id:null, tab:"holdings"};
+var sortOv={key:"name",dir:1};
+var sortHd={key:"value",dir:-1};
+
+function render(){
+  var inP = view.name==="portfolio";
+  var p = inP ? getP(view.id) : null;
+  if(inP && !p){view={name:"overview",id:null,tab:"holdings"}; inP=false;}
+
+  $("btnBack").hidden=!inP;
+  $("title").textContent = inP ? p.name : "Overview";
+  $("tabs").hidden=!inP;
+  if(inP){
+    Array.prototype.forEach.call($("tabs").children,function(b){
+      b.classList.toggle("on",b.getAttribute("data-tab")===view.tab);
+    });
+  }
+  var allCs=[]; db.portfolios.forEach(function(q){allCs=allCs.concat(portfolioCalcs(q));});
+  renderStatus(inP?portfolioCalcs(p):allCs);
+
+  if(!inP) renderOverview();
+  else if(view.tab==="holdings") renderHoldings(p);
+  else renderDetails(p);
+  fitText();
+}
+// ตัวเลขยาว (เช่น ดองเวียดนาม) ย่อขนาดอัตโนมัติ ไม่ให้ชนคอลัมน์ข้างๆ
+function fitText(){
+  var els=document.querySelectorAll("#main .c.r > div, #foot .c.r > div");
+  Array.prototype.forEach.call(els,function(el){
+    el.style.fontSize="";
+    var s=parseFloat(getComputedStyle(el).fontSize);
+    while(el.scrollWidth>el.clientWidth+0.5 && s>9){s-=0.5; el.style.fontSize=s+"px";}
+  });
+}
+
+function renderStatus(cs){
+  var t=latestQuoteTime(), txt;
+  if(t) txt="ราคาล่าสุด "+new Date(t*1000).toLocaleString("th-TH",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+  else txt="ยังไม่มีข้อมูลราคา";
+  var noQ=cs.filter(function(x){return x.noQuote;}).length;
+  var noFx=cs.filter(function(x){return !x.noQuote&&x.noFx;}).length;
+  var w="";
+  if(noQ) w='<button class="warn" id="warnQ">⚠ ไม่มีราคา '+noQ+' ตัว (แตะดูวิธีแก้)</button>';
+  else if(noFx) w='<button class="warn" id="warnQ">⚠ ไม่มีอัตราแลกเปลี่ยน (แตะดู)</button>';
+  $("status").innerHTML='<span>'+esc(txt)+'</span>'+w;
+}
+
+function headHTML(first,sortState){
+  function cell(key,l1,l2,right){
+    var on=sortState.key===key;
+    return '<div class="c'+(right?' r':'')+'" data-sort="'+key+'"><b>'+l1+
+      (on?'<span class="arrow">'+(sortState.dir>0?'▲':'▼')+'</span>':'')+'</b><small>'+l2+'</small></div>';
+  }
+  return cell("name",first[0],first[1],false)+
+    cell("value","มูลค่า","ต้นทุน",true)+
+    cell("today","วันนี้ +/−","% เทียบเมื่อวาน",true)+
+    cell("total","กำไร/ขาดทุน","% จากต้นทุน",true);
+}
+function footHTML(t,label,sub){
+  return '<div class="c"><div class="lbl">'+label+'</div><div class="sub">'+sub+'</div></div>'+
+    '<div class="c r"><div>'+money(t.v,"THB")+'</div><div class="sub">'+money(t.c,"THB")+'</div></div>'+
+    '<div class="c r"><div class="'+cls(t.d)+'">'+money(t.d,"",true)+'</div><div class="'+cls(t.d)+'">'+pct(t.dayPct,true)+'</div></div>'+
+    '<div class="c r"><div class="'+cls(t.pl)+'">'+money(t.pl,"",true)+'</div><div class="'+cls(t.pl)+'">'+pct(t.plPct,true)+'</div></div>';
+}
+
+/* ---------- Overview ---------- */
+function renderOverview(){
+  var colhead=$("colhead"), main=$("main"), foot=$("foot");
+  colhead.hidden=false; foot.hidden=false;
+  colhead.innerHTML=headHTML(["พอร์ต","จำนวนหุ้น"],sortOv);
+
+  var rows=db.portfolios.map(function(p,i){
+    var cs=portfolioCalcs(p), t=totals(cs);
+    return {p:p,i:i,t:t,n:cs.length};
+  });
+  var k=sortOv.key, d=sortOv.dir;
+  rows.sort(function(a,b){
+    var x,y;
+    if(k==="name"){return d*(a.i-b.i);}
+    if(k==="value"){x=a.t.v;y=b.t.v;}
+    else if(k==="today"){x=a.t.dayPct;y=b.t.dayPct;}
+    else {x=a.t.plPct;y=b.t.plPct;}
+    return d*(x-y);
+  });
+
+  if(!rows.length){
+    main.innerHTML='<div class="empty">ยังไม่มีพอร์ต<br>กดปุ่ม <b>+</b> มุมขวาบนเพื่อสร้างพอร์ตแรก</div>';
+  } else {
+    main.innerHTML=rows.map(function(r){
+      var t=r.t;
+      return '<div class="row grid" data-pid="'+r.p.id+'">'+
+        '<div class="c"><div class="nm">'+esc(r.p.name)+'</div><div class="sub">'+r.n+' ตัว'+
+          (t.miss?' <span class="nop">⚠'+t.miss+'</span>':'')+'</div></div>'+
+        '<div class="c r num"><div>'+money(t.v,"THB")+'</div><div class="sub">'+money(t.c,"THB")+'</div></div>'+
+        '<div class="c r num"><div class="'+cls(t.d)+'">'+money(t.d,"",true)+'</div><div class="'+cls(t.d)+'">'+pct(t.dayPct,true)+'</div></div>'+
+        '<div class="c r num"><div class="'+cls(t.pl)+'">'+money(t.pl,"",true)+'</div><div class="'+cls(t.pl)+'">'+pct(t.plPct,true)+'</div></div>'+
+      '</div>';
+    }).join("");
+  }
+  var all=[]; db.portfolios.forEach(function(p){all=all.concat(portfolioCalcs(p));});
+  foot.innerHTML=footHTML(totals(all),"รวมทุกพอร์ต","Unrealized · บาท");
+}
+
+/* ---------- Holdings ---------- */
+function renderHoldings(p){
+  var colhead=$("colhead"), main=$("main"), foot=$("foot");
+  colhead.hidden=false; foot.hidden=false;
+  colhead.innerHTML=headHTML(["หุ้น","ราคาล่าสุด"],sortHd);
+  var cs=portfolioCalcs(p), k=sortHd.key, d=sortHd.dir;
+  cs.sort(function(a,b){
+    if(k==="name") return d*a.h.sym.localeCompare(b.h.sym);
+    var x,y;
+    if(k==="value"){x=a.valueTHB;y=b.valueTHB;}
+    else if(k==="today"){x=a.noQuote?null:a.dayPct;y=b.noQuote?null:b.dayPct;}
+    else {x=a.noQuote?null:a.plPct;y=b.noQuote?null:b.plPct;}
+    if(x==null) x=-Infinity; if(y==null) y=-Infinity;
+    if(x===y) return 0;
+    return d*(x<y?-1:1);
+  });
+  if(!cs.length){
+    main.innerHTML='<div class="empty">พอร์ตนี้ยังว่างอยู่<br>กดปุ่ม <b>+</b> มุมขวาบนเพื่อเพิ่มหุ้น</div>';
+  } else {
+    main.innerHTML=cs.map(function(x){
+      var h=x.h, c=x.cur;
+      if(x.noQuote){
+        return '<div class="row grid" data-hid="'+h.id+'">'+
+          '<div class="c"><div class="nm">'+esc(h.sym)+'</div><div class="sub nop">ไม่มีราคา</div></div>'+
+          '<div class="c r num"><div>—</div><div class="sub">'+money(x.cost,c)+'</div></div>'+
+          '<div class="c r num"><div>—</div><div>—</div></div>'+
+          '<div class="c r num"><div>—</div><div>—</div></div>'+
+          '<div class="line3">'+qtyTxt(h.qty)+' @ '+money(h.cost,c)+'</div></div>';
+      }
+      return '<div class="row grid" data-hid="'+h.id+'">'+
+        '<div class="c"><div class="nm">'+esc(h.sym)+'</div>'+
+          '<div class="sub">'+money(x.price,c)+(h.manual?' · ตั้งเอง':'')+'</div></div>'+
+        '<div class="c r num"><div>'+money(x.value,c)+'</div><div class="sub">'+money(x.cost,c)+'</div></div>'+
+        '<div class="c r num"><div class="'+cls(x.day)+'">'+money(x.day,"",true)+'</div><div class="'+cls(x.day)+'">'+pct(x.dayPct,true)+'</div></div>'+
+        '<div class="c r num"><div class="'+cls(x.pl)+'">'+money(x.pl,"",true)+'</div><div class="'+cls(x.pl)+'">'+pct(x.plPct,true)+'</div></div>'+
+        '<div class="line3">'+qtyTxt(h.qty)+' หุ้น @ '+money(h.cost,c)+(c!=="THB"&&x.noFx?' · <span class="nop">ไม่มีอัตราแลกเปลี่ยน '+c+'</span>':'')+'</div></div>';
+    }).join("");
+  }
+  foot.innerHTML=footHTML(totals(cs),"รวมพอร์ต","Unrealized · บาท");
+}
+
+/* ---------- Details (pie chart) ---------- */
+function colorAt(i){return "hsl("+Math.round((i*137.5)%360)+",58%,68%)";}
+function renderDetails(p){
+  $("colhead").hidden=true; $("foot").hidden=true;
+  var cs=portfolioCalcs(p).filter(function(x){return !x.missing && x.valueTHB>0;});
+  cs.sort(function(a,b){return b.valueTHB-a.valueTHB;});
+  var tot=cs.reduce(function(s,x){return s+x.valueTHB;},0);
+  var main=$("main");
+  if(!cs.length||tot<=0){
+    main.innerHTML='<div class="empty">ยังไม่มีข้อมูลให้แสดงสัดส่วน<br>(ต้องมีหุ้นที่มีราคาอย่างน้อย 1 ตัว)</div>';
+    return;
+  }
+  var R=46, r=26, cx=50, cy=50, a0=-Math.PI/2, svg="", i;
+  if(cs.length===1){
+    svg+='<circle cx="50" cy="50" r="'+((R+r)/2)+'" fill="none" stroke="'+colorAt(0)+'" stroke-width="'+(R-r)+'"/>'+
+         '<text x="50" y="'+(cy-R+11)+'" text-anchor="middle" font-size="4.4" fill="#1b1f1d">100% '+esc(cs[0].h.sym)+'</text>';
+  } else {
+    for(i=0;i<cs.length;i++){
+      var fr=cs[i].valueTHB/tot, a1=a0+fr*2*Math.PI, lg=fr>0.5?1:0;
+      var x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
+      var x2=cx+r*Math.cos(a1),y2=cy+r*Math.sin(a1),x3=cx+r*Math.cos(a0),y3=cy+r*Math.sin(a0);
+      svg+='<path d="M'+x0.toFixed(3)+' '+y0.toFixed(3)+' A'+R+' '+R+' 0 '+lg+' 1 '+x1.toFixed(3)+' '+y1.toFixed(3)+
+           ' L'+x2.toFixed(3)+' '+y2.toFixed(3)+' A'+r+' '+r+' 0 '+lg+' 0 '+x3.toFixed(3)+' '+y3.toFixed(3)+
+           ' Z" fill="'+colorAt(i)+'" stroke="#2a2d2c" stroke-width="0.6"/>';
+      if(fr>=0.06){
+        var am=(a0+a1)/2, rm=(R+r)/2;
+        var tx=cx+rm*Math.cos(am), ty=cy+rm*Math.sin(am);
+        svg+='<text text-anchor="middle" fill="#1b1f1d" font-size="3.6" font-weight="600">'+
+             '<tspan x="'+tx.toFixed(2)+'" y="'+(ty-0.4).toFixed(2)+'">'+esc(cs[i].h.sym.replace(/\..*$/,""))+'</tspan>'+
+             '<tspan x="'+tx.toFixed(2)+'" dy="4.2">'+(fr*100).toFixed(1)+'%</tspan></text>';
+      }
+      a0=a1;
+    }
+  }
+  svg+='<text x="50" y="48.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">รวม (บาท)</text>'+
+       '<text x="50" y="54.5" text-anchor="middle" font-size="5" font-weight="600" fill="#eceff1">'+fmt(tot)+'</text>';
+  var legend=cs.map(function(x,j){
+    return '<div class="lg"><i style="background:'+colorAt(j)+'"></i><span>'+esc(x.h.sym)+'</span>'+
+      '<span class="p">'+(x.valueTHB/tot*100).toFixed(1)+'%</span><span class="v">฿'+fmt(x.valueTHB)+'</span></div>';
+  }).join("");
+  var skipped=portfolioCalcs(p).length-cs.length;
+  main.innerHTML='<div class="det"><svg class="pie" viewBox="0 0 100 100" role="img" aria-label="สัดส่วนการถือหุ้น">'+svg+
+    '</svg><div class="legend">'+legend+'</div>'+
+    (skipped>0?'<div class="empty" style="padding:14px">ไม่รวม '+skipped+' ตัวที่ยังไม่มีราคา</div>':'')+'</div>';
+}
+
+/* ====================== การนำทาง ====================== */
+function openPortfolio(id){
+  view={name:"portfolio",id:id,tab:"holdings"};
+  try{history.pushState({p:id},"");}catch(e){}
+  render(); $("main").scrollTop=0;
+}
+function goOverview(fromPop){
+  // ปุ่ม ← ในแอป: ถ้าเข้ามาจากหน้า Overview ให้ย้อนประวัติ (popstate จะวาดหน้าให้เอง)
+  if(!fromPop && history.state && history.state.p){history.back();return;}
+  view={name:"overview",id:null,tab:"holdings"};
+  render(); $("main").scrollTop=0;
+}
+window.addEventListener("popstate",function(){goOverview(true);});
+$("btnBack").onclick=function(){goOverview(false);};
+$("tabs").onclick=function(e){
+  var b=e.target.closest("button"); if(!b) return;
+  view.tab=b.getAttribute("data-tab"); render(); $("main").scrollTop=0;
+};
+$("colhead").onclick=function(e){
+  var c=e.target.closest("[data-sort]"); if(!c) return;
+  var st=view.name==="overview"?sortOv:sortHd, key=c.getAttribute("data-sort");
+  if(st.key===key) st.dir=-st.dir; else {st.key=key; st.dir=(key==="name")?1:-1;}
+  render();
+};
+$("main").onclick=function(e){
+  var r=e.target.closest(".row"); if(!r) return;
+  if(r.hasAttribute("data-pid")) openPortfolio(r.getAttribute("data-pid"));
+  else if(r.hasAttribute("data-hid")) holdingDialog(view.id,r.getAttribute("data-hid"));
+};
+$("status").onclick=function(e){
+  if(e.target.id==="warnQ") symbolsDialog(true);
+};
+$("btnRefresh").onclick=function(){loadPrices(true);};
+$("btnAdd").onclick=function(){
+  if(view.name==="overview") portfolioDialog(null); else holdingDialog(view.id,null);
+};
+
+/* ====================== เมนู ⋮ ====================== */
+function closeMenu(){$("menu").hidden=true;$("scrim").hidden=true;}
+$("scrim").onclick=closeMenu;
+$("btnMenu").onclick=function(){
+  var items=[];
+  if(view.name==="portfolio"){
+    items.push(["editP","แก้ไขชื่อพอร์ต / ต่อท้ายชื่อหุ้น"]);
+    items.push(["delP","ลบพอร์ตนี้","danger"]);
+    items.push(["hr"]);
+  } else items.push(["addP","สร้างพอร์ตใหม่"],["hr"]);
+  items.push(["export","สำรองข้อมูล (Export)"],["import","นำเข้าข้อมูล (Import)"],["hr"],
+             ["symbols","รายชื่อหุ้นสำหรับ symbols.json"]);
+  if(/\.github\.io$/.test(location.hostname)) items.push(["runwf","สั่ง GitHub อัปเดตราคาตอนนี้"]);
+  $("menu").innerHTML=items.map(function(it){
+    return it[0]==="hr"?"<hr>":'<button data-a="'+it[0]+'" class="'+(it[2]||"")+'">'+it[1]+'</button>';
+  }).join("");
+  $("menu").hidden=false; $("scrim").hidden=false;
+};
+$("menu").onclick=function(e){
+  var b=e.target.closest("button"); if(!b) return;
+  var a=b.getAttribute("data-a"); closeMenu();
+  if(a==="addP") portfolioDialog(null);
+  else if(a==="editP") portfolioDialog(view.id);
+  else if(a==="delP") deletePortfolio(view.id);
+  else if(a==="export") exportDialog();
+  else if(a==="import") importDialog();
+  else if(a==="symbols") symbolsDialog(false);
+  else if(a==="runwf") runWorkflow();
+};
+function runWorkflow(){
+  var user=location.hostname.split(".")[0];
+  var repo=location.pathname.split("/").filter(Boolean)[0]||"";
+  window.open("https://github.com/"+user+"/"+repo+"/actions/workflows/update-prices.yml","_blank");
+}
+
+/* ====================== Dialog ====================== */
+function modal(html){
+  var d=document.createElement("dialog");
+  d.innerHTML='<div class="dlg">'+html+'</div>';
+  document.body.appendChild(d);
+  d.addEventListener("close",function(){d.remove();});
+  d.addEventListener("click",function(e){if(e.target===d) d.close();});
+  d.showModal();
+  return d;
+}
+function val(d,id){return d.querySelector("#"+id).value;}
+
+/* ---------- พอร์ต ---------- */
+function portfolioDialog(pid){
+  var p=pid?getP(pid):null;
+  var d=modal('<h2>'+(p?'แก้ไขพอร์ต':'สร้างพอร์ตใหม่')+'</h2>'+
+    '<label>ชื่อพอร์ต</label><input id="pName" type="text" maxlength="40" value="'+esc(p?p.name:"")+'" placeholder="เช่น 01 THAI_zeer">'+
+    '<label>ต่อท้ายชื่อหุ้นให้อัตโนมัติ (ไม่บังคับ)</label>'+
+    '<input id="pSuf" type="text" maxlength="6" autocapitalize="characters" value="'+esc(p?(p.suffix||""):"")+'" placeholder="เช่น .BK">'+
+    '<div class="hint">ถ้าใส่ .BK แล้วพิมพ์ PTT ในพอร์ตนี้ แอปจะเติมเป็น PTT.BK ให้เอง<br>'+
+    'ไทย .BK · ฝรั่งเศส .PA · เวียดนาม .VN · ญี่ปุ่น .T · ฮ่องกง .HK · สหรัฐไม่ต้องใส่</div>'+
+    '<div class="acts"><button data-x="c">ยกเลิก</button><button class="pri" data-x="s">บันทึก</button></div>');
+  d.addEventListener("click",function(e){
+    var x=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(x==="c") d.close();
+    if(x==="s"){
+      var name=val(d,"pName").trim(), suf=val(d,"pSuf").trim().toUpperCase();
+      if(!name){toast("ใส่ชื่อพอร์ตก่อน");return;}
+      if(suf && suf.charAt(0)!==".") suf="."+suf;
+      if(p){p.name=name;p.suffix=suf;}
+      else db.portfolios.push({id:uid(),name:name,suffix:suf,holdings:[]});
+      saveDB(); d.close(); render();
+    }
+  });
+}
+function deletePortfolio(pid){
+  var p=getP(pid); if(!p) return;
+  if(!confirm('ลบพอร์ต "'+p.name+'" และหุ้นทั้งหมดในพอร์ต?\n(สำรองข้อมูลไว้ก่อนได้ที่เมนู Export)')) return;
+  db.portfolios=db.portfolios.filter(function(x){return x.id!==pid;});
+  saveDB(); goOverview(false);
+}
+
+/* ---------- หุ้น ---------- */
+function normSym(sym,p,manual){
+  sym=sym.trim();
+  if(manual) return sym;
+  sym=sym.toUpperCase();
+  if(p.suffix && !/[.=^\-]/.test(sym)) sym+=p.suffix;
+  return sym;
+}
+function holdingDialog(pid,hid){
+  var p=getP(pid); if(!p) return;
+  var h=hid?p.holdings.filter(function(x){return x.id===hid;})[0]:null;
+  var man=!!(h&&h.manual);
+  var opts=CURS.map(function(c){
+    return '<option value="'+c+'"'+((h&&h.manual&&h.manual.cur===c)?' selected':'')+'>'+c+'</option>';
+  }).join("");
+  var d=modal('<h2>'+(h?'แก้ไข '+esc(h.sym):'เพิ่มหุ้นในพอร์ต')+'</h2>'+
+    '<label id="lSym">ชื่อหุ้น (symbol ของ Yahoo Finance)</label>'+
+    '<input id="fSym" type="text" autocapitalize="characters" autocomplete="off" value="'+esc(h?h.sym:"")+'" placeholder="เช่น PTT หรือ AAPL">'+
+    '<div class="hint" id="symHint">ไทยลงท้าย .BK (เช่น PTT.BK) · ฝรั่งเศส .PA · เวียดนาม .VN · ทองคำ GC=F · เงินสด/คริปโต BTC-USD'+
+    (p.suffix?'<br>พอร์ตนี้เติม <b>'+esc(p.suffix)+'</b> ให้อัตโนมัติ':'')+'</div>'+
+    '<label>จำนวนหุ้น / หน่วย</label><input id="fQty" type="number" step="any" min="0" inputmode="decimal" value="'+(h?h.qty:"")+'">'+
+    '<label>ต้นทุนเฉลี่ยต่อหุ้น (สกุลเงินเดียวกับราคา)</label><input id="fCost" type="number" step="any" min="0" inputmode="decimal" value="'+(h?h.cost:"")+'">'+
+    '<label class="chk"><input type="checkbox" id="fMan"'+(man?' checked':'')+'> ตั้งราคาเอง (กองทุนรวม / ของที่ Yahoo ไม่มี)</label>'+
+    '<div id="manBox"'+(man?'':' style="display:none"')+'>'+
+      '<label>ราคาปัจจุบันต่อหน่วย</label><input id="fPrice" type="number" step="any" min="0" inputmode="decimal" value="'+(man?h.manual.price:"")+'">'+
+      '<label>สกุลเงินของราคา/ต้นทุน</label><select id="fCur">'+opts+'</select>'+
+      '<div class="hint">แอปจะไม่ดึงราคาให้ตัวนี้ คุณมาแก้ราคาเองเมื่อต้องการ (ตัวนี้ไม่ต้องอยู่ใน symbols.json)</div>'+
+    '</div>'+
+    '<div class="acts">'+
+      (h?'<button class="row2" data-x="buy">ซื้อเพิ่ม</button><button class="row2" data-x="sell">ขายบางส่วน</button>':'')+
+      (h?'<button class="dng" data-x="del">ลบ</button>':'<button data-x="c">ยกเลิก</button>')+
+      '<button class="pri" data-x="s">บันทึก</button></div>');
+  var man_ = d.querySelector("#fMan");
+  man_.onchange=function(){
+    d.querySelector("#manBox").style.display=man_.checked?"":"none";
+    d.querySelector("#lSym").textContent=man_.checked?"ชื่อที่ต้องการแสดง":"ชื่อหุ้น (symbol ของ Yahoo Finance)";
+    d.querySelector("#symHint").style.display=man_.checked?"none":"";
+  };
+  man_.onchange();
+  if(h&&!man) d.querySelector("#symHint").style.display="none";
+  d.addEventListener("click",function(e){
+    var x=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(!x) return;
+    if(x==="c") d.close();
+    else if(x==="del"){
+      if(confirm("ลบ "+h.sym+" ออกจากพอร์ต?")){
+        p.holdings=p.holdings.filter(function(y){return y.id!==h.id;});
+        saveDB(); d.close(); render();
+      }
+    }
+    else if(x==="buy"||x==="sell"){d.close(); tradeDialog(pid,h.id,x);}
+    else if(x==="s"){
+      var isMan=man_.checked;
+      var sym=normSym(val(d,"fSym"),p,isMan);
+      var qty=parseFloat(val(d,"fQty")), cost=parseFloat(val(d,"fCost"));
+      if(!sym){toast("ใส่ชื่อหุ้นก่อน");return;}
+      if(!(qty>=0)){toast("จำนวนไม่ถูกต้อง");return;}
+      if(!(cost>=0)){toast("ต้นทุนไม่ถูกต้อง");return;}
+      var manual=null;
+      if(isMan){
+        var pr=parseFloat(val(d,"fPrice"));
+        if(!(pr>=0)){toast("ใส่ราคาปัจจุบันด้วย");return;}
+        manual={price:pr,cur:val(d,"fCur")};
+      }
+      var dup=p.holdings.filter(function(y){return y.sym===sym && (!h||y.id!==h.id);})[0];
+      if(dup){toast("มี "+sym+" ในพอร์ตนี้แล้ว แตะที่แถวนั้นแล้วกด ซื้อเพิ่ม");return;}
+      if(h){h.sym=sym;h.qty=qty;h.cost=cost;h.manual=manual;}
+      else p.holdings.push({id:uid(),sym:sym,qty:qty,cost:cost,manual:manual});
+      saveDB(); d.close(); render();
+    }
+  });
+}
+function tradeDialog(pid,hid,mode){
+  var p=getP(pid), h=p.holdings.filter(function(x){return x.id===hid;})[0]; if(!h) return;
+  var x=calc(h), buy=(mode==="buy");
+  var d=modal('<h2>'+(buy?'ซื้อเพิ่ม ':'ขาย ')+esc(h.sym)+'</h2>'+
+    '<div class="hint">ตอนนี้ถือ '+qtyTxt(h.qty)+' @ '+money(h.cost,x.cur)+'</div>'+
+    '<label>จำนวนที่'+(buy?'ซื้อ':'ขาย')+'</label><input id="tQty" type="number" step="any" min="0" inputmode="decimal">'+
+    '<label>ราคา'+(buy?'ที่ซื้อ':'ที่ขาย')+'ต่อหุ้น ('+x.cur+')</label>'+
+    '<input id="tPrice" type="number" step="any" min="0" inputmode="decimal" value="'+(x.price!=null?x.price:"")+'">'+
+    '<div class="pv" id="tPv"></div>'+
+    '<div class="acts"><button data-x="c">ยกเลิก</button><button class="pri" data-x="s">ยืนยัน</button></div>');
+  function preview(){
+    var q=parseFloat(val(d,"tQty")), pr=parseFloat(val(d,"tPrice")), t="";
+    if(q>0&&pr>=0){
+      if(buy){
+        var nq=h.qty+q, nc=(h.qty*h.cost+q*pr)/nq;
+        t="หลังซื้อ: "+qtyTxt(nq)+" @ "+money(nc,x.cur)+" (ต้นทุนเฉลี่ยใหม่)";
+      } else {
+        var rq=h.qty-q;
+        if(rq<0) t='<span class="nop">ขายเกินจำนวนที่ถือ</span>';
+        else t="หลังขาย: เหลือ "+qtyTxt(rq)+" @ "+money(h.cost,x.cur)+"<br>กำไร/ขาดทุนที่รับรู้ครั้งนี้: "+
+          '<span class="'+cls(q*(pr-h.cost))+'">'+money(q*(pr-h.cost),x.cur,true)+'</span>';
+      }
+    }
+    d.querySelector("#tPv").innerHTML=t||'<span class="sub">กรอกจำนวนและราคา จะเห็นผลลัพธ์ตรงนี้</span>';
+  }
+  d.addEventListener("input",preview); preview();
+  d.addEventListener("click",function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(a==="c") d.close();
+    if(a==="s"){
+      var q=parseFloat(val(d,"tQty")), pr=parseFloat(val(d,"tPrice"));
+      if(!(q>0)||!(pr>=0)){toast("กรอกจำนวนและราคาให้ครบ");return;}
+      if(buy){
+        var nq=h.qty+q; h.cost=(h.qty*h.cost+q*pr)/nq; h.qty=nq;
+      } else {
+        if(q>h.qty+1e-9){toast("ขายเกินจำนวนที่ถือ");return;}
+        h.qty=h.qty-q;
+        if(h.qty<1e-9){
+          if(confirm("ขายหมดแล้ว ลบ "+h.sym+" ออกจากพอร์ตเลยไหม?"))
+            p.holdings=p.holdings.filter(function(y){return y.id!==h.id;});
+          else h.qty=0;
+        }
+      }
+      saveDB(); d.close(); render();
+    }
+  });
+}
+
+/* ---------- Export / Import ---------- */
+function exportText(){
+  return JSON.stringify({app:"pf",version:1,exported:new Date().toISOString(),portfolios:db.portfolios},null,1);
+}
+function exportDialog(){
+  var txt=exportText();
+  var d=modal('<h2>สำรองข้อมูล (Export)</h2>'+
+    '<div class="hint">ข้อมูลทั้งหมดมีแค่ในเครื่องนี้ ไม่ได้ขึ้น GitHub เก็บไฟล์นี้ไว้เพื่อย้ายไปเครื่องใหม่ (กด Import ที่เครื่องใหม่)</div>'+
+    '<div class="acts"><button class="pri" data-x="f">ดาวน์โหลดเป็นไฟล์</button><button data-x="cp">คัดลอกข้อความ</button></div>'+
+    '<div class="acts"><button data-x="c">ปิด</button></div>');
+  d.addEventListener("click",function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(a==="c") d.close();
+    if(a==="f"){
+      var blob=new Blob([txt],{type:"application/json"}), el=document.createElement("a");
+      el.href=URL.createObjectURL(blob);
+      el.download="portfolio-backup-"+new Date().toISOString().slice(0,10)+".json";
+      document.body.appendChild(el); el.click(); el.remove();
+      setTimeout(function(){URL.revokeObjectURL(el.href);},4000);
+      toast("ดาวน์โหลดแล้ว");
+    }
+    if(a==="cp") copyText(txt,"คัดลอกแล้ว");
+  });
+}
+function copyText(txt,okMsg){
+  function fallback(){
+    var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    var ok=false; try{ok=document.execCommand("copy");}catch(e){}
+    ta.remove(); toast(ok?okMsg:"คัดลอกไม่ได้ ลองกดค้างที่ข้อความเอง");
+  }
+  if(navigator.clipboard&&navigator.clipboard.writeText)
+    navigator.clipboard.writeText(txt).then(function(){toast(okMsg);},fallback);
+  else fallback();
+}
+function importFromText(txt){
+  var v; try{v=JSON.parse(txt);}catch(e){return "ข้อความ/ไฟล์ไม่ใช่ JSON ที่ถูกต้อง";}
+  var list=Array.isArray(v)?v:(v&&v.portfolios);
+  if(!Array.isArray(list)) return "ไม่พบข้อมูลพอร์ตในไฟล์";
+  var out=list.map(function(p){
+    if(!p||typeof p.name!=="string"||!Array.isArray(p.holdings)) return null;
+    return {id:String(p.id||uid()),name:p.name,suffix:String(p.suffix||""),
+      holdings:p.holdings.map(function(h){
+        if(!h||!h.sym||!(+h.qty>=0)||!(+h.cost>=0)) return null;
+        var m=null;
+        if(h.manual&&+h.manual.price>=0) m={price:+h.manual.price,cur:String(h.manual.cur||"THB")};
+        return {id:String(h.id||uid()),sym:String(h.sym),qty:+h.qty,cost:+h.cost,manual:m};
+      }).filter(Boolean)};
+  }).filter(Boolean);
+  if(!out.length) return "ไม่พบพอร์ตที่อ่านได้";
+  var n=out.reduce(function(s,p){return s+p.holdings.length;},0);
+  if(db.portfolios.length && !confirm("นำเข้า "+out.length+" พอร์ต "+n+" ตัว\nข้อมูลในเครื่องนี้ตอนนี้จะถูกแทนที่ทั้งหมด ดำเนินการต่อ?")) return "ยกเลิก";
+  db={portfolios:out}; saveDB();
+  view={name:"overview",id:null,tab:"holdings"}; render();
+  return "";
+}
+function importDialog(){
+  var d=modal('<h2>นำเข้าข้อมูล (Import)</h2>'+
+    '<div class="hint">เลือกไฟล์สำรองที่ได้จาก Export หรือวางข้อความที่คัดลอกไว้</div>'+
+    '<div class="acts"><button class="pri" data-x="pick">เลือกไฟล์</button></div>'+
+    '<label>หรือวางข้อความที่นี่</label><textarea id="iTxt"></textarea>'+
+    '<input type="file" id="iFile" accept="application/json,.json" hidden>'+
+    '<div class="acts"><button data-x="c">ยกเลิก</button><button class="pri" data-x="go">นำเข้าจากข้อความ</button></div>');
+  var f=d.querySelector("#iFile");
+  f.onchange=function(){
+    var file=f.files[0]; if(!file) return;
+    var rd=new FileReader();
+    rd.onload=function(){var m=importFromText(String(rd.result)); if(m){if(m!=="ยกเลิก")toast(m);} else {d.close();toast("นำเข้าแล้ว");}};
+    rd.readAsText(file);
+  };
+  d.addEventListener("click",function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(a==="c") d.close();
+    if(a==="pick") f.click();
+    if(a==="go"){
+      var t=val(d,"iTxt").trim(); if(!t){toast("ยังไม่ได้วางข้อความ");return;}
+      var m=importFromText(t); if(m){if(m!=="ยกเลิก")toast(m);} else {d.close();toast("นำเข้าแล้ว");}
+    }
+  });
+}
+
+/* ---------- symbols.json ---------- */
+function symbolsText(){
+  var syms={}, curs={USD:1};
+  db.portfolios.forEach(function(p){p.holdings.forEach(function(h){
+    if(h.manual){ if(h.manual.cur!=="THB") curs[h.manual.cur]=1; }
+    else syms[h.sym]=1;
+  });});
+  return JSON.stringify({symbols:Object.keys(syms).sort(),currencies:Object.keys(curs).sort()},null,2)+"\n";
+}
+function symbolsDialog(fromWarn){
+  var txt=symbolsText();
+  var d=modal('<h2>รายชื่อหุ้นสำหรับ GitHub</h2>'+
+    '<div class="hint">'+(fromWarn?'มีหุ้นที่ยังไม่มีราคา เพราะยังไม่อยู่ในไฟล์ <b>symbols.json</b> บน GitHub (หรือพิมพ์ชื่อผิด)<br>':'')+
+    'วิธีอัปเดต: ① กดคัดลอก ② เปิดไฟล์ symbols.json ใน GitHub กดรูปดินสอ ③ ลบของเดิมทั้งหมดแล้ววางทับ ④ กด Commit — GitHub จะดึงราคาให้เองภายในไม่กี่นาที แล้วกด ⟳ ในแอป</div>'+
+    '<label>เนื้อหาไฟล์ symbols.json ทั้งไฟล์</label><textarea id="sTxt" readonly>'+esc(txt)+'</textarea>'+
+    '<div class="acts"><button data-x="c">ปิด</button><button class="pri" data-x="cp">คัดลอก</button></div>'+
+    (/\.github\.io$/.test(location.hostname)?'<div class="acts"><button data-x="gh">เปิดหน้าแก้ไข symbols.json บน GitHub</button></div>':''));
+  d.addEventListener("click",function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(a==="c") d.close();
+    if(a==="cp") copyText(txt,"คัดลอกแล้ว");
+    if(a==="gh"){
+      var user=location.hostname.split(".")[0];
+      var repo=location.pathname.split("/").filter(Boolean)[0]||"";
+      window.open("https://github.com/"+user+"/"+repo+"/edit/main/symbols.json","_blank");
+    }
+  });
+}
+
+/* ====================== เริ่มทำงาน ====================== */
+document.addEventListener("visibilitychange",function(){
+  if(!document.hidden && Date.now()-lastLoad>5*60*1000) loadPrices(false);
+});
+render();
+try{var c=JSON.parse(localStorage.getItem("pf.prices")||"null"); if(c){applyPrices(c); render();}}catch(e){}
+loadPrices(false);
+try{if(navigator.storage&&navigator.storage.persist) navigator.storage.persist();}catch(e){}
+if("serviceWorker" in navigator){
+  window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});
+}
+})();
+</script>
+</body>
+</html>
