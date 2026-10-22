@@ -1,39 +1,45 @@
 {
- "updated": "2026-10-22T08:41:15+00:00",
+ "updated": "2026-10-22T09:14:35+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.66
+  "USD": 33.68
  },
  "quotes": {
   "ADVANC.BK": {
    "price": 335.0,
    "currency": "THB",
    "prevClose": 335.0,
-   "t": 1792656652
+   "t": 1792658662
   },
   "AOT.BK": {
    "price": 60.0,
    "currency": "THB",
    "prevClose": 58.25,
-   "t": 1792656661
+   "t": 1792658649
   },
   "BDMS.BK": {
-   "price": 19.5,
+   "price": 19.4,
    "currency": "THB",
    "prevClose": 19.5,
-   "t": 1792656661
+   "t": 1792658663
   },
   "CPALL.BK": {
-   "price": 44.0,
+   "price": 44.25,
    "currency": "THB",
    "prevClose": 43.75,
-   "t": 1792656663
+   "t": 1792658664
+  },
+  "NVDA": {
+   "price": 221.97,
+   "currency": "USD",
+   "prevClose": 216.470001,
+   "t": 1792612800
   },
   "PTT.BK": {
    "price": 41.5,
    "currency": "THB",
    "prevClose": 40.75,
-   "t": 1792656656
+   "t": 1792658644
   }
  },
  "valuation": {
@@ -59,17 +65,6 @@
    "dy": 1.35,
    "t": 1792656280
   },
-  "PTT.BK": {
-   "cur": "THB",
-   "src": "set",
-   "asof": "2026-10-21",
-   "mcap": 1178223598160,
-   "pe": 9.45,
-   "pbv": 0.98,
-   "adj": true,
-   "dy": 6.79,
-   "t": 1792656280
-  },
   "BDMS.BK": {
    "cur": "THB",
    "src": "set",
@@ -91,6 +86,26 @@
    "adj": true,
    "dy": 3.75,
    "t": 1792658468
+  },
+  "PTT.BK": {
+   "cur": "THB",
+   "src": "set",
+   "asof": "2026-10-21",
+   "mcap": 1178223598160,
+   "pe": 9.45,
+   "pbv": 0.98,
+   "adj": true,
+   "dy": 6.79,
+   "t": 1792656280
+  },
+  "NVDA": {
+   "cur": "USD",
+   "mcap": 5359909470208,
+   "pe": 28.06,
+   "pbv": 23.41,
+   "src": "yahoo",
+   "dy": 0.23,
+   "t": 1792660473
   }
  }
 }
