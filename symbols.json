@@ -4,7 +4,9 @@
     "AOT.BK",
     "BDMS.BK",
     "CPALL.BK",
-    "PTT.BK"
+    "NVDA",
+    "PTT.BK",
+    "TSMC"
   ],
   "currencies": [
     "USD"
