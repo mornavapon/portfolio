@@ -74,12 +74,17 @@ button{font:inherit;color:inherit}
 #foot .sub{font-size:12px}
 
 /* ---------- Details ---------- */
-.det{padding:14px 6px 24px}
-.pie{width:100%;max-width:340px;display:block;margin:0 auto}
-.pie text{font-family:inherit}
-.legend{margin-top:16px}
-.lg{display:grid;grid-template-columns:14px 1fr auto auto;gap:4px 10px;align-items:center;
-  padding:9px 6px;border-bottom:1px solid var(--line);font-size:14px}
+.det{padding:6px 0 24px}
+.pie{width:100%;max-width:600px;display:block;margin:0 auto;-webkit-user-select:none;user-select:none}
+.pie path,.pie circle{cursor:pointer;transition:opacity .15s,transform .15s;transform-origin:50px 50px}
+.pie .dim{opacity:.28}
+.pie path.sel{transform:scale(1.045)}
+.pie text{font-family:inherit;pointer-events:none}
+.hint2{text-align:center;font-size:12px;color:var(--muted);margin-top:2px}
+.legend{margin-top:10px}
+.lg{display:grid;grid-template-columns:14px 1fr auto auto;gap:4px 10px;align-items:center;cursor:pointer;
+  padding:10px 8px;border-bottom:1px solid var(--line);font-size:14px}
+.lg.on{background:var(--card)}
 .lg i{width:12px;height:12px;border-radius:3px;display:block}
 .lg .p{font-weight:600;min-width:56px;text-align:right}
 .lg .v{color:var(--muted);font-size:12.5px;min-width:80px;text-align:right}
@@ -419,47 +424,76 @@ function renderHoldings(p){
 
 /* ---------- Details (pie chart) ---------- */
 function colorAt(i){return "hsl("+Math.round((i*137.5)%360)+",58%,68%)";}
+var det={items:[],tot:0,sel:-1};
+function pctTxt(f){return (f>0&&f<0.05)?"<0.1%":f.toFixed(1)+"%";}
+function shortName(sym,n){var s=sym.replace(/\..*$/,"");return s.length>n?s.slice(0,n-1)+"…":s;}
+function centerSvg(){
+  if(det.sel>=0){
+    var x=det.items[det.sel], f=x.valueTHB/det.tot*100;
+    return '<text x="50" y="43.5" text-anchor="middle" font-size="4.2" font-weight="600" fill="#eceff1">'+esc(shortName(x.h.sym,12))+'</text>'+
+      '<text x="50" y="52.5" text-anchor="middle" font-size="7" font-weight="700" fill="'+colorAt(det.sel)+'">'+pctTxt(f)+'</text>'+
+      '<text x="50" y="58.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">฿'+fmt(x.valueTHB)+'</text>';
+  }
+  return '<text x="50" y="48.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">รวม (บาท)</text>'+
+    '<text x="50" y="54.5" text-anchor="middle" font-size="5.2" font-weight="600" fill="#eceff1">'+fmt(det.tot)+'</text>';
+}
+function selectSlice(i){
+  det.sel=(det.sel===i)?-1:i;
+  var svg=document.querySelector("#main .pie"); if(!svg) return;
+  Array.prototype.forEach.call(svg.querySelectorAll("[data-i]"),function(el){
+    var k=+el.getAttribute("data-i");
+    el.classList.toggle("sel",k===det.sel);
+    el.classList.toggle("dim",det.sel>=0&&k!==det.sel);
+  });
+  $("ctr").innerHTML=centerSvg();
+  Array.prototype.forEach.call(document.querySelectorAll("#main .lg"),function(el){
+    el.classList.toggle("on",+el.getAttribute("data-i")===det.sel);
+  });
+}
 function renderDetails(p){
   $("colhead").hidden=true; $("foot").hidden=true;
   var cs=portfolioCalcs(p).filter(function(x){return !x.missing && x.valueTHB>0;});
   cs.sort(function(a,b){return b.valueTHB-a.valueTHB;});
   var tot=cs.reduce(function(s,x){return s+x.valueTHB;},0);
   var main=$("main");
+  det={items:cs,tot:tot,sel:-1};
   if(!cs.length||tot<=0){
     main.innerHTML='<div class="empty">ยังไม่มีข้อมูลให้แสดงสัดส่วน<br>(ต้องมีหุ้นที่มีราคาอย่างน้อย 1 ตัว)</div>';
     return;
   }
-  var R=46, r=26, cx=50, cy=50, a0=-Math.PI/2, svg="", i;
+  var R=48, r=22, cx=50, cy=50, a0=-Math.PI/2, paths="", labels="", i;
   if(cs.length===1){
-    svg+='<circle cx="50" cy="50" r="'+((R+r)/2)+'" fill="none" stroke="'+colorAt(0)+'" stroke-width="'+(R-r)+'"/>'+
-         '<text x="50" y="'+(cy-R+11)+'" text-anchor="middle" font-size="4.4" fill="#1b1f1d">100% '+esc(cs[0].h.sym)+'</text>';
+    paths='<circle data-i="0" cx="50" cy="50" r="'+((R+r)/2)+'" fill="none" stroke="'+colorAt(0)+'" stroke-width="'+(R-r)+'"/>';
+    labels='<text x="50" y="'+(cy-R+r/2+2)+'" text-anchor="middle" font-size="3.6" font-weight="600" fill="#1b1f1d">100% '+esc(shortName(cs[0].h.sym,8))+'</text>';
   } else {
     for(i=0;i<cs.length;i++){
       var fr=cs[i].valueTHB/tot, a1=a0+fr*2*Math.PI, lg=fr>0.5?1:0;
       var x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
       var x2=cx+r*Math.cos(a1),y2=cy+r*Math.sin(a1),x3=cx+r*Math.cos(a0),y3=cy+r*Math.sin(a0);
-      svg+='<path d="M'+x0.toFixed(3)+' '+y0.toFixed(3)+' A'+R+' '+R+' 0 '+lg+' 1 '+x1.toFixed(3)+' '+y1.toFixed(3)+
+      paths+='<path data-i="'+i+'" d="M'+x0.toFixed(3)+' '+y0.toFixed(3)+' A'+R+' '+R+' 0 '+lg+' 1 '+x1.toFixed(3)+' '+y1.toFixed(3)+
            ' L'+x2.toFixed(3)+' '+y2.toFixed(3)+' A'+r+' '+r+' 0 '+lg+' 0 '+x3.toFixed(3)+' '+y3.toFixed(3)+
-           ' Z" fill="'+colorAt(i)+'" stroke="#2a2d2c" stroke-width="0.6"/>';
-      if(fr>=0.06){
-        var am=(a0+a1)/2, rm=(R+r)/2;
-        var tx=cx+rm*Math.cos(am), ty=cy+rm*Math.sin(am);
-        svg+='<text text-anchor="middle" fill="#1b1f1d" font-size="3.6" font-weight="600">'+
-             '<tspan x="'+tx.toFixed(2)+'" y="'+(ty-0.4).toFixed(2)+'">'+esc(cs[i].h.sym.replace(/\..*$/,""))+'</tspan>'+
-             '<tspan x="'+tx.toFixed(2)+'" dy="4.2">'+(fr*100).toFixed(1)+'%</tspan></text>';
+           ' Z" fill="'+colorAt(i)+'" stroke="#2a2d2c" stroke-width="0.4"/>';
+      var am=(a0+a1)/2, rm=(R+r)/2, tx=cx+rm*Math.cos(am), ty=cy+rm*Math.sin(am);
+      if(fr>=0.07){
+        labels+='<text text-anchor="middle" fill="#1b1f1d" font-size="3.4" font-weight="600">'+
+          '<tspan x="'+tx.toFixed(2)+'" y="'+(ty-0.3).toFixed(2)+'">'+esc(shortName(cs[i].h.sym,7))+'</tspan>'+
+          '<tspan x="'+tx.toFixed(2)+'" dy="3.8">'+(fr*100).toFixed(1)+'%</tspan></text>';
+      } else if(fr>=0.035){
+        labels+='<text x="'+tx.toFixed(2)+'" y="'+(ty+1).toFixed(2)+'" text-anchor="middle" fill="#1b1f1d" font-size="2.8" font-weight="600">'+
+          (fr*100).toFixed(1)+'%</text>';
       }
       a0=a1;
     }
   }
-  svg+='<text x="50" y="48.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">รวม (บาท)</text>'+
-       '<text x="50" y="54.5" text-anchor="middle" font-size="5" font-weight="600" fill="#eceff1">'+fmt(tot)+'</text>';
   var legend=cs.map(function(x,j){
-    return '<div class="lg"><i style="background:'+colorAt(j)+'"></i><span>'+esc(x.h.sym)+'</span>'+
-      '<span class="p">'+(x.valueTHB/tot*100).toFixed(1)+'%</span><span class="v">฿'+fmt(x.valueTHB)+'</span></div>';
+    return '<div class="lg" data-i="'+j+'"><i style="background:'+colorAt(j)+'"></i><span>'+esc(x.h.sym)+'</span>'+
+      '<span class="p">'+pctTxt(x.valueTHB/tot*100)+'</span><span class="v">฿'+fmt(x.valueTHB)+'</span></div>';
   }).join("");
   var skipped=portfolioCalcs(p).length-cs.length;
-  main.innerHTML='<div class="det"><svg class="pie" viewBox="0 0 100 100" role="img" aria-label="สัดส่วนการถือหุ้น">'+svg+
-    '</svg><div class="legend">'+legend+'</div>'+
+  main.innerHTML='<div class="det"><svg class="pie" viewBox="-2 -2 104 104" role="img" aria-label="สัดส่วนการถือหุ้น">'+
+    paths+labels+'<g id="ctr">'+centerSvg()+'</g></svg>'+
+    '<div class="hint2">แตะที่ชิ้นในวงกลมหรือที่รายการด้านล่าง เพื่อดูชื่อหุ้นและสัดส่วน</div>'+
+    '<div class="legend">'+legend+'</div>'+
     (skipped>0?'<div class="empty" style="padding:14px">ไม่รวม '+skipped+' ตัวที่ยังไม่มีราคา</div>':'')+'</div>';
 }
 
@@ -488,6 +522,12 @@ $("colhead").onclick=function(e){
   render();
 };
 $("main").onclick=function(e){
+  var sl=e.target.closest("[data-i]");
+  if(sl){
+    selectSlice(+sl.getAttribute("data-i"));
+    if(sl.classList.contains("lg")&&det.sel>=0) $("main").scrollTo({top:0,behavior:"smooth"});
+    return;
+  }
   var r=e.target.closest(".row"); if(!r) return;
   if(r.hasAttribute("data-pid")) openPortfolio(r.getAttribute("data-pid"));
   else if(r.hasAttribute("data-hid")) holdingDialog(view.id,r.getAttribute("data-hid"));
