@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T09:18:08+00:00",
+ "updated": "2026-10-22T09:27:47+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.68
@@ -9,25 +9,25 @@
    "price": 335.0,
    "currency": "THB",
    "prevClose": 335.0,
-   "t": 1792658876
+   "t": 1792659456
   },
   "AOT.BK": {
-   "price": 60.0,
+   "price": 59.75,
    "currency": "THB",
    "prevClose": 58.25,
-   "t": 1792658875
+   "t": 1792659459
   },
   "BDMS.BK": {
    "price": 19.4,
    "currency": "THB",
    "prevClose": 19.5,
-   "t": 1792658878
+   "t": 1792659440
   },
   "CPALL.BK": {
    "price": 44.0,
    "currency": "THB",
    "prevClose": 43.75,
-   "t": 1792658874
+   "t": 1792659430
   },
   "NVDA": {
    "price": 221.97,
@@ -36,10 +36,10 @@
    "t": 1792612800
   },
   "PTT.BK": {
-   "price": 41.25,
+   "price": 41.5,
    "currency": "THB",
    "prevClose": 40.75,
-   "t": 1792658882
+   "t": 1792659458
   },
   "TSM": {
    "price": 431.89,
