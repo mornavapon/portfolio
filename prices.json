@@ -1,35 +1,21 @@
 {
- "updated": "2026-10-22T03:00:35+00:00",
+ "updated": "2026-10-22T03:09:30+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.59,
-  "EUR": 37.734,
-  "VND": 0.0013
+  "USD": 33.58
  },
  "quotes": {
-  "PTT.BK": {
-   "price": 40.75,
-   "currency": "THB",
-   "prevClose": 40.75,
-   "t": 1792575478
-  },
   "AOT.BK": {
    "price": 58.25,
    "currency": "THB",
    "prevClose": 57.25,
    "t": 1792575478
   },
-  "AAPL": {
-   "price": 343.99,
-   "currency": "USD",
-   "prevClose": 339.5,
-   "t": 1792612801
-  },
-  "GC=F": {
-   "price": 4129.7,
-   "currency": "USD",
-   "prevClose": 4150.0,
-   "t": 1792637426
+  "PTT.BK": {
+   "price": 40.75,
+   "currency": "THB",
+   "prevClose": 40.75,
+   "t": 1792575478
   }
  }
 }
