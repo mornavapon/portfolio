@@ -28,7 +28,7 @@ button{font:inherit;color:inherit}
 
 /* ---------- ส่วนที่ตรึง ---------- */
 #bar{flex:none;display:flex;align-items:center;gap:2px;background:var(--bar);color:var(--bar-text);
-  padding:calc(6px + env(safe-area-inset-top)) 6px 6px 10px;min-height:56px}
+  padding:calc(2px + env(safe-area-inset-top)) 6px 2px 10px;min-height:48px}
 #bar h1{flex:1;min-width:0;margin:0;font-size:20px;font-weight:500;white-space:nowrap;
   overflow:hidden;text-overflow:ellipsis;padding-left:6px}
 .ib{width:44px;height:44px;border:0;background:transparent;border-radius:50%;
@@ -38,7 +38,7 @@ button{font:inherit;color:inherit}
 .spin svg{animation:sp 0.9s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 #tabs{flex:none;display:flex;background:var(--bar)}
-#tabs button{flex:1;border:0;background:transparent;padding:12px 0;font-size:14px;font-weight:600;
+#tabs button{flex:1;border:0;background:transparent;padding:9px 0;font-size:14px;font-weight:600;
   letter-spacing:.5px;color:var(--bar-dim);border-bottom:3px solid transparent}
 #tabs button.on{color:#fff;border-bottom-color:#fff}
 #status{flex:none;display:flex;align-items:center;gap:8px;justify-content:space-between;
@@ -47,12 +47,12 @@ button{font:inherit;color:inherit}
 #colhead{flex:none;margin:8px 8px 0;padding:8px 10px;background:var(--card);border-radius:10px 10px 0 0;
   font-size:12px}
 #main{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:0 8px;background:var(--bg)}
-#foot{flex:none;margin:0 8px calc(8px + env(safe-area-inset-bottom));padding:10px;background:var(--card);
+#foot{flex:none;margin:0 8px calc(8px + env(safe-area-inset-bottom));padding:11.1px 10px;background:var(--card);
   border-radius:0 0 10px 10px;font-size:13px}
 #colhead[hidden],#foot[hidden],#tabs[hidden]{display:none}
 
 /* ---------- ตาราง ---------- */
-.grid{display:grid;grid-template-columns:27fr 29fr 21fr 23fr;column-gap:6px;align-items:start}
+.grid{display:grid;grid-template-columns:24fr 29fr 20fr 27fr;column-gap:6px;align-items:start}
 .grid .c{min-width:0}
 .grid .r{text-align:right}
 #colhead .c{display:flex;flex-direction:column;gap:1px;color:var(--text);cursor:pointer;line-height:1.25}
@@ -60,17 +60,22 @@ button{font:inherit;color:inherit}
 #colhead b{font-weight:600}
 #colhead small{color:var(--muted);font-size:11px}
 #colhead .arrow{color:var(--accent);margin-left:3px;font-size:10px}
-.row{padding:11px 10px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13.5px;line-height:1.35}
+.row{padding:10.3px 10px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13.5px;line-height:1.35}
 .row:active{background:#323634}
 .row .nm{font-weight:600;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .row .sub{font-size:12px}
 .row .num{white-space:nowrap}
+/* ตัวเลขฝั่งขวา (มูลค่า / วันนี้ / กำไร) ใหญ่ขึ้นให้อ่านง่าย ความสูงแถวคงเดิม */
+.row .c.r,#foot .c.r{line-height:1.2}
+.row .c.r > div:first-child,#foot .c.r > div:first-child{font-size:17px}
+.row .c.r > div:nth-child(2),#foot .c.r > div:nth-child(2){font-size:14.5px}
 .row .line3{grid-column:1/-1;font-size:12px;color:var(--muted);margin-top:3px}
 .tag{font-size:10px;border:1px solid var(--muted);border-radius:4px;padding:0 3px;margin-left:4px;color:var(--muted)}
 .nop{color:#ffcf6b}
 .empty{padding:36px 16px;text-align:center;color:var(--muted);line-height:1.8;font-size:14px}
 #foot .c.r div{white-space:nowrap}
 #foot .lbl{font-weight:600}
+#foot .c:first-child .sub{white-space:nowrap}
 #foot .sub{font-size:12px}
 
 /* ---------- Details ---------- */
@@ -346,7 +351,7 @@ function headHTML(first,sortState){
   }
   return cell("name",first[0],first[1],false)+
     cell("value","มูลค่า","ต้นทุน",true)+
-    cell("today","วันนี้ +/−","% เทียบเมื่อวาน",true)+
+    cell("today","วันนี้ +/−","% เมื่อวาน",true)+
     cell("total","กำไร/ขาดทุน","% จากต้นทุน",true);
 }
 function footHTML(t,label,sub){
@@ -391,7 +396,7 @@ function renderOverview(){
     }).join("");
   }
   var all=[]; db.portfolios.forEach(function(p){all=all.concat(portfolioCalcs(p));});
-  foot.innerHTML=footHTML(totals(all),"รวมทุกพอร์ต","Unrealized · บาท");
+  foot.innerHTML=footHTML(totals(all),"รวมทุกพอร์ต","Unrealized");
 }
 
 /* ---------- Holdings ---------- */
@@ -432,7 +437,7 @@ function renderHoldings(p){
         '<div class="line3">'+qtyTxt(h.qty)+' หุ้น @ '+money(h.cost,c)+(c!=="THB"&&x.noFx?' · <span class="nop">ไม่มีอัตราแลกเปลี่ยน '+c+'</span>':'')+'</div></div>';
     }).join("");
   }
-  foot.innerHTML=footHTML(totals(cs),"รวมพอร์ต","Unrealized · บาท");
+  foot.innerHTML=footHTML(totals(cs),"รวมพอร์ต","Unrealized");
 }
 
 /* ---------- Details (pie chart) ---------- */
