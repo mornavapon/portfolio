@@ -1,13 +1,10 @@
 {
   "symbols": [
-    "PTT.BK",
     "AOT.BK",
-    "AAPL",
-    "GC=F"
+    "PTT.BK"
   ],
   "currencies": [
-    "EUR",
-    "USD",
-    "VND"
+    "USD"
   ]
 }
+
