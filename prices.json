@@ -1,27 +1,27 @@
 {
- "updated": "2026-10-22T06:39:25+00:00",
+ "updated": "2026-10-22T07:38:29+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.67
+  "USD": 33.65
  },
  "quotes": {
   "ADVANC.BK": {
    "price": 335.0,
    "currency": "THB",
    "prevClose": 335.0,
-   "t": 1792646999
+   "t": 1792652899
   },
   "AOT.BK": {
-   "price": 60.0,
+   "price": 59.75,
    "currency": "THB",
    "prevClose": 58.25,
-   "t": 1792646987
+   "t": 1792652905
   },
   "PTT.BK": {
    "price": 41.5,
    "currency": "THB",
    "prevClose": 40.75,
-   "t": 1792646978
+   "t": 1792652905
   }
  }
 }
