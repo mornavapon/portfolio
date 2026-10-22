@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T08:04:55+00:00",
+ "updated": "2026-10-22T08:30:48+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.66
@@ -9,19 +9,19 @@
    "price": 336.0,
    "currency": "THB",
    "prevClose": 335.0,
-   "t": 1792654464
+   "t": 1792656041
   },
   "AOT.BK": {
-   "price": 60.0,
+   "price": 59.75,
    "currency": "THB",
    "prevClose": 58.25,
-   "t": 1792654447
+   "t": 1792655985
   },
   "PTT.BK": {
    "price": 41.25,
    "currency": "THB",
    "prevClose": 40.75,
-   "t": 1792654475
+   "t": 1792656039
   }
  },
  "valuation": {
