@@ -1,27 +1,62 @@
 {
- "updated": "2026-10-22T07:38:29+00:00",
+ "updated": "2026-10-22T08:04:55+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.65
+  "USD": 33.66
  },
  "quotes": {
   "ADVANC.BK": {
-   "price": 335.0,
+   "price": 336.0,
    "currency": "THB",
    "prevClose": 335.0,
-   "t": 1792652899
+   "t": 1792654464
   },
   "AOT.BK": {
-   "price": 59.75,
+   "price": 60.0,
    "currency": "THB",
    "prevClose": 58.25,
-   "t": 1792652905
+   "t": 1792654447
   },
   "PTT.BK": {
-   "price": 41.5,
+   "price": 41.25,
    "currency": "THB",
    "prevClose": 40.75,
-   "t": 1792652905
+   "t": 1792654475
+  }
+ },
+ "valuation": {
+  "ADVANC.BK": {
+   "cur": "THB",
+   "src": "set",
+   "asof": "2026-10-21",
+   "mcap": 999334469731,
+   "pe": 18.67,
+   "pbv": 19.12,
+   "adj": true,
+   "dy": 10.74,
+   "t": 1792656280
+  },
+  "AOT.BK": {
+   "cur": "THB",
+   "src": "set",
+   "asof": "2026-10-21",
+   "mcap": 857142005150,
+   "pe": 45.9,
+   "pbv": 6.39,
+   "adj": true,
+   "dy": 1.35,
+   "t": 1792656280
+  },
+  "PTT.BK": {
+   "cur": "THB",
+   "src": "set",
+   "asof": "2026-10-21",
+   "mcap": 1178223598160,
+   "pe": 9.45,
+   "pbv": 0.98,
+   "adj": true,
+   "dy": 6.79,
+   "t": 1792656280
   }
  }
 }
