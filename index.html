@@ -49,10 +49,11 @@ button{font:inherit;color:inherit}
 #main{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:0 8px;background:var(--bg)}
 #foot{flex:none;margin:0 8px calc(8px + env(safe-area-inset-bottom));padding:11.1px 10px;background:var(--card);
   border-radius:0 0 10px 10px;font-size:13px}
+.ib[hidden]{display:none}
 #colhead[hidden],#foot[hidden],#tabs[hidden]{display:none}
 
 /* ---------- ตาราง ---------- */
-.grid{display:grid;grid-template-columns:24fr 29fr 20fr 27fr;column-gap:6px;align-items:start}
+.grid{display:grid;grid-template-columns:27fr 28fr 19fr 26fr;column-gap:6px;align-items:start}
 .grid .c{min-width:0}
 .grid .r{text-align:right}
 #colhead .c{display:flex;flex-direction:column;gap:1px;color:var(--text);cursor:pointer;line-height:1.25}
@@ -83,6 +84,8 @@ button{font:inherit;color:inherit}
 .pie{width:100%;max-width:600px;display:block;margin:0 auto;-webkit-user-select:none;user-select:none}
 .pie path,.pie circle{cursor:pointer;transition:opacity .15s,transform .15s;transform-origin:50px 50px}
 .pie .dim{opacity:.28}
+.pie [data-pk]{cursor:pointer;transition:opacity .15s,transform .15s;transform-origin:50px 50px}
+.pie path.sel{transform:scale(1.045)}
 .pie path.sel{transform:scale(1.045)}
 .pie text{font-family:inherit;pointer-events:none}
 .hint2{text-align:center;font-size:12px;color:var(--muted);margin-top:2px}
@@ -94,6 +97,10 @@ button{font:inherit;color:inherit}
 .lg .p{font-weight:600;min-width:56px;text-align:right}
 .lg .v{color:var(--muted);font-size:12.5px;min-width:80px;text-align:right}
 
+.pt{margin:18px 8px 2px;font-size:15px;font-weight:600}
+.pt small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:2px}
+.pie2{margin-bottom:6px}
+.sep{border:0;border-top:1px solid var(--line);margin:22px 8px 0}
 /* ---------- Valuation ---------- */
 .val{margin-top:22px}
 .val h3{margin:0 8px 6px;font-size:14px;font-weight:600}
@@ -151,6 +158,9 @@ dialog::backdrop{background:rgba(0,0,0,.62)}
     <h1 id="title">Overview</h1>
     <button class="ib" id="btnRefresh" aria-label="รีเฟรชราคา">
       <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
+    </button>
+    <button class="ib" id="btnPie" aria-label="ดูสัดส่วนทุกพอร์ต">
+      <svg viewBox="0 0 24 24"><path d="M11 2v9.1H20.9A10 10 0 0 0 11 2zM13 4.1A8 8 0 0 1 19 11h-6zM9 4.1A8 8 0 1 0 19.9 13H9z"/></svg>
     </button>
     <button class="ib" id="btnAdd" aria-label="เพิ่ม">
       <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>
@@ -301,12 +311,14 @@ var sortOv={key:"name",dir:1};
 var sortHd={key:"value",dir:-1};
 
 function render(){
-  var inP = view.name==="portfolio";
+  var inP = view.name==="portfolio", inA = view.name==="allpie";
   var p = inP ? getP(view.id) : null;
   if(inP && !p){view={name:"overview",id:null,tab:"holdings"}; inP=false;}
 
-  $("btnBack").hidden=!inP;
-  $("title").textContent = inP ? p.name : "Overview";
+  $("btnBack").hidden=!(inP||inA);
+  $("btnPie").hidden=inP||inA;
+  $("btnAdd").hidden=inA;
+  $("title").textContent = inP ? p.name : (inA ? "สัดส่วนทุกพอร์ต" : "Overview");
   $("tabs").hidden=!inP;
   if(inP){
     Array.prototype.forEach.call($("tabs").children,function(b){
@@ -316,7 +328,8 @@ function render(){
   var allCs=[]; db.portfolios.forEach(function(q){allCs=allCs.concat(portfolioCalcs(q));});
   renderStatus(inP?portfolioCalcs(p):allCs);
 
-  if(!inP) renderOverview();
+  if(inA) renderAllPie();
+  else if(!inP) renderOverview();
   else if(view.tab==="holdings") renderHoldings(p);
   else renderDetails(p);
   fitText();
@@ -552,10 +565,101 @@ function renderDetails(p){
     (skipped>0?'<div class="empty" style="padding:14px">ไม่รวม '+skipped+' ตัวที่ยังไม่มีราคา</div>':'')+'</div>';
 }
 
+/* ---------- สัดส่วนทุกพอร์ต (pie 2 วง) ---------- */
+var pies=[];
+function pieSvg(pi,items,tot){
+  var R=48,r=22,cx=50,cy=50,a0=-Math.PI/2,paths="",labels="",i;
+  if(items.length===1){
+    paths='<circle data-pk="'+pi+':0" cx="50" cy="50" r="'+((R+r)/2)+'" fill="none" stroke="'+colorAt(0)+'" stroke-width="'+(R-r)+'"/>';
+    labels='<text x="50" y="'+(cy-R+r/2+2)+'" text-anchor="middle" font-size="3.6" font-weight="600" fill="#1b1f1d">100% '+esc(items[0].short)+'</text>';
+  } else for(i=0;i<items.length;i++){
+    var fr=items[i].v/tot,a1=a0+fr*2*Math.PI,lg=fr>0.5?1:0;
+    var x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
+    var x2=cx+r*Math.cos(a1),y2=cy+r*Math.sin(a1),x3=cx+r*Math.cos(a0),y3=cy+r*Math.sin(a0);
+    paths+='<path data-pk="'+pi+':'+i+'" d="M'+x0.toFixed(3)+' '+y0.toFixed(3)+' A'+R+' '+R+' 0 '+lg+' 1 '+x1.toFixed(3)+' '+y1.toFixed(3)+
+      ' L'+x2.toFixed(3)+' '+y2.toFixed(3)+' A'+r+' '+r+' 0 '+lg+' 0 '+x3.toFixed(3)+' '+y3.toFixed(3)+
+      ' Z" fill="'+colorAt(i)+'" stroke="#2a2d2c" stroke-width="0.4"/>';
+    var am=(a0+a1)/2,rm=(R+r)/2,tx=cx+rm*Math.cos(am),ty=cy+rm*Math.sin(am);
+    if(fr>=0.07){
+      labels+='<text text-anchor="middle" fill="#1b1f1d" font-size="3.4" font-weight="600">'+
+        '<tspan x="'+tx.toFixed(2)+'" y="'+(ty-0.3).toFixed(2)+'">'+esc(items[i].short)+'</tspan>'+
+        '<tspan x="'+tx.toFixed(2)+'" dy="3.8">'+(fr*100).toFixed(1)+'%</tspan></text>';
+    } else if(fr>=0.035){
+      labels+='<text x="'+tx.toFixed(2)+'" y="'+(ty+1).toFixed(2)+'" text-anchor="middle" fill="#1b1f1d" font-size="2.8" font-weight="600">'+
+        (fr*100).toFixed(1)+'%</text>';
+    }
+    a0=a1;
+  }
+  return '<svg class="pie pie2" viewBox="-2 -2 104 104" role="img">'+paths+labels+'<g id="ctr'+pi+'">'+pieCenter(pi)+'</g></svg>';
+}
+function pieCenter(pi){
+  var P=pies[pi],sel=P.sel;
+  if(sel>=0){
+    var x=P.items[sel],f=x.v/P.tot*100;
+    return '<text x="50" y="43.5" text-anchor="middle" font-size="4.2" font-weight="600" fill="#eceff1">'+esc(x.short)+'</text>'+
+      '<text x="50" y="52.5" text-anchor="middle" font-size="7" font-weight="700" fill="'+colorAt(sel)+'">'+pctTxt(f)+'</text>'+
+      '<text x="50" y="58.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">฿'+fmt(x.v)+'</text>';
+  }
+  return '<text x="50" y="48.5" text-anchor="middle" font-size="3.4" fill="#9aa5a0">รวม (บาท)</text>'+
+    '<text x="50" y="54.5" text-anchor="middle" font-size="5.2" font-weight="600" fill="#eceff1">'+fmt(P.tot)+'</text>';
+}
+function pieSelect(pi,i){
+  var P=pies[pi]; P.sel=(P.sel===i)?-1:i;
+  var box=document.getElementById("pb"+pi); if(!box) return;
+  Array.prototype.forEach.call(box.querySelectorAll("[data-pk]"),function(el){
+    var k=+el.getAttribute("data-pk").split(":")[1];
+    el.classList.toggle("sel",k===P.sel&&el.tagName==="path");
+    el.classList.toggle("dim",P.sel>=0&&k!==P.sel);
+    if(el.classList.contains("lg")) el.classList.toggle("on",k===P.sel);
+  });
+  $("ctr"+pi).innerHTML=pieCenter(pi);
+}
+function pieBlock(pi,title,sub,items){
+  items=items.filter(function(x){return x.v>0;}).sort(function(a,b){return b.v-a.v;});
+  var tot=items.reduce(function(s,x){return s+x.v;},0);
+  pies[pi]={items:items,tot:tot,sel:-1};
+  var head='<div class="pt">'+title+'<small>'+sub+'</small></div>';
+  if(!items.length) return head+'<div class="empty" style="padding:14px">ยังไม่มีข้อมูล (ต้องมีหุ้นที่มีราคา)</div>';
+  var legend=items.map(function(x,j){
+    return '<div class="lg" data-pk="'+pi+':'+j+'"><i style="background:'+colorAt(j)+'"></i><span>'+esc(x.label)+
+      (x.note?' <small style="color:var(--muted)">'+esc(x.note)+'</small>':'')+'</span>'+
+      '<span class="p">'+pctTxt(x.v/tot*100)+'</span><span class="v">฿'+fmt(x.v)+'</span></div>';
+  }).join("");
+  return head+'<div id="pb'+pi+'">'+pieSvg(pi,items,tot)+'<div class="legend">'+legend+'</div></div>';
+}
+function renderAllPie(){
+  $("colhead").hidden=true; $("foot").hidden=true;
+  var byP=[],bySym={},skipped=0;
+  db.portfolios.forEach(function(p){
+    var sum=0;
+    portfolioCalcs(p).forEach(function(x){
+      if(x.missing||!(x.valueTHB>0)){skipped++;return;}
+      sum+=x.valueTHB;
+      var k=x.h.sym, o=bySym[k]||(bySym[k]={label:k,short:shortName(k,7),v:0,n:0});
+      o.v+=x.valueTHB; o.n++;
+    });
+    byP.push({label:p.name,short:p.name.replace(/^\d+\s*/,"").slice(0,8),v:sum});
+  });
+  var stocks=Object.keys(bySym).map(function(k){
+    var o=bySym[k]; if(o.n>1) o.note="("+o.n+" พอร์ต)"; return o;
+  });
+  $("main").innerHTML='<div class="det">'+
+    '<div class="hint2">แตะที่ชิ้นในวงกลมหรือที่รายการ เพื่อดูสัดส่วน</div>'+
+    pieBlock(0,"1) สัดส่วนแต่ละพอร์ต","มูลค่าของแต่ละพอร์ต เทียบกับทุกพอร์ตรวมกัน",byP)+
+    '<hr class="sep">'+
+    pieBlock(1,"2) สัดส่วนหุ้นทุกตัวรวมเป็นพอร์ตเดียว","หุ้นตัวเดียวกันในหลายพอร์ต (เช่น PTT) ถูกนำมารวมกัน",stocks)+
+    (skipped>0?'<div class="empty" style="padding:14px">ไม่รวม '+skipped+' ตัวที่ยังไม่มีราคา</div>':'')+'</div>';
+}
+
 /* ====================== การนำทาง ====================== */
 function openPortfolio(id){
   view={name:"portfolio",id:id,tab:"holdings"};
   try{history.pushState({p:id},"");}catch(e){}
+  render(); $("main").scrollTop=0;
+}
+function openAllPie(){
+  view={name:"allpie",id:null,tab:"holdings"};
+  try{history.pushState({p:"pie"},"");}catch(e){}
   render(); $("main").scrollTop=0;
 }
 function goOverview(fromPop){
@@ -577,6 +681,12 @@ $("colhead").onclick=function(e){
   render();
 };
 $("main").onclick=function(e){
+  var pk=e.target.closest("[data-pk]");
+  if(pk){
+    var a=pk.getAttribute("data-pk").split(":");
+    pieSelect(+a[0],+a[1]);
+    return;
+  }
   var sl=e.target.closest("[data-i]");
   if(sl){
     selectSlice(+sl.getAttribute("data-i"));
@@ -590,6 +700,7 @@ $("main").onclick=function(e){
 $("status").onclick=function(e){
   if(e.target.id==="warnQ") symbolsDialog(true);
 };
+$("btnPie").onclick=openAllPie;
 $("btnRefresh").onclick=function(){loadPrices(true);};
 $("btnAdd").onclick=function(){
   if(view.name==="overview") portfolioDialog(null); else holdingDialog(view.id,null);
