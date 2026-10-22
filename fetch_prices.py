@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""ดึงราคาหุ้นและอัตราแลกเปลี่ยนจาก Yahoo Finance แล้วเขียนลง prices.json
+"""ดึงราคาหุ้น อัตราแลกเปลี่ยน และข้อมูล valuation แล้วเขียนลง prices.json
 
 อ่านรายชื่อจาก symbols.json:
   {"symbols": ["PTT.BK", "AAPL", "GC=F"], "currencies": ["USD", "EUR", "VND"]}
 
-- Yahoo มักตอบ 429 (Too Many Requests) ให้เครื่องของ GitHub จึงใช้ curl_cffi (เลียนแบบ Chrome)
-  ถ้าติดตั้งไม่ได้จะใช้ urllib ธรรมดาแทน และถ้าโดน 429 จะรอแล้วลองใหม่
-- ถ้าโดนบล็อกติดๆ กัน 3 ตัว จะหยุดรอบนี้ทันที (ราคาเดิมยังอยู่ รอบหน้าลองใหม่เอง)
-- ตัวไหนดึงไม่สำเร็จ จะคงราคาเดิมของตัวนั้นไว้ ไม่ทำให้ทั้งไฟล์พัง
-- ถ้าราคาไม่เปลี่ยนจากรอบก่อน จะไม่เขียนไฟล์ (GitHub จะได้ไม่ commit ซ้ำ)
-- อัตราแลกเปลี่ยนทั้งหมดเก็บเป็น "1 หน่วยสกุลนั้น = กี่บาท"
+ราคา / อัตราแลกเปลี่ยน : Yahoo Finance (ทุกรอบที่รัน)
+Valuation (มูลค่าตลาด, P/E, P/BV, ปันผล) : รีเฟรชไม่เกินวันละ 2 ครั้งต่อหุ้น
+  - หุ้นไทย (.BK)  : set.or.th หน้า Factsheet (ล้านบาท, P/E, P/BV) ปรับตามราคาล่าสุด
+                     ถ้า set.or.th ดึงไม่ได้ จะใช้ Yahoo Finance แทน
+  - หุ้นต่างประเทศ : Yahoo Finance
+  - ปันผลต่อปี (D/V): ผลรวมปันผลย้อนหลัง 12 เดือน หารด้วยราคา (จากข้อมูลของ Yahoo)
+
+หลักการ: ส่วนไหนดึงไม่ได้ จะคงค่าเดิมไว้ ไม่ทำให้ราคาหรือทั้งไฟล์พัง
+อัตราแลกเปลี่ยนทั้งหมดเก็บเป็น "1 หน่วยสกุลนั้น = กี่บาท"
 """
+import html as htmlmod
 import json
 import random
+import re
 import subprocess
 import sys
 import time
@@ -26,12 +31,14 @@ ROOT = Path(__file__).parent
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/124.0 Safari/537.36")
 HOSTS = ["query1.finance.yahoo.com", "query2.finance.yahoo.com"]
+SET_FACTSHEET = "https://www.set.or.th/en/market/product/stock/quote/{}/factsheet"
 # สกุลเงินที่ Yahoo รายงานเป็นหน่วยย่อย (เช่น เพนนี) -> (สกุลหลัก, ตัวหาร)
 MINOR_UNITS = {"GBp": ("GBP", 100.0), "GBX": ("GBP", 100.0),
                "ZAc": ("ZAR", 100.0), "ILA": ("ILS", 100.0)}
 MAX_ATTEMPTS = 3          # ลองต่อตัวกี่ครั้ง
 BACKOFF = [6, 15]         # วินาทีที่รอก่อนลองใหม่ (ครั้งที่ 1, 2)
 STOP_AFTER_BLOCKED = 3    # โดนบล็อกติดกันกี่ตัวแล้วหยุดรอบนี้
+VAL_TTL = 12 * 3600       # valuation ของแต่ละตัวรีเฟรชไม่ถี่กว่านี้ (วินาที)
 
 
 class HttpErr(Exception):
@@ -79,26 +86,31 @@ def get_session():
         return None
 
 
-def http_json(host, path):
-    url = "https://" + host + path
+def http_text(url, headers=None):
+    hdr = {"Accept": "text/html,application/json,*/*", "Accept-Language": "en-US,en;q=0.9"}
+    if headers:
+        hdr.update(headers)
     s = get_session()
     if s is not None:
-        r = s.get(url, timeout=25)
+        r = s.get(url, headers=hdr, timeout=30)
         if r.status_code != 200:
             raise HttpErr(r.status_code)
-        return r.json()
-    req = urllib.request.Request(url, headers={
-        "User-Agent": UA, "Accept": "application/json,text/plain,*/*",
-        "Accept-Language": "en-US,en;q=0.9"})
+        return r.text
+    hdr["User-Agent"] = UA
+    req = urllib.request.Request(url, headers=hdr)
     try:
-        with urllib.request.urlopen(req, timeout=25) as r:
-            return json.load(r)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.read().decode("utf-8", "replace")
     except urllib.error.HTTPError as e:
         raise HttpErr(e.code, e.reason) from None
 
 
-def fetch_chart(symbol):
-    path = "/v8/finance/chart/" + urllib.parse.quote(symbol, safe="") + "?interval=1d&range=5d"
+def http_json(host, path):
+    return json.loads(http_text("https://" + host + path, {"Accept": "application/json,*/*"}))
+
+
+def fetch_chart(symbol, query="interval=1d&range=5d"):
+    path = "/v8/finance/chart/" + urllib.parse.quote(symbol, safe="") + "?" + query
     last = None
     for attempt in range(MAX_ATTEMPTS):
         host = HOSTS[attempt % len(HOSTS)]
@@ -143,6 +155,24 @@ def parse_quote(data):
     return q
 
 
+def closes_by_date(data):
+    """{'2026-10-21': 335.0, ...} ราคาปิดรายวันตามวันที่ท้องถิ่นของตลาด (ใช้ปรับ valuation ให้ตรงราคา)"""
+    try:
+        res = data["chart"]["result"][0]
+        off = res["meta"].get("gmtoffset") or 0
+        ts = res.get("timestamp") or []
+        cl = res["indicators"]["quote"][0]["close"]
+    except (KeyError, IndexError, TypeError):
+        return {}
+    out = {}
+    for t, c in zip(ts, cl):
+        if c is None:
+            continue
+        out[datetime.fromtimestamp(t + off, timezone.utc).date().isoformat()] = float(c)
+    return out
+
+
+# ---------------------------------------------------------------- อัตราแลกเปลี่ยน
 def fx_usdthb():
     d = fetch_chart("USDTHB=X")["chart"]["result"][0]["meta"]
     return float(d["regularMarketPrice"])
@@ -164,8 +194,193 @@ def fx_to_thb(cur, usdthb):
     return usdthb / float(d["regularMarketPrice"])
 
 
+# ---------------------------------------------------------------- valuation
+def html_to_text(h):
+    h = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", h)
+    h = re.sub(r"(?s)<[^>]+>", " ", h)
+    return re.sub(r"\s+", " ", htmlmod.unescape(h))
+
+
+def _num(tok):
+    try:
+        return float(tok.replace(",", ""))
+    except (ValueError, AttributeError):
+        return None
+
+
+def parse_set_factsheet(page):
+    """อ่าน Market Cap (ล้านบาท), P/E, P/BV และวันที่ข้อมูล จากหน้า Factsheet ของ set.or.th"""
+    t = html_to_text(page)
+
+    def grab(label):
+        m = re.search(label + r"\s*:?\s*(-?[\d,]*\.?\d+|N/?A|-)(?![\w.])", t, re.I)
+        return _num(m.group(1)) if m else None
+
+    f = {
+        "mcap": grab(r"Market\s*Cap\s*\((?:M\.?\s*Baht|ล้านบาท)\)"),
+        "pe": grab(r"P/E\s*\(X\)"),
+        "pbv": grab(r"P/BV\s*\(X\)"),
+        "asof": None,
+    }
+    m = re.search(r"As of\s+(\d{1,2}\s+[A-Za-z]{3}\s+\d{4})", t)
+    if m:
+        try:
+            f["asof"] = datetime.strptime(re.sub(r"\s+", " ", m.group(1)), "%d %b %Y").date().isoformat()
+        except ValueError:
+            pass
+    if f["mcap"] is None and f["pe"] is None and f["pbv"] is None:
+        raise ValueError("หาตัวเลข Market Cap / P/E / P/BV ในหน้า SET ไม่เจอ (โครงหน้าเว็บอาจเปลี่ยน)")
+    return f
+
+
+def set_valuation(sym, quote, closes):
+    """valuation หุ้นไทยจาก set.or.th ปรับตามราคาล่าสุดของ Yahoo"""
+    code = sym[:-3]
+    f = parse_set_factsheet(http_text(SET_FACTSHEET.format(urllib.parse.quote(code, safe=""))))
+    k = 1.0
+    adj = False
+    asof = f.get("asof")
+    if quote and asof and closes and closes.get(asof, 0) > 0:
+        r = quote["price"] / closes[asof]
+        if 0.7 < r < 1.4:   # กันค่าเพี้ยน
+            k, adj = r, True
+    e = {"cur": "THB", "src": "set", "asof": asof}
+    e["mcap"] = round(f["mcap"] * 1e6 * k) if f["mcap"] is not None else None
+    e["pe"] = round(f["pe"] * k, 2) if f["pe"] is not None else None
+    e["pbv"] = round(f["pbv"] * k, 2) if f["pbv"] is not None else None
+    if adj:
+        e["adj"] = True
+    return e
+
+
+_crumb = None
+
+
+def yahoo_fundamentals(symbols):
+    """มูลค่าตลาด, P/E, P/BV จาก Yahoo (ต้องใช้ crumb) คืน {symbol: {...}}"""
+    global _crumb
+    s = get_session()
+    if s is None:
+        print("ข้ามข้อมูล valuation จาก Yahoo: ต้องใช้ curl_cffi", file=sys.stderr)
+        return {}
+    out = {}
+    try:
+        if _crumb is None:
+            r = s.get("https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=20)
+            c = r.text.strip()
+            if r.status_code != 200 or not c or "<" in c or " " in c:
+                raise HttpErr(r.status_code, "getcrumb")
+            _crumb = c
+        for i in range(0, len(symbols), 40):
+            chunk = symbols[i:i + 40]
+            url = ("https://query1.finance.yahoo.com/v7/finance/quote?symbols="
+                   + urllib.parse.quote(",".join(chunk), safe=",") + "&crumb=" + urllib.parse.quote(_crumb))
+            r = s.get(url, timeout=30)
+            if r.status_code != 200:
+                print("Yahoo quote HTTP", r.status_code, file=sys.stderr)
+                continue
+            for it in r.json().get("quoteResponse", {}).get("result", []):
+                cur = it.get("currency") or ""
+                cur = MINOR_UNITS[cur][0] if cur in MINOR_UNITS else cur
+                out[str(it.get("symbol", "")).upper()] = {
+                    "cur": cur,
+                    "mcap": it.get("marketCap"),
+                    "pe": round(float(it["trailingPE"]), 2) if it.get("trailingPE") else None,
+                    "pbv": round(float(it["priceToBook"]), 2) if it.get("priceToBook") else None,
+                }
+            time.sleep(1)
+    except Exception as e:  # noqa: BLE001
+        print("ดึง valuation จาก Yahoo ไม่ได้:", e, file=sys.stderr)
+    return out
+
+
+def trailing_dividend_yield(sym, price):
+    """% ปันผลย้อนหลัง 12 เดือน = ผลรวมปันผลที่จ่ายใน 1 ปี / ราคาปัจจุบัน"""
+    data = fetch_chart(sym, "interval=1d&range=1y&events=div")
+    res = data["chart"]["result"][0]
+    divs = (res.get("events") or {}).get("dividends") or {}
+    cur = (res.get("meta") or {}).get("currency")
+    factor = MINOR_UNITS[cur][1] if cur in MINOR_UNITS else 1.0
+    cutoff = time.time() - 365 * 86400
+    total = sum(float(d.get("amount") or 0) for d in divs.values() if (d.get("date") or 0) >= cutoff) / factor
+    if total <= 0 or not price:
+        return None
+    return round(total / price * 100, 2)
+
+
 def pause():
     time.sleep(random.uniform(0.7, 1.4))
+
+
+def build_valuation(symbols, quotes, closes_map, old_val, now=None):
+    """รวม valuation ทุกตัว ใช้ค่าเดิมถ้ายังไม่ถึงเวลารีเฟรช ตัวไหนดึงไม่ได้คงค่าเดิมไว้"""
+    now = int(now or time.time())
+    val, todo = {}, []
+    for s in symbols:
+        o = old_val.get(s)
+        if o:
+            val[s] = o
+        if not o or now - int(o.get("t", 0)) >= VAL_TTL:
+            todo.append(s)
+    if not todo:
+        return val
+    print(f"รีเฟรช valuation {len(todo)} ตัว:", ", ".join(todo))
+
+    new = {}
+    need_yahoo = set()
+    for s in todo:
+        if s.upper().endswith(".BK"):
+            try:
+                new[s] = set_valuation(s, quotes.get(s), closes_map.get(s))
+                pause()
+            except Exception as e:  # noqa: BLE001
+                print("SET FAIL", s, "->", e, "(จะลองใช้ Yahoo แทน)", file=sys.stderr)
+                need_yahoo.add(s)
+        else:
+            need_yahoo.add(s)
+    if need_yahoo:
+        yf = yahoo_fundamentals(sorted(need_yahoo))
+        for s in need_yahoo:
+            if s in yf:
+                new[s] = dict(yf[s], src="yahoo")
+
+    blocked = 0
+    for s in todo:
+        q = quotes.get(s)
+        e = new.setdefault(s, {})
+        if blocked >= STOP_AFTER_BLOCKED:
+            break
+        try:
+            e["dy"] = trailing_dividend_yield(s, q["price"] if q else None)
+            blocked = 0
+        except Blocked as ex:
+            blocked += 1
+            print("DIV BLOCKED", ex, file=sys.stderr)
+        except Exception as ex:  # noqa: BLE001
+            print("DIV FAIL", s, ex, file=sys.stderr)
+        pause()
+
+    for s in todo:
+        e, o = new.get(s, {}), old_val.get(s, {})
+        keys = ("mcap", "pe", "pbv", "dy")
+        if not any(e.get(k) is not None for k in keys):
+            continue                        # รอบนี้ไม่ได้อะไรใหม่เลย: คงของเดิมไว้ทั้งก้อน แล้วลองใหม่รอบหน้า
+        core_new = any(e.get(k) is not None for k in ("mcap", "pe", "pbv"))
+        for k in keys:                      # ช่องไหนได้ค่าใหม่ใช้ค่าใหม่ ไม่ได้ก็คงของเดิม
+            if e.get(k) is None and o.get(k) is not None:
+                e[k] = o[k]
+        if "src" not in e:                  # ได้แค่ปันผล: ที่มาของ P/E ฯลฯ ยังเป็นของเดิม
+            for k in ("src", "asof", "adj"):
+                if k in o:
+                    e[k] = o[k]
+        q = quotes.get(s)
+        e.setdefault("cur", (q or {}).get("currency") or o.get("cur") or "")
+        # ได้ตัวเลขหลักครบจึงนับว่ารีเฟรชแล้ว ถ้าได้แค่ปันผล ให้ลองใหม่อีกใน ~30 นาที
+        e["t"] = now if core_new else (o.get("t") or now - VAL_TTL + 1800)
+        val[s] = e
+        print("VAL", s, "src=" + str(e.get("src")), "mcap=", e.get("mcap"), "pe=", e.get("pe"),
+              "pbv=", e.get("pbv"), "dy=", e.get("dy"), "asof=", e.get("asof"))
+    return val
 
 
 def main():
@@ -186,8 +401,9 @@ def main():
             old = {}
     old_q = old.get("quotes", {})
     old_fx = old.get("fx", {})
+    old_val = old.get("valuation", {})
 
-    quotes, failed, fresh = {}, [], set()
+    quotes, failed, fresh, closes_map = {}, [], set(), {}
     blocked_run = 0
     stopped = False
     for s in symbols:
@@ -197,7 +413,9 @@ def main():
                 quotes[s] = old_q[s]
             continue
         try:
-            quotes[s] = parse_quote(fetch_chart(s))
+            data = fetch_chart(s)
+            quotes[s] = parse_quote(data)
+            closes_map[s] = closes_by_date(data)
             fresh.add(s)
             blocked_run = 0
         except Blocked as e:
@@ -249,17 +467,28 @@ def main():
             if cur in old_fx:
                 fx[cur] = old_fx[cur]
 
-    if old.get("quotes") == quotes and old.get("fx") == fx:
-        print("ราคาไม่เปลี่ยน ไม่เขียนไฟล์")
+    # valuation: ถ้าส่วนนี้พัง ต้องไม่ทำให้ราคาพังตามไปด้วย
+    valuation = {s: v for s, v in old_val.items() if s in symbols}
+    if not stopped:
+        try:
+            valuation = build_valuation([s for s in symbols if s in quotes], quotes, closes_map, old_val)
+        except Exception as e:  # noqa: BLE001
+            print("valuation ผิดพลาด (ราคายังอัปเดตตามปกติ):", e, file=sys.stderr)
+
+    if (old.get("quotes") == quotes and old.get("fx") == fx
+            and old.get("valuation", {}) == valuation):
+        print("ข้อมูลไม่เปลี่ยน ไม่เขียนไฟล์")
         return
 
     result = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "fx": fx,
         "quotes": quotes,
+        "valuation": valuation,
     }
     out_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"เขียน prices.json แล้ว: ได้ราคาใหม่ {len(fresh)}/{len(symbols)} ตัว, fx={sorted(fx)}")
+    print(f"เขียน prices.json แล้ว: ได้ราคาใหม่ {len(fresh)}/{len(symbols)} ตัว, "
+          f"valuation {len(valuation)} ตัว, fx={sorted(fx)}")
     if failed:
         print("ตัวที่ดึงไม่ได้รอบนี้:", ", ".join(failed))
 
