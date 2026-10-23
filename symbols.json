@@ -23,6 +23,7 @@
     "COIN",
     "COST",
     "CPALL.BK",
+    "CPF.BK",
     "CRWV",
     "CSCO",
     "FDX",
@@ -61,6 +62,7 @@
     "TMUS",
     "TSLA",
     "TSM",
+    "TVO.BK",
     "UNH",
     "V",
     "VFS",
@@ -72,6 +74,8 @@
     "YUM"
   ],
   "currencies": [
+    "CNY",
+    "HKD",
     "USD"
   ]
 }
