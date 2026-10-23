@@ -1027,7 +1027,7 @@ function symbolsText(){
   var syms={}, curs={USD:1};
   db.portfolios.forEach(function(p){p.holdings.forEach(function(h){
     if(h.manual){ if(h.manual.cur!=="THB") curs[h.manual.cur]=1; }
-    else syms[h.sym]=1;
+    else { syms[h.sym]=1; var gc=(prices.quotes[h.sym]&&prices.quotes[h.sym].currency)||guessCur(h.sym); if(gc!=="THB") curs[gc]=1; }
   });});
   return JSON.stringify({symbols:Object.keys(syms).sort(),currencies:Object.keys(curs).sort()},null,2)+"\n";
 }
