@@ -430,7 +430,7 @@ function renderOverview(){
   var k=sortOv.key, d=sortOv.dir;
   rows.sort(function(a,b){
     var x,y;
-    if(k==="name"){return d*(a.i-b.i);}
+    if(k==="name"){return d*(a.p.name.localeCompare(b.p.name,undefined,{numeric:true,sensitivity:"base"})||(a.i-b.i));}
     if(k==="value"){x=a.t.v;y=b.t.v;}
     else if(k==="today"){x=a.t.dayPct;y=b.t.dayPct;}
     else {x=a.t.plPct;y=b.t.plPct;}
