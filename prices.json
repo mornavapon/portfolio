@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-22T23:53:42+00:00",
+ "updated": "2026-10-23T00:26:16+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.71
+  "USD": 33.69
  },
  "quotes": {
   "ADVANC.BK": {
@@ -32,7 +32,7 @@
   "NVDA": {
    "price": 212.21,
    "currency": "USD",
-   "prevClose": 221.970001,
+   "prevClose": 216.470001,
    "t": 1792699200
   },
   "PTT.BK": {
@@ -44,7 +44,7 @@
   "TSM": {
    "price": 412.35,
    "currency": "USD",
-   "prevClose": 431.890015,
+   "prevClose": 425.079987,
    "t": 1792699203
   }
  },
