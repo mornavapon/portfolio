@@ -142,6 +142,11 @@ dialog::backdrop{background:rgba(0,0,0,.62)}
 .dlg .acts .pri{background:var(--bar);color:#fff}
 .dlg .acts .dng{background:#6b2a26;color:#ffd5d0}
 .dlg .acts .row2{flex-basis:100%}
+.dlg .big{display:block;width:100%;margin-top:10px;padding:18px 12px;border:0;border-radius:14px;font-size:18px;
+  font-weight:600;background:var(--card2);color:var(--text)}
+.dlg .big:active{background:var(--bar)}
+.dlg .big.tv{background:var(--bar);color:#fff}
+.dlg .big.cx{background:transparent;color:var(--muted);font-weight:400;font-size:16px;padding:12px}
 .dlg .pv{margin-top:12px;padding:10px;border-radius:10px;background:var(--card2);font-size:13.5px;line-height:1.7}
 #toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
   background:#101312;color:#fff;padding:10px 16px;border-radius:22px;font-size:14px;max-width:88vw;
@@ -757,7 +762,7 @@ $("main").onclick=function(e){
   }
   var r=e.target.closest(".row"); if(!r) return;
   if(r.hasAttribute("data-pid")) openPortfolio(r.getAttribute("data-pid"));
-  else if(r.hasAttribute("data-hid")) holdingDialog(view.id,r.getAttribute("data-hid"));
+  else if(r.hasAttribute("data-hid")) holdingChoice(view.id,r.getAttribute("data-hid"));
 };
 $("status").onclick=function(e){
   if(e.target.id==="warnQ") symbolsDialog(true);
@@ -853,6 +858,20 @@ function normSym(sym,p,manual){
   if(p.suffix && !/[.=^\-]/.test(sym)) sym+=p.suffix;
   return sym;
 }
+function holdingChoice(pid,hid){
+  var p=getP(pid); if(!p) return;
+  var h=p.holdings.filter(function(x){return x.id===hid;})[0]; if(!h) return;
+  var d=modal('<h2 style="margin-bottom:6px">'+esc(h.sym)+'</h2>'+
+    (h.manual?'':'<button class="big tv" data-x="tv">📈 ดูกราฟ (TradingView)</button>')+
+    '<button class="big" data-x="ed">✏️ แก้ไข / ซื้อ / ขาย</button>'+
+    '<button class="big cx" data-x="c">ยกเลิก</button>');
+  d.addEventListener("click",function(e){
+    var x=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(x==="tv"){ openTV(h.sym); d.close(); }
+    else if(x==="ed"){ d.close(); holdingDialog(pid,hid); }
+    else if(x==="c") d.close();
+  });
+}
 function holdingDialog(pid,hid){
   var p=getP(pid); if(!p) return;
   var h=hid?p.holdings.filter(function(x){return x.id===hid;})[0]:null;
@@ -873,7 +892,6 @@ function holdingDialog(pid,hid){
       '<label>สกุลเงินของราคา/ต้นทุน</label><select id="fCur">'+opts+'</select>'+
       '<div class="hint">แอปจะไม่ดึงราคาให้ตัวนี้ คุณมาแก้ราคาเองเมื่อต้องการ (ตัวนี้ไม่ต้องอยู่ใน symbols.json)</div>'+
     '</div>'+
-    (h&&!man?'<div class="acts"><button data-x="tv">📈 ดูกราฟใน TradingView</button></div>':'')+
     '<div class="acts">'+
       (h?'<button class="row2" data-x="buy">ซื้อเพิ่ม</button><button class="row2" data-x="sell">ขายบางส่วน</button>':'')+
       (h?'<button class="dng" data-x="del">ลบ</button>':'<button data-x="c">ยกเลิก</button>')+
@@ -890,7 +908,6 @@ function holdingDialog(pid,hid){
     var x=e.target.getAttribute&&e.target.getAttribute("data-x");
     if(!x) return;
     if(x==="c") d.close();
-    else if(x==="tv"){ openTV(h.sym); }
     else if(x==="del"){
       if(confirm("ลบ "+h.sym+" ออกจากพอร์ต?")){
         p.holdings=p.holdings.filter(function(y){return y.id!==h.id;});
