@@ -528,6 +528,30 @@ function capTxt(v,cur){
 }
 function ratioTxt(x){return (x==null||!isFinite(x)||x<=0)?'<span class="na">-</span>':x.toFixed(2);}
 function yieldTxt(x){return (x==null||!isFinite(x))?'<span class="na">-</span>':x.toFixed(2)+"%";}
+/* ---------- แปลงชื่อหุ้น Yahoo เป็นรหัส TradingView แล้วเปิดกราฟ ---------- */
+var TV_EX={".BK":"SET",".HK":"HKEX",".SZ":"SZSE",".SS":"SSE",".T":"TSE",".L":"LSE",".PA":"EURONEXT",".AS":"EURONEXT",
+  ".BR":"EURONEXT",".LS":"EURONEXT",".DE":"XETR",".MI":"MIL",".MC":"BME",".SW":"SIX",".SI":"SGX",".KS":"KRX",
+  ".KQ":"KRX",".TW":"TWSE",".AX":"ASX",".TO":"TSX",".VN":"HOSE",".HE":"OMXHEX",".ST":"OMXSTO",".CO":"OMXCOP",".OL":"OSL"};
+var TV_FUT={"GC":"COMEX:GC1!","SI":"COMEX:SI1!","HG":"COMEX:HG1!","PL":"NYMEX:PL1!","CL":"NYMEX:CL1!","BZ":"NYMEX:BZ1!",
+  "NG":"NYMEX:NG1!","ES":"CME_MINI:ES1!","NQ":"CME_MINI:NQ1!","ZC":"CBOT:ZC1!","ZS":"CBOT:ZS1!","ZW":"CBOT:ZW1!"};
+function tvSymbol(sym){
+  sym=String(sym).trim().toUpperCase();
+  var m=/^([A-Z0-9]+)=F$/.exec(sym); if(m&&TV_FUT[m[1]]) return TV_FUT[m[1]];
+  m=/^([A-Z]{6})=X$/.exec(sym); if(m) return "FX_IDC:"+m[1];
+  m=/^([A-Z0-9]+)-USD$/.exec(sym); if(m) return "BINANCE:"+m[1]+"USDT";
+  var i=sym.lastIndexOf(".");
+  if(i>0){
+    var ex=TV_EX[sym.slice(i)], code=sym.slice(0,i);
+    if(ex){
+      if(ex==="HKEX") code=code.replace(/^0+(?=\d)/,"");
+      return ex+":"+code;
+    }
+  }
+  return sym.replace("-",".");   // หุ้นสหรัฐ: ให้ TradingView เลือกตลาดหลักเอง (BRK-B -> BRK.B)
+}
+function openTV(sym){
+  window.open("https://www.tradingview.com/chart/?symbol="+encodeURIComponent(tvSymbol(sym)),"_blank","noopener");
+}
 function tickerLink(x){
   var sym=x.h.sym;
   if(x.h.manual) return esc(sym);
@@ -849,6 +873,7 @@ function holdingDialog(pid,hid){
       '<label>สกุลเงินของราคา/ต้นทุน</label><select id="fCur">'+opts+'</select>'+
       '<div class="hint">แอปจะไม่ดึงราคาให้ตัวนี้ คุณมาแก้ราคาเองเมื่อต้องการ (ตัวนี้ไม่ต้องอยู่ใน symbols.json)</div>'+
     '</div>'+
+    (h&&!man?'<div class="acts"><button data-x="tv">📈 ดูกราฟใน TradingView</button></div>':'')+
     '<div class="acts">'+
       (h?'<button class="row2" data-x="buy">ซื้อเพิ่ม</button><button class="row2" data-x="sell">ขายบางส่วน</button>':'')+
       (h?'<button class="dng" data-x="del">ลบ</button>':'<button data-x="c">ยกเลิก</button>')+
@@ -865,6 +890,7 @@ function holdingDialog(pid,hid){
     var x=e.target.getAttribute&&e.target.getAttribute("data-x");
     if(!x) return;
     if(x==="c") d.close();
+    else if(x==="tv"){ openTV(h.sym); }
     else if(x==="del"){
       if(confirm("ลบ "+h.sym+" ออกจากพอร์ต?")){
         p.holdings=p.holdings.filter(function(y){return y.id!==h.id;});
