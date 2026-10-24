@@ -112,6 +112,10 @@ button{font:inherit;color:inherit}
 .vt th:first-child,.vt td:first-child{text-align:left;padding-left:8px}
 .vt a{color:var(--accent);text-decoration:none;font-weight:600}
 .vt .na{color:var(--muted)}
+.vt th[data-vs]{cursor:pointer;user-select:none}
+.vt th[data-vs]:active{color:var(--text)}
+.vt th .ar{color:var(--accent);font-size:9px;margin-left:2px}
+.vt th.on{color:var(--text)}
 .vnote{font-size:11.5px;color:var(--muted);line-height:1.65;margin:10px 8px 0}
 
 /* ---------- เมนู / dialog / toast ---------- */
@@ -565,23 +569,52 @@ function tickerLink(x){
               :"https://finance.yahoo.com/quote/"+encodeURIComponent(sym);
   return '<a href="'+url+'" target="_blank" rel="noopener">'+esc(thai?code:sym)+'</a>';
 }
+var sortVal={key:"",dir:-1}, valCs=[];
+function vsKey(x,k){
+  var V=prices.valuation||{}, v=x.h.manual?null:V[x.h.sym];
+  if(k==="name") return x.h.sym.replace(/\.BK$/i,"");
+  if(!v) return null;
+  if(k==="cap"){
+    var r=rateOf(v.cur||x.cur); if(r==null||!(v.mcap>0)) return null;
+    return v.mcap*r;
+  }
+  if(k==="pe"||k==="pbv"){var n=v[k]; return (n!=null&&isFinite(n)&&n>0)?n:null;}
+  if(k==="dy") return (v.dy!=null&&isFinite(v.dy))?v.dy:null;
+  return null;
+}
 function valuationHTML(cs){
+  valCs=cs;
   var V=prices.valuation||{}, newest=0, any=false;
-  var rows=cs.map(function(x){
+  var list=cs.slice(), k=sortVal.key, d=sortVal.dir;
+  if(k){
+    list.sort(function(a,b){
+      var x=vsKey(a,k), y=vsKey(b,k);
+      if(x==null&&y==null) return 0;
+      if(x==null) return 1;            // ไม่มีข้อมูล ไว้ล่างสุดเสมอ
+      if(y==null) return -1;
+      if(k==="name") return d*x.localeCompare(y,undefined,{sensitivity:"base"});
+      return d*(x-y);
+    });
+  }
+  var rows=list.map(function(x){
     var v=x.h.manual?null:V[x.h.sym];
     if(v){any=true; if(v.t>newest) newest=v.t;}
     var priceTxt=x.cur==="THB"?fmt(x.price):money(x.price,x.cur);
     return '<tr><td>'+tickerLink(x)+'</td><td>'+priceTxt+'</td><td>'+capTxt(v?v.mcap:null,v?v.cur:x.cur)+
       '</td><td>'+ratioTxt(v?v.pe:null)+'</td><td>'+ratioTxt(v?v.pbv:null)+'</td><td>'+yieldTxt(v?v.dy:null)+'</td></tr>';
   }).join("");
+  function th(key,label){
+    var on=(k===key);
+    return '<th data-vs="'+key+'"'+(on?' class="on"':'')+'>'+label+(on?'<span class="ar">'+(d>0?'▲':'▼')+'</span>':'')+'</th>';
+  }
   var note=any
     ?'หุ้นไทยใช้ข้อมูลจาก set.or.th ปรับตามราคาล่าสุด (ลบ = ล้านบาท) · หุ้นต่างประเทศจาก Yahoo Finance · '+
       'D/V = เงินปันผลย้อนหลัง 12 เดือน ÷ ราคา · อัปเดตข้อมูล '+
       new Date(newest*1000).toLocaleString("th-TH",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+
-      '<br>แตะชื่อหุ้นเพื่อเปิดหน้างบการเงิน'
+      '<br>แตะหัวคอลัมน์เพื่อเรียงลำดับ (แตะซ้ำเพื่อกลับด้าน) · แตะชื่อหุ้นเพื่อเปิดหน้างบการเงิน'
     :'ยังไม่มีข้อมูล valuation ระบบบน GitHub จะดึงมาให้ในรอบถัดไป (ทุก 30 นาที) แล้วกด ⟳';
-  return '<div class="val"><h3>Valuation</h3><div class="vscroll"><table class="vt"><thead><tr>'+
-    '<th>TICKER</th><th>PRICE</th><th>MARKET CAP</th><th>P/E</th><th>P/BV</th><th>D/V<br>(ต่อปี)</th>'+
+  return '<div class="val" id="valBox"><h3>Valuation</h3><div class="vscroll"><table class="vt"><thead><tr>'+
+    th("name","TICKER")+'<th>PRICE</th>'+th("cap","MARKET CAP")+th("pe","P/E")+th("pbv","P/BV")+th("dy","D/V<br>(ต่อปี)")+
     '</tr></thead><tbody>'+rows+'</tbody></table></div><div class="vnote">'+note+'</div></div>';
 }
 function renderDetails(p){
@@ -748,6 +781,14 @@ $("colhead").onclick=function(e){
   render();
 };
 $("main").onclick=function(e){
+  var vs=e.target.closest("[data-vs]");
+  if(vs){
+    var key=vs.getAttribute("data-vs");
+    if(sortVal.key===key) sortVal.dir=-sortVal.dir; else {sortVal.key=key; sortVal.dir=(key==="name")?1:-1;}
+    var box=$("valBox");
+    if(box){var tmp=document.createElement("div"); tmp.innerHTML=valuationHTML(valCs); box.replaceWith(tmp.firstChild);}
+    return;
+  }
   var pk=e.target.closest("[data-pk]");
   if(pk){
     var a=pk.getAttribute("data-pk").split(":");
