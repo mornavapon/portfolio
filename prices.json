@@ -1,29 +1,29 @@
 {
- "updated": "2026-10-26T03:06:18+00:00",
+ "updated": "2026-10-26T04:07:23+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.77,
-  "CNY": 5.0668,
-  "HKD": 4.3062
+  "USD": 33.78,
+  "CNY": 5.0671,
+  "HKD": 4.3071
  },
  "quotes": {
   "2828.HK": {
-   "price": 79.7,
+   "price": 80.06,
    "currency": "HKD",
    "prevClose": 79.879997,
-   "t": 1792982989
+   "t": 1792986643
   },
   "300750.SZ": {
-   "price": 236.7,
+   "price": 239.52,
    "currency": "CNY",
    "prevClose": 237.600006,
-   "t": 1792982989
+   "t": 1792986634
   },
   "3188.HK": {
-   "price": 49.66,
+   "price": 49.84,
    "currency": "HKD",
    "prevClose": 49.860001,
-   "t": 1792982950
+   "t": 1792986553
   },
   "AAPL": {
    "price": 347.725,
@@ -34,8 +34,8 @@
   "ADVANC.BK": {
    "price": 336.0,
    "currency": "THB",
-   "prevClose": 335.0,
-   "t": 1792661722
+   "prevClose": 336.0,
+   "t": 1792985747
   },
   "AMD": {
    "price": 516.79,
@@ -56,10 +56,10 @@
    "t": 1792785601
   },
   "AOT.BK": {
-   "price": 59.75,
+   "price": 60.5,
    "currency": "THB",
-   "prevClose": 58.25,
-   "t": 1792661722
+   "prevClose": 59.75,
+   "t": 1792985752
   },
   "ARM": {
    "price": 210.33,
@@ -86,10 +86,10 @@
    "t": 1792785603
   },
   "BDMS.BK": {
-   "price": 19.4,
+   "price": 19.6,
    "currency": "THB",
-   "prevClose": 19.5,
-   "t": 1792661722
+   "prevClose": 19.4,
+   "t": 1792985767
   },
   "BLK": {
    "price": 1118.25,
@@ -140,16 +140,16 @@
    "t": 1792785601
   },
   "CPALL.BK": {
-   "price": 44.0,
+   "price": 43.5,
    "currency": "THB",
-   "prevClose": 43.75,
-   "t": 1792661722
+   "prevClose": 44.0,
+   "t": 1792985760
   },
   "CPF.BK": {
-   "price": 20.0,
+   "price": 20.1,
    "currency": "THB",
-   "prevClose": 20.1,
-   "t": 1792661722
+   "prevClose": 20.0,
+   "t": 1792985768
   },
   "CRWV": {
    "price": 54.235,
@@ -320,10 +320,10 @@
    "t": 1792785600
   },
   "PTT.BK": {
-   "price": 41.5,
+   "price": 42.25,
    "currency": "THB",
-   "prevClose": 40.75,
-   "t": 1792661722
+   "prevClose": 41.5,
+   "t": 1792985802
   },
   "QCOM": {
    "price": 175.91,
@@ -380,10 +380,10 @@
    "t": 1792785603
   },
   "TVO.BK": {
-   "price": 29.0,
+   "price": 29.25,
    "currency": "THB",
    "prevClose": 29.0,
-   "t": 1792661722
+   "t": 1792985802
   },
   "UNH": {
    "price": 418.09,
