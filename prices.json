@@ -1,35 +1,35 @@
 {
- "updated": "2026-10-28T02:41:33+00:00",
+ "updated": "2026-10-28T03:37:33+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.8,
-  "CNY": 5.0743,
-  "HKD": 4.3119
+  "USD": 33.81,
+  "CNY": 5.0721,
+  "HKD": 4.3114
  },
  "quotes": {
   "0700.HK": {
-   "price": 386.8,
+   "price": 388.2,
    "currency": "HKD",
    "prevClose": 385.200012,
-   "t": 1793154090
+   "t": 1793157545
   },
   "2828.HK": {
-   "price": 79.88,
+   "price": 80.14,
    "currency": "HKD",
    "prevClose": 80.099998,
-   "t": 1793154091
+   "t": 1793157527
   },
   "300750.SZ": {
-   "price": 231.4,
+   "price": 232.16,
    "currency": "CNY",
    "prevClose": 233.0,
-   "t": 1793154091
+   "t": 1793157547
   },
   "3188.HK": {
-   "price": 49.84,
+   "price": 49.88,
    "currency": "HKD",
    "prevClose": 50.099998,
-   "t": 1793154011
+   "t": 1793157332
   },
   "AAPL": {
    "price": 347.1,
@@ -56,22 +56,22 @@
    "t": 1793131360
   },
   "ADVANC.BK": {
-   "price": 335.0,
+   "price": 337.0,
    "currency": "THB",
-   "prevClose": 338.0,
-   "t": 1793093962
+   "prevClose": 335.0,
+   "t": 1793156640
   },
   "ADVICE.BK": {
    "price": 7.05,
    "currency": "THB",
    "prevClose": 7.1,
-   "t": 1793093962
+   "t": 1793156321
   },
   "AIT.BK": {
-   "price": 4.76,
+   "price": 4.74,
    "currency": "THB",
    "prevClose": 4.76,
-   "t": 1793093962
+   "t": 1793156621
   },
   "AMAT": {
    "price": 395.93,
@@ -101,7 +101,7 @@
    "price": 61.25,
    "currency": "THB",
    "prevClose": 61.25,
-   "t": 1793093962
+   "t": 1793156657
   },
   "ARM": {
    "price": 226.6,
@@ -116,10 +116,10 @@
    "t": 1793131201
   },
   "ASP.BK": {
-   "price": 2.32,
+   "price": 2.3,
    "currency": "THB",
-   "prevClose": 2.34,
-   "t": 1793093962
+   "prevClose": 2.32,
+   "t": 1793156401
   },
   "AVGO": {
    "price": 342.33,
@@ -128,16 +128,16 @@
    "t": 1793131201
   },
   "AXTRART.BK": {
-   "price": 11.6,
+   "price": 11.7,
    "currency": "THB",
-   "prevClose": 12.0,
-   "t": 1793093962
+   "prevClose": 11.6,
+   "t": 1793156640
   },
   "BA.BK": {
-   "price": 18.9,
+   "price": 18.4,
    "currency": "THB",
-   "prevClose": 19.299999,
-   "t": 1793093962
+   "prevClose": 18.9,
+   "t": 1793156667
   },
   "BAC": {
    "price": 50.68,
@@ -155,31 +155,31 @@
    "price": 185.0,
    "currency": "THB",
    "prevClose": 185.0,
-   "t": 1793093962
+   "t": 1793156649
   },
   "BCP.BK": {
-   "price": 51.5,
+   "price": 50.25,
    "currency": "THB",
-   "prevClose": 52.25,
-   "t": 1793093962
+   "prevClose": 51.5,
+   "t": 1793156667
   },
   "BDMS.BK": {
    "price": 19.9,
    "currency": "THB",
-   "prevClose": 19.700001,
-   "t": 1793093962
+   "prevClose": 19.9,
+   "t": 1793156667
   },
   "BH.BK": {
-   "price": 201.0,
+   "price": 200.0,
    "currency": "THB",
-   "prevClose": 200.0,
-   "t": 1793093962
+   "prevClose": 201.0,
+   "t": 1793156646
   },
   "BJC.BK": {
    "price": 19.9,
    "currency": "THB",
-   "prevClose": 18.799999,
-   "t": 1793093962
+   "prevClose": 19.9,
+   "t": 1793156662
   },
   "BLK": {
    "price": 1136.05,
@@ -200,22 +200,22 @@
    "t": 1793131342
   },
   "BTC-USD": {
-   "price": 80825.41,
+   "price": 81030.02,
    "currency": "USD",
    "prevClose": 80006.65625,
-   "t": 1793155021
+   "t": 1793158476
   },
   "BTG.BK": {
-   "price": 21.4,
+   "price": 20.8,
    "currency": "THB",
-   "prevClose": 21.5,
-   "t": 1793093962
+   "prevClose": 21.4,
+   "t": 1793156670
   },
   "BTS.BK": {
    "price": 1.93,
    "currency": "THB",
-   "prevClose": 1.95,
-   "t": 1793093962
+   "prevClose": 1.93,
+   "t": 1793156674
   },
   "C": {
    "price": 122.69,
@@ -230,10 +230,10 @@
    "t": 1793131202
   },
   "CENTEL.BK": {
-   "price": 47.5,
+   "price": 47.0,
    "currency": "THB",
-   "prevClose": 46.0,
-   "t": 1793093962
+   "prevClose": 47.5,
+   "t": 1793156670
   },
   "CME": {
    "price": 293.48,
@@ -254,10 +254,10 @@
    "t": 1793131201
   },
   "COM7.BK": {
-   "price": 33.25,
+   "price": 32.75,
    "currency": "THB",
-   "prevClose": 33.5,
-   "t": 1793093962
+   "prevClose": 33.25,
+   "t": 1793156669
   },
   "COST": {
    "price": 992.13,
@@ -266,28 +266,28 @@
    "t": 1793131201
   },
   "CPALL.BK": {
-   "price": 44.0,
+   "price": 44.25,
    "currency": "THB",
    "prevClose": 44.0,
-   "t": 1793093962
+   "t": 1793156689
   },
   "CPAXT.BK": {
    "price": 14.2,
    "currency": "THB",
    "prevClose": 14.2,
-   "t": 1793093962
+   "t": 1793156578
   },
   "CPF.BK": {
    "price": 20.0,
    "currency": "THB",
-   "prevClose": 20.200001,
-   "t": 1793093962
+   "prevClose": 20.0,
+   "t": 1793156693
   },
   "CPN.BK": {
-   "price": 65.0,
+   "price": 65.25,
    "currency": "THB",
    "prevClose": 65.0,
-   "t": 1793093962
+   "t": 1793156664
   },
   "CRWD": {
    "price": 268.02,
@@ -317,13 +317,13 @@
    "price": 1.32,
    "currency": "THB",
    "prevClose": 1.32,
-   "t": 1793093962
+   "t": 1793156642
   },
   "DELTA.BK": {
-   "price": 235.0,
+   "price": 230.0,
    "currency": "THB",
-   "prevClose": 241.0,
-   "t": 1793093962
+   "prevClose": 235.0,
+   "t": 1793156701
   },
   "DIS": {
    "price": 110.23,
@@ -340,20 +340,20 @@
   "E1VFVN3001.BK": {
    "price": 44.25,
    "currency": "THB",
-   "prevClose": 44.5,
-   "t": 1793093962
+   "prevClose": 44.25,
+   "t": 1793156654
   },
   "EGCO.BK": {
-   "price": 133.0,
+   "price": 132.0,
    "currency": "THB",
-   "prevClose": 133.5,
-   "t": 1793093962
+   "prevClose": 133.0,
+   "t": 1793156606
   },
   "ETH-USD": {
-   "price": 2354.96,
+   "price": 2361.88,
    "currency": "USD",
    "prevClose": 2320.28125,
-   "t": 1793155052
+   "t": 1793158506
   },
   "FDX": {
    "price": 307.1,
@@ -364,8 +364,8 @@
   "FUEVFVND01.BK": {
    "price": 42.0,
    "currency": "THB",
-   "prevClose": 42.25,
-   "t": 1793092814
+   "prevClose": 42.0,
+   "t": 1793156494
   },
   "GE": {
    "price": 297.66,
@@ -382,8 +382,8 @@
   "GPSC.BK": {
    "price": 51.25,
    "currency": "THB",
-   "prevClose": 51.5,
-   "t": 1793093962
+   "prevClose": 51.25,
+   "t": 1793156711
   },
   "GRID": {
    "price": 167.05,
@@ -398,10 +398,10 @@
    "t": 1793131202
   },
   "GULF.BK": {
-   "price": 61.5,
+   "price": 61.75,
    "currency": "THB",
-   "prevClose": 61.75,
-   "t": 1793093962
+   "prevClose": 61.5,
+   "t": 1793156717
   },
   "HD": {
    "price": 318.5,
@@ -410,10 +410,10 @@
    "t": 1793131202
   },
   "HMPRO.BK": {
-   "price": 6.5,
+   "price": 6.45,
    "currency": "THB",
-   "prevClose": 6.45,
-   "t": 1793093962
+   "prevClose": 6.5,
+   "t": 1793156714
   },
   "IMPACT.BK": {
    "price": 13.0,
@@ -434,10 +434,10 @@
    "t": 1793131201
   },
   "JMART.BK": {
-   "price": 10.5,
+   "price": 10.6,
    "currency": "THB",
-   "prevClose": 10.3,
-   "t": 1793093962
+   "prevClose": 10.5,
+   "t": 1793156723
   },
   "JNJ": {
    "price": 268.73,
@@ -458,16 +458,16 @@
    "t": 1793093962
   },
   "KBANK.BK": {
-   "price": 245.0,
+   "price": 247.0,
    "currency": "THB",
-   "prevClose": 244.0,
-   "t": 1793093962
+   "prevClose": 245.0,
+   "t": 1793156708
   },
   "KKP.BK": {
-   "price": 119.5,
+   "price": 119.0,
    "currency": "THB",
-   "prevClose": 121.0,
-   "t": 1793093962
+   "prevClose": 119.5,
+   "t": 1793156727
   },
   "KO": {
    "price": 91.18,
@@ -482,10 +482,10 @@
    "t": 1793093962
   },
   "LH.BK": {
-   "price": 3.6,
+   "price": 3.62,
    "currency": "THB",
-   "prevClose": 3.7,
-   "t": 1793093962
+   "prevClose": 3.6,
+   "t": 1793156730
   },
   "LHX": {
    "price": 259.4,
@@ -518,10 +518,10 @@
    "t": 1793093962
   },
   "M.BK": {
-   "price": 20.7,
+   "price": 20.6,
    "currency": "THB",
-   "prevClose": 20.1,
-   "t": 1793093962
+   "prevClose": 20.700001,
+   "t": 1793156723
   },
   "MA": {
    "price": 609.85,
@@ -545,7 +545,7 @@
    "price": 20.8,
    "currency": "THB",
    "prevClose": 20.799999,
-   "t": 1793093962
+   "t": 1793156743
   },
   "MJLF.BK": {
    "price": 6.1,
@@ -560,10 +560,10 @@
    "t": 1793131202
   },
   "MRDIYT.BK": {
-   "price": 8.5,
+   "price": 8.6,
    "currency": "THB",
    "prevClose": 8.5,
-   "t": 1793093962
+   "t": 1793156734
   },
   "MRK": {
    "price": 141.82,
@@ -628,8 +628,8 @@
   "OR.BK": {
    "price": 12.8,
    "currency": "THB",
-   "prevClose": 12.9,
-   "t": 1793093962
+   "prevClose": 12.8,
+   "t": 1793156757
   },
   "ORCL": {
    "price": 130.53,
@@ -638,10 +638,10 @@
    "t": 1793131454
   },
   "OSP.BK": {
-   "price": 18.3,
+   "price": 18.4,
    "currency": "THB",
-   "prevClose": 17.9,
-   "t": 1793093962
+   "prevClose": 18.299999,
+   "t": 1793156758
   },
   "OXY": {
    "price": 62.73,
@@ -686,22 +686,22 @@
    "t": 1793131202
   },
   "PSH.BK": {
-   "price": 3.82,
+   "price": 3.76,
    "currency": "THB",
    "prevClose": 3.82,
-   "t": 1793093962
+   "t": 1793156694
   },
   "PTT.BK": {
    "price": 42.0,
    "currency": "THB",
-   "prevClose": 41.75,
-   "t": 1793093962
+   "prevClose": 42.0,
+   "t": 1793156773
   },
   "PTTEP.BK": {
-   "price": 166.5,
+   "price": 163.0,
    "currency": "THB",
-   "prevClose": 162.0,
-   "t": 1793093962
+   "prevClose": 166.5,
+   "t": 1793156775
   },
   "QCOM": {
    "price": 184.17,
@@ -718,8 +718,8 @@
   "RATCH.BK": {
    "price": 38.75,
    "currency": "THB",
-   "prevClose": 39.25,
-   "t": 1793093962
+   "prevClose": 38.75,
+   "t": 1793156701
   },
   "RBLX": {
    "price": 54.47,
@@ -728,10 +728,10 @@
    "t": 1793131437
   },
   "RJH.BK": {
-   "price": 16.7,
+   "price": 16.5,
    "currency": "THB",
-   "prevClose": 16.5,
-   "t": 1793093962
+   "prevClose": 16.700001,
+   "t": 1793156451
   },
   "RKLB": {
    "price": 58.31,
@@ -752,16 +752,16 @@
    "t": 1793131200
   },
   "SCB.BK": {
-   "price": 153.5,
+   "price": 154.5,
    "currency": "THB",
-   "prevClose": 152.5,
-   "t": 1793093962
+   "prevClose": 153.5,
+   "t": 1793156782
   },
   "SCC.BK": {
-   "price": 278.0,
+   "price": 275.0,
    "currency": "THB",
-   "prevClose": 274.0,
-   "t": 1793093962
+   "prevClose": 278.0,
+   "t": 1793156783
   },
   "SCHD": {
    "price": 35.12,
@@ -782,10 +782,10 @@
    "t": 1793131200
   },
   "SIS.BK": {
-   "price": 24.6,
+   "price": 24.7,
    "currency": "THB",
-   "prevClose": 24.700001,
-   "t": 1793093962
+   "prevClose": 24.6,
+   "t": 1793156670
   },
   "SNDK": {
    "price": 1304.84,
@@ -806,10 +806,10 @@
    "t": 1793131202
   },
   "STGT.BK": {
-   "price": 10.2,
+   "price": 9.6,
    "currency": "THB",
-   "prevClose": 10.3,
-   "t": 1793093962
+   "prevClose": 10.2,
+   "t": 1793156784
   },
   "STX": {
    "price": 667.85,
@@ -821,13 +821,13 @@
    "price": 9.55,
    "currency": "THB",
    "prevClose": 9.6,
-   "t": 1793093962
+   "t": 1793156260
   },
   "TDEX.BK": {
-   "price": 10.56,
+   "price": 10.57,
    "currency": "THB",
-   "prevClose": 10.45,
-   "t": 1793093962
+   "prevClose": 10.55,
+   "t": 1793156419
   },
   "TFMAMA.BK": {
    "price": 183.0,
@@ -842,10 +842,10 @@
    "t": 1793131330
   },
   "THB=X": {
-   "price": 33.8,
+   "price": 33.81,
    "currency": "THB",
    "prevClose": 33.759998,
-   "t": 1793155117
+   "t": 1793158597
   },
   "TMUS": {
    "price": 146.83,
@@ -856,8 +856,8 @@
   "TRUE.BK": {
    "price": 12.8,
    "currency": "THB",
-   "prevClose": 13.0,
-   "t": 1793093962
+   "prevClose": 12.8,
+   "t": 1793156790
   },
   "TSLA": {
    "price": 407.46,
@@ -872,16 +872,16 @@
    "t": 1793131202
   },
   "TU.BK": {
-   "price": 13.1,
+   "price": 13.0,
    "currency": "THB",
-   "prevClose": 13.0,
-   "t": 1793093962
+   "prevClose": 13.1,
+   "t": 1793156777
   },
   "TVO.BK": {
-   "price": 28.75,
+   "price": 28.25,
    "currency": "THB",
-   "prevClose": 29.25,
-   "t": 1793093962
+   "prevClose": 28.75,
+   "t": 1793156735
   },
   "U": {
    "price": 40.1,
@@ -902,9 +902,9 @@
    "t": 1793131202
   },
   "VAYU1.BK": {
-   "price": 11.1,
+   "price": 11.2,
    "currency": "THB",
-   "t": 1793093962
+   "t": 1793156739
   },
   "VFS": {
    "price": 3.15,
@@ -925,10 +925,10 @@
    "t": 1793131200
   },
   "VIH.BK": {
-   "price": 8.3,
+   "price": 8.25,
    "currency": "THB",
-   "prevClose": 8.35,
-   "t": 1793093962
+   "prevClose": 8.3,
+   "t": 1793156749
   },
   "VOO": {
    "price": 707.52,
@@ -1073,7 +1073,7 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 1.69,
+   "dy": 1.68,
    "t": 1792684518
   },
   "300750.SZ": {
