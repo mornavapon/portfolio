@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-30T11:32:24+00:00",
+ "updated": "2026-10-30T12:15:37+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.68,
-  "CNY": 5.0628,
-  "HKD": 4.2942
+  "USD": 33.69,
+  "CNY": 5.0653,
+  "HKD": 4.296
  },
  "quotes": {
   "002352.SZ": {
@@ -393,10 +393,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 77647.67,
+   "price": 77410.71,
    "currency": "USD",
    "prevClose": 77775.109375,
-   "t": 1793359749,
+   "t": 1793362333,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -589,10 +589,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2244.62,
+   "price": 2236.42,
    "currency": "USD",
    "prevClose": 2249.498291,
-   "t": 1793359780,
+   "t": 1793362353,
    "name": "Ethereum USD"
   },
   "FDX": {
@@ -1240,10 +1240,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.67,
+   "price": 33.69,
    "currency": "THB",
    "prevClose": 33.687,
-   "t": 1793359882,
+   "t": 1793362477,
    "name": "USD/THB"
   },
   "TMUS": {
