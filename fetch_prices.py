@@ -152,6 +152,9 @@ def parse_quote(data):
     t = meta.get("regularMarketTime")
     if t:
         q["t"] = int(t)
+    nm = meta.get("longName") or meta.get("shortName")
+    if nm:
+        q["name"] = " ".join(str(nm).split())[:80]
     return q
 
 
@@ -415,6 +418,8 @@ def main():
         try:
             data = fetch_chart(s)
             quotes[s] = parse_quote(data)
+            if "name" not in quotes[s] and s in old_q and old_q[s].get("name"):
+                quotes[s]["name"] = old_q[s]["name"]   # ถ้ารอบนี้ Yahoo ไม่ส่งชื่อมา ใช้ชื่อเดิม
             closes_map[s] = closes_by_date(data)
             fresh.add(s)
             blocked_run = 0

@@ -70,6 +70,9 @@ button{font:inherit;color:inherit}
 .row .c.r,#foot .c.r{line-height:1.2}
 .row .c.r > div:first-child,#foot .c.r > div:first-child{font-size:17px}
 .row .c.r > div:nth-child(2),#foot .c.r > div:nth-child(2){font-size:14.5px}
+.row .fname{grid-column:1/-1;font-size:13px;line-height:1.15;color:#7d8883;margin-top:2.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .line3 .fn{color:#7d8883}
+.row .line3.ell{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .row .line3{grid-column:1/-1;font-size:14.5px;line-height:1.15;color:var(--muted);margin-top:2.5px}
 .tag{font-size:10px;border:1px solid var(--muted);border-radius:4px;padding:0 3px;margin-left:4px;color:var(--muted)}
 .nop{color:#ffcf6b}
@@ -155,6 +158,7 @@ dialog::backdrop{background:rgba(0,0,0,.62)}
   display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--text)}
 .dlg .sw i{width:40px;height:40px;border-radius:50%;display:block}
 .dlg .sw.on{border-color:#fff}
+.dlg .nms .sw{padding:12px 4px;font-size:13.5px;text-align:center}
 .dlg .big.cx{background:transparent;color:var(--muted);font-weight:400;font-size:16px;padding:12px}
 .dlg .pv{margin-top:12px;padding:10px;border-radius:10px;background:var(--card2);font-size:13.5px;line-height:1.7}
 #toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
@@ -467,6 +471,14 @@ function renderOverview(){
 }
 
 /* ---------- Holdings ---------- */
+function nameOf(sym){var q=prices.quotes&&prices.quotes[sym]; return (q&&q.name)?q.name:"";}
+function nameParts(h){
+  // คืน [บรรทัดชื่อแยก, ข้อความต่อท้ายบรรทัดจำนวนหุ้น] ตามที่เลือกในปุ่มปรับแต่ง
+  var n=h.manual?"":nameOf(h.sym), m=ui.n||"full";
+  if(!n||m==="off") return ["",""];
+  if(m==="compact") return ["",' <span class="fn">('+esc(n)+')</span>'];
+  return ['<div class="fname">('+esc(n)+')</div>',""];
+}
 function renderHoldings(p){
   var colhead=$("colhead"), main=$("main"), foot=$("foot");
   colhead.hidden=false; foot.hidden=false;
@@ -495,13 +507,14 @@ function renderHoldings(p){
           '<div class="c r num"><div>—</div><div>—</div></div>'+
           '<div class="line3">'+qtyTxt(h.qty)+' @ '+money(h.cost,c)+'</div></div>';
       }
+      var np=nameParts(h);
       return '<div class="row grid" data-hid="'+h.id+'">'+
         '<div class="c"><div class="nm">'+esc(h.sym)+'</div>'+
           '<div class="sub">'+money(x.price,c)+(h.manual?' · ตั้งเอง':'')+'</div></div>'+
         '<div class="c r num"><div>'+money(x.value,c)+'</div><div class="sub">'+money(x.cost,c)+'</div></div>'+
         '<div class="c r num"><div class="'+cls(x.day)+'">'+money(x.day,"",true)+'</div><div class="'+cls(x.day)+'">'+pct(x.dayPct,true)+'</div></div>'+
         '<div class="c r num"><div class="'+cls(x.pl)+'">'+money(x.pl,"",true)+'</div><div class="'+cls(x.pl)+'">'+pct(x.plPct,true)+'</div></div>'+
-        '<div class="line3">'+qtyTxt(h.qty)+' หุ้น @ '+money(h.cost,c)+(c!=="THB"&&x.noFx?' · <span class="nop">ไม่มีอัตราแลกเปลี่ยน '+c+'</span>':'')+'</div></div>';
+        np[0]+'<div class="line3'+(np[1]?' ell':'')+'">'+qtyTxt(h.qty)+' หุ้น @ '+money(h.cost,c)+np[1]+(c!=="THB"&&x.noFx?' · <span class="nop">ไม่มีอัตราแลกเปลี่ยน '+c+'</span>':'')+'</div></div>';
     }).join("");
   }
   foot.innerHTML=footHTML(totals(cs),"รวมพอร์ต","Unrealized");
@@ -1149,8 +1162,8 @@ var THEMES=[
   {id:"purple",name:"ม่วง",    bar:"#5e3d92", dark:"#4a2f74", dim:"#d3c6ea"},
   {id:"orange",name:"ส้ม",     bar:"#a2501c", dark:"#803e15", dim:"#f0cdb4"}
 ];
-var ui={c:"green",t:""};
-try{var u0=JSON.parse(localStorage.getItem("pf.ui")||"null"); if(u0&&typeof u0==="object"){ui.c=u0.c||"green"; ui.t=String(u0.t||"").slice(0,24);}}catch(e){}
+var ui={c:"green",t:"",n:"full"};
+try{var u0=JSON.parse(localStorage.getItem("pf.ui")||"null"); if(u0&&typeof u0==="object"){ui.c=u0.c||"green"; ui.t=String(u0.t||"").slice(0,24); ui.n=(u0.n==="compact"||u0.n==="off")?u0.n:"full";}}catch(e){}
 function saveUi(){try{localStorage.setItem("pf.ui",JSON.stringify(ui));}catch(e){}}
 function applyUi(){
   var th=THEMES.filter(function(x){return x.id===ui.c;})[0]||THEMES[0], r=document.documentElement.style;
@@ -1165,13 +1178,22 @@ function uiDialog(){
     '<label>สีแถบด้านบน</label><div class="sws">'+sw+'</div>'+
     '<label>ชื่อหน้าหลัก (แทนคำว่า Overview)</label>'+
     '<input id="uiT" type="text" maxlength="24" autocomplete="off" placeholder="Overview" value="'+esc(ui.t)+'">'+
+    '<label>ชื่อเต็มของหุ้น ในหน้าพอร์ต</label><div class="sws nms">'+
+      [["full","แยกบรรทัด"],["compact","ต่อท้ายจำนวนหุ้น"],["off","ไม่แสดง"]].map(function(o){
+        return '<button class="sw'+((ui.n||"full")===o[0]?' on':'')+'" data-n="'+o[0]+'"><span>'+o[1]+'</span></button>';}).join("")+'</div>'+
+    '<div class="hint">แยกบรรทัด = อ่านชื่อได้เต็ม แต่แถวสูงขึ้น · ต่อท้ายจำนวนหุ้น = แถวสูงเท่าเดิม แต่ชื่อยาวจะถูกตัด</div>'+
     '<div class="acts"><button data-x="rs">ตั้งค่าเดิม</button><button class="pri" data-x="ok">ตกลง</button></div>');
-  function mark(){Array.prototype.forEach.call(d.querySelectorAll(".sw"),function(b){b.classList.toggle("on",b.getAttribute("data-c")===ui.c);});}
+  function mark(){Array.prototype.forEach.call(d.querySelectorAll(".sw[data-c]"),function(b){b.classList.toggle("on",b.getAttribute("data-c")===ui.c);});}
   d.addEventListener("click",function(e){
     var b=e.target.closest(".sw");
+    if(b&&b.hasAttribute("data-n")){
+      ui.n=b.getAttribute("data-n"); saveUi();
+      Array.prototype.forEach.call(d.querySelectorAll(".sw[data-n]"),function(z){z.classList.toggle("on",z===b);});
+      return;
+    }
     if(b){ui.c=b.getAttribute("data-c"); saveUi(); applyUi(); mark(); return;}
     var x=e.target.getAttribute&&e.target.getAttribute("data-x");
-    if(x==="rs"){ui={c:"green",t:""}; saveUi(); applyUi(); d.close(); render();}
+    if(x==="rs"){ui={c:"green",t:"",n:"full"}; saveUi(); applyUi(); d.close(); render();}
     else if(x==="ok"){ui.t=val(d,"uiT").trim().slice(0,24); saveUi(); d.close(); render();}
   });
 }
