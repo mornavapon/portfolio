@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-30T21:12:49+00:00",
+ "updated": "2026-10-30T22:07:13+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.74,
-  "CNY": 5.0702,
+  "CNY": 5.074,
   "HKD": 4.3028
  },
  "quotes": {
@@ -61,7 +61,7 @@
    "currency": "HKD",
    "prevClose": 88.5,
    "t": 1793344365,
-   "name": "Global X China Clean Energy ETF"
+   "name": "Global X ETF Series OFC - Global X China Clean Energy ETF"
   },
   "2828.HK": {
    "price": 80.82,
@@ -82,14 +82,14 @@
    "currency": "HKD",
    "prevClose": 3.782,
    "t": 1793347686,
-   "name": "CSOP Hang Seng TECH Index ETF"
+   "name": "CSOP ETF Series - CSOP Hang Seng TECH Index ETF"
   },
   "3188.HK": {
    "price": 48.82,
    "currency": "HKD",
    "prevClose": 49.799999,
    "t": 1793347686,
-   "name": "ChinaAMC CSI 300 Index ETF"
+   "name": "ChinaAMC ETF Series - ChinaAMC CSI 300 Index ETF"
   },
   "3690.HK": {
    "price": 71.6,
@@ -393,10 +393,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 76539.92,
+   "price": 76686.89,
    "currency": "USD",
    "prevClose": 77775.109375,
-   "t": 1793394564,
+   "t": 1793397835,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -589,10 +589,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2233.01,
+   "price": 2238.58,
    "currency": "USD",
    "prevClose": 2249.498291,
-   "t": 1793394594,
+   "t": 1793397865,
    "name": "Ethereum USD"
   },
   "FDX": {
@@ -1243,7 +1243,7 @@
    "price": 33.74,
    "currency": "THB",
    "prevClose": 33.687,
-   "t": 1793394706,
+   "t": 1793397961,
    "name": "USD/THB"
   },
   "TMUS": {
