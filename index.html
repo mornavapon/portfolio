@@ -150,6 +150,11 @@ dialog::backdrop{background:rgba(0,0,0,.62)}
   font-weight:600;background:var(--card2);color:var(--text)}
 .dlg .big:active{background:var(--bar)}
 .dlg .big.tv{background:var(--bar);color:#fff}
+.dlg .sws{display:flex;gap:10px;margin-top:6px}
+.dlg .sw{flex:1;border:2px solid transparent;background:var(--card2);border-radius:14px;padding:10px 4px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--text)}
+.dlg .sw i{width:40px;height:40px;border-radius:50%;display:block}
+.dlg .sw.on{border-color:#fff}
 .dlg .big.cx{background:transparent;color:var(--muted);font-weight:400;font-size:16px;padding:12px}
 .dlg .pv{margin-top:12px;padding:10px;border-radius:10px;background:var(--card2);font-size:13.5px;line-height:1.7}
 #toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
@@ -188,6 +193,7 @@ dialog::backdrop{background:rgba(0,0,0,.62)}
       <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
     </button>
     <h1 id="title">Overview</h1>
+    <button class="ib" id="btnUi" aria-label="ปรับแต่งหน้าตา"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="2" height="18" rx="1"/><rect x="11" y="3" width="2" height="18" rx="1"/><rect x="17" y="3" width="2" height="18" rx="1"/><circle cx="6" cy="14" r="3.2"/><circle cx="12" cy="8" r="3.2"/><circle cx="18" cy="15.5" r="3.2"/></svg></button>
     <button class="ib" id="btnLock" aria-label="เปิด/ปิดการถามรหัสผ่าน"></button>
     <button class="ib" id="btnRefresh" aria-label="รีเฟรชราคา">
       <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
@@ -364,8 +370,9 @@ function render(){
   $("btnBack").hidden=!(inP||inA);
   $("btnPie").hidden=inP||inA;
   $("btnLock").hidden=inP||inA;
+  $("btnUi").hidden=inP||inA;
   $("btnAdd").hidden=inA;
-  $("title").textContent = inP ? p.name : (inA ? "สัดส่วนทุกพอร์ต" : "Overview");
+  $("title").textContent = inP ? p.name : (inA ? "สัดส่วนทุกพอร์ต" : (ui.t||"Overview"));
   $("tabs").hidden=!inP;
   if(inP){
     Array.prototype.forEach.call($("tabs").children,function(b){
@@ -1134,6 +1141,42 @@ function symbolsDialog(fromWarn){
     }
   });
 }
+
+/* ====================== ปรับแต่งหน้าตา (สีแถบด้านบน + ชื่อหน้าหลัก) ====================== */
+var THEMES=[
+  {id:"green", name:"เขียว",   bar:"#1f6b43", dark:"#185536", dim:"#b7d9c5"},
+  {id:"blue",  name:"น้ำเงิน", bar:"#1f5f8f", dark:"#184a70", dim:"#b9d4ea"},
+  {id:"purple",name:"ม่วง",    bar:"#5e3d92", dark:"#4a2f74", dim:"#d3c6ea"},
+  {id:"orange",name:"ส้ม",     bar:"#a2501c", dark:"#803e15", dim:"#f0cdb4"}
+];
+var ui={c:"green",t:""};
+try{var u0=JSON.parse(localStorage.getItem("pf.ui")||"null"); if(u0&&typeof u0==="object"){ui.c=u0.c||"green"; ui.t=String(u0.t||"").slice(0,24);}}catch(e){}
+function saveUi(){try{localStorage.setItem("pf.ui",JSON.stringify(ui));}catch(e){}}
+function applyUi(){
+  var th=THEMES.filter(function(x){return x.id===ui.c;})[0]||THEMES[0], r=document.documentElement.style;
+  r.setProperty("--bar",th.bar); r.setProperty("--bar-dark",th.dark); r.setProperty("--bar-dim",th.dim);
+  var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content",th.bar);
+}
+function uiDialog(){
+  var sw=THEMES.map(function(t){
+    return '<button class="sw'+(t.id===ui.c?' on':'')+'" data-c="'+t.id+'"><i style="background:'+t.bar+'"></i><span>'+t.name+'</span></button>';
+  }).join("");
+  var d=modal('<h2>ปรับแต่งหน้าตา</h2>'+
+    '<label>สีแถบด้านบน</label><div class="sws">'+sw+'</div>'+
+    '<label>ชื่อหน้าหลัก (แทนคำว่า Overview)</label>'+
+    '<input id="uiT" type="text" maxlength="24" autocomplete="off" placeholder="Overview" value="'+esc(ui.t)+'">'+
+    '<div class="acts"><button data-x="rs">ตั้งค่าเดิม</button><button class="pri" data-x="ok">ตกลง</button></div>');
+  function mark(){Array.prototype.forEach.call(d.querySelectorAll(".sw"),function(b){b.classList.toggle("on",b.getAttribute("data-c")===ui.c);});}
+  d.addEventListener("click",function(e){
+    var b=e.target.closest(".sw");
+    if(b){ui.c=b.getAttribute("data-c"); saveUi(); applyUi(); mark(); return;}
+    var x=e.target.getAttribute&&e.target.getAttribute("data-x");
+    if(x==="rs"){ui={c:"green",t:""}; saveUi(); applyUi(); d.close(); render();}
+    else if(x==="ok"){ui.t=val(d,"uiT").trim().slice(0,24); saveUi(); d.close(); render();}
+  });
+}
+$("btnUi").onclick=uiDialog;
+applyUi();
 
 /* ====================== รหัสผ่านเข้าแอป (กันคนที่บังเอิญเปิดลิงก์เข้ามา) ====================== */
 var LOCK_CODE="99", lkIn="";
