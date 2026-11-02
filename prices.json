@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-02T22:13:06+00:00",
+ "updated": "2026-11-02T23:11:59+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.71,
-  "CNY": 5.0714,
-  "HKD": 4.2979,
+  "CNY": 5.0699,
+  "HKD": 4.2966,
   "INR": 0.3548,
-  "JPY": 0.2112,
+  "JPY": 0.211,
   "KRW": 0.0251,
-  "SGD": 26.381,
-  "TWD": 1.0331,
+  "SGD": 26.3616,
+  "TWD": 1.0327,
   "VND": 0.0013
  },
  "quotes": {
@@ -88,7 +88,7 @@
    "currency": "HKD",
    "prevClose": 88.139999,
    "t": 1793598468,
-   "name": "Global X China Clean Energy ETF"
+   "name": "Global X ETF Series OFC - Global X China Clean Energy ETF"
   },
   "2828.HK": {
    "price": 81.0,
@@ -109,14 +109,14 @@
    "currency": "HKD",
    "prevClose": 3.692,
    "t": 1793606893,
-   "name": "CSOP Hang Seng TECH Index ETF"
+   "name": "CSOP ETF Series - CSOP Hang Seng TECH Index ETF"
   },
   "3188.HK": {
    "price": 49.4,
    "currency": "HKD",
    "prevClose": 48.82,
    "t": 1793606893,
-   "name": "ChinaAMC CSI 300 Index ETF"
+   "name": "ChinaAMC ETF Series - ChinaAMC CSI 300 Index ETF"
   },
   "3690.HK": {
    "price": 73.05,
@@ -427,10 +427,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 76718.34,
+   "price": 76593.59,
    "currency": "USD",
    "prevClose": 78248.453125,
-   "t": 1793657343,
+   "t": 1793660731,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -448,10 +448,10 @@
    "name": "BTS Group Holdings Public Company Limited"
   },
   "BZ=F": {
-   "price": 104.28,
+   "price": 104.23,
    "currency": "USD",
    "prevClose": 117.639999,
-   "t": 1793656740,
+   "t": 1793656770,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -483,10 +483,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 96.32,
+   "price": 96.26,
    "currency": "USD",
    "prevClose": 104.120003,
-   "t": 1793656753,
+   "t": 1793656797,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -637,10 +637,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2255.22,
+   "price": 2245.27,
    "currency": "USD",
    "prevClose": 2273.052246,
-   "t": 1793657380,
+   "t": 1793660729,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -668,7 +668,7 @@
    "price": 3956.6,
    "currency": "USD",
    "prevClose": 3898.899902,
-   "t": 1793656785,
+   "t": 1793656799,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1312,7 +1312,7 @@
    "price": 33.71,
    "currency": "THB",
    "prevClose": 33.716,
-   "t": 1793657492,
+   "t": 1793661018,
    "name": "USD/THB"
   },
   "TMUS": {
@@ -1612,7 +1612,7 @@
    "price": 25164.316,
    "currency": "USD",
    "prevClose": 25437.0,
-   "t": 1793657540,
+   "t": 1793657759,
    "name": "NASDAQ Composite"
   },
   "^KS11": {
