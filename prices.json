@@ -1,171 +1,171 @@
 {
- "updated": "2026-11-02T00:53:02+00:00",
+ "updated": "2026-11-02T01:58:25+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.75,
-  "CNY": 5.0732,
-  "HKD": 4.3053
+  "CNY": 5.0735,
+  "HKD": 4.3027
  },
  "quotes": {
   "002352.SZ": {
-   "price": 32.82,
+   "price": 33.1,
    "currency": "CNY",
-   "prevClose": 32.150002,
-   "t": 1793343888,
+   "prevClose": 32.82,
+   "t": 1793583534,
    "name": "S.F. Holding Co., Ltd."
   },
   "0694.HK": {
-   "price": 1.38,
+   "price": 1.395,
    "currency": "HKD",
-   "prevClose": 1.4,
-   "t": 1793347686,
+   "prevClose": 1.38,
+   "t": 1793583349,
    "name": "Beijing Capital International Airport Company Limited"
   },
   "0700.HK": {
-   "price": 383.6,
+   "price": 389.2,
    "currency": "HKD",
-   "prevClose": 377.600006,
-   "t": 1793347686,
+   "prevClose": 383.600006,
+   "t": 1793583537,
    "name": "Tencent Holdings Limited"
   },
   "0941.HK": {
-   "price": 80.0,
+   "price": 80.55,
    "currency": "HKD",
-   "prevClose": 78.5,
-   "t": 1793347686,
+   "prevClose": 80.0,
+   "t": 1793583534,
    "name": "China Mobile Limited"
   },
   "1177.HK": {
-   "price": 4.82,
+   "price": 4.75,
    "currency": "HKD",
-   "prevClose": 4.85,
-   "t": 1793347686,
+   "prevClose": 4.82,
+   "t": 1793583540,
    "name": "Sino Biopharmaceutical Limited"
   },
   "1211.HK": {
-   "price": 68.25,
+   "price": 67.85,
    "currency": "HKD",
-   "prevClose": 68.650002,
-   "t": 1793347686,
+   "prevClose": 68.25,
+   "t": 1793583541,
    "name": "BYD Company Limited"
   },
   "1810.HK": {
-   "price": 26.48,
+   "price": 27.1,
    "currency": "HKD",
-   "prevClose": 25.68,
-   "t": 1793347686,
+   "prevClose": 26.48,
+   "t": 1793583541,
    "name": "Xiaomi Corporation"
   },
   "2809.HK": {
-   "price": 86.46,
+   "price": 87.28,
    "currency": "HKD",
    "prevClose": 88.139999,
    "t": 1793344365,
    "name": "Global X ETF Series OFC - Global X China Clean Energy ETF"
   },
   "2828.HK": {
-   "price": 80.82,
+   "price": 81.2,
    "currency": "HKD",
-   "prevClose": 79.68,
-   "t": 1793347686,
+   "prevClose": 80.82,
+   "t": 1793583544,
    "name": "Hang Seng China Enterprises Index ETF"
   },
   "300750.SZ": {
-   "price": 232.92,
+   "price": 236.63,
    "currency": "CNY",
-   "prevClose": 229.070007,
-   "t": 1793343877,
+   "prevClose": 232.919998,
+   "t": 1793583544,
    "name": "Contemporary Amperex Technology Co., Limited"
   },
   "3033.HK": {
-   "price": 3.692,
+   "price": 3.7,
    "currency": "HKD",
-   "prevClose": 3.668,
-   "t": 1793347686,
+   "prevClose": 3.692,
+   "t": 1793583547,
    "name": "CSOP ETF Series - CSOP Hang Seng TECH Index ETF"
   },
   "3188.HK": {
-   "price": 48.82,
+   "price": 49.02,
    "currency": "HKD",
-   "prevClose": 46.919998,
-   "t": 1793347686,
+   "prevClose": 48.82,
+   "t": 1793583541,
    "name": "ChinaAMC ETF Series - ChinaAMC CSI 300 Index ETF"
   },
   "3690.HK": {
-   "price": 71.6,
+   "price": 71.3,
    "currency": "HKD",
-   "prevClose": 69.199997,
-   "t": 1793347686,
+   "prevClose": 71.599998,
+   "t": 1793583546,
    "name": "Meituan"
   },
   "3988.HK": {
-   "price": 6.145,
+   "price": 6.175,
    "currency": "HKD",
-   "prevClose": 6.135,
-   "t": 1793347686,
+   "prevClose": 6.145,
+   "t": 1793583539,
    "name": "Bank of China Limited"
   },
   "600276.SS": {
-   "price": 48.46,
+   "price": 48.58,
    "currency": "CNY",
-   "prevClose": 48.619999,
-   "t": 1793343601,
+   "prevClose": 48.459999,
+   "t": 1793583551,
    "name": "Jiangsu Hengrui Pharmaceuticals Co.,Ltd"
   },
   "600941.SS": {
-   "price": 102.13,
+   "price": 103.09,
    "currency": "CNY",
-   "prevClose": 101.470001,
-   "t": 1793343601,
+   "prevClose": 102.129997,
+   "t": 1793583552,
    "name": "China Mobile Limited"
   },
   "601318.SS": {
-   "price": 52.8,
+   "price": 53.0,
    "currency": "CNY",
-   "prevClose": 53.200001,
-   "t": 1793343601,
+   "prevClose": 52.799999,
+   "t": 1793583555,
    "name": "Ping An Insurance (Group) Company of China, Ltd."
   },
   "688825.SS": {
-   "price": 41.8,
+   "price": 42.49,
    "currency": "CNY",
-   "prevClose": 42.869999,
-   "t": 1793343601,
+   "prevClose": 41.799999,
+   "t": 1793583556,
    "name": "CXMT Corporation"
   },
   "688981.SS": {
-   "price": 96.79,
+   "price": 97.34,
    "currency": "CNY",
-   "prevClose": 101.0,
-   "t": 1793343602,
+   "prevClose": 96.790001,
+   "t": 1793583556,
    "name": "Semiconductor Manufacturing International Corporation"
   },
   "9618.HK": {
-   "price": 100.4,
+   "price": 100.1,
    "currency": "HKD",
-   "prevClose": 98.550003,
-   "t": 1793347687,
+   "prevClose": 100.400002,
+   "t": 1793583536,
    "name": "JD.com, Inc."
   },
   "9888.HK": {
-   "price": 75.7,
+   "price": 73.75,
    "currency": "HKD",
-   "prevClose": 75.550003,
-   "t": 1793347686,
+   "prevClose": 75.699997,
+   "t": 1793583558,
    "name": "Baidu, Inc."
   },
   "9988.HK": {
-   "price": 97.05,
+   "price": 97.95,
    "currency": "HKD",
-   "prevClose": 96.099998,
-   "t": 1793347687,
+   "prevClose": 97.050003,
+   "t": 1793583555,
    "name": "Alibaba Group Holding Limited"
   },
   "9999.HK": {
-   "price": 176.7,
+   "price": 176.3,
    "currency": "HKD",
-   "prevClose": 172.399994,
-   "t": 1793347687,
+   "prevClose": 176.699997,
+   "t": 1793583560,
    "name": "NetEase, Inc."
   },
   "AAPL": {
@@ -393,10 +393,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 77985.36,
+   "price": 78335.21,
    "currency": "USD",
    "prevClose": 77434.75,
-   "t": 1793580148,
+   "t": 1793584497,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -589,10 +589,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2268.16,
+   "price": 2287.22,
    "currency": "USD",
    "prevClose": 2252.747803,
-   "t": 1793580175,
+   "t": 1793584533,
    "name": "Ethereum USD"
   },
   "FDX": {
@@ -1240,10 +1240,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.76,
+   "price": 33.75,
    "currency": "THB",
    "prevClose": 33.716,
-   "t": 1793580280,
+   "t": 1793584641,
    "name": "USD/THB"
   },
   "TMUS": {
@@ -1596,7 +1596,7 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 1.67,
+   "dy": 1.66,
    "t": 1792684518
   },
   "300750.SZ": {
