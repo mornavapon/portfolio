@@ -226,7 +226,7 @@
     "XLY",
     "XOM",
     "YUM",
-    "^GPSC",
+    "^GSPC",
     "^HSI",
     "^IXIC",
     "^KS11",
@@ -240,8 +240,11 @@
   "currencies": [
     "CNY",
     "HKD",
+    "INR",
     "JPY",
     "KRW",
+    "SGD",
+    "TWD",
     "USD",
     "VND"
   ]
