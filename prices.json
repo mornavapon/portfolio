@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-02T23:11:59+00:00",
+ "updated": "2026-11-03T00:04:39+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.71,
-  "CNY": 5.0699,
+  "USD": 33.68,
+  "CNY": 5.071,
   "HKD": 4.2966,
   "INR": 0.3548,
-  "JPY": 0.211,
+  "JPY": 0.2111,
   "KRW": 0.0251,
-  "SGD": 26.3616,
-  "TWD": 1.0327,
+  "SGD": 26.3605,
+  "TWD": 1.0329,
   "VND": 0.0013
  },
  "quotes": {
@@ -427,10 +427,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 76593.59,
+   "price": 76673.71,
    "currency": "USD",
    "prevClose": 78248.453125,
-   "t": 1793660731,
+   "t": 1793664031,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -448,10 +448,10 @@
    "name": "BTS Group Holdings Public Company Limited"
   },
   "BZ=F": {
-   "price": 104.23,
+   "price": 104.35,
    "currency": "USD",
    "prevClose": 117.639999,
-   "t": 1793656770,
+   "t": 1793663403,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -483,10 +483,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 96.26,
+   "price": 96.33,
    "currency": "USD",
    "prevClose": 104.120003,
-   "t": 1793656797,
+   "t": 1793663437,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -637,10 +637,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2245.27,
+   "price": 2250.19,
    "currency": "USD",
    "prevClose": 2273.052246,
-   "t": 1793660729,
+   "t": 1793664064,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -665,10 +665,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 3956.6,
+   "price": 3957.4,
    "currency": "USD",
    "prevClose": 3898.899902,
-   "t": 1793656799,
+   "t": 1793663445,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1309,10 +1309,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.71,
+   "price": 33.7,
    "currency": "THB",
    "prevClose": 33.716,
-   "t": 1793661018,
+   "t": 1793664176,
    "name": "USD/THB"
   },
   "TMUS": {
@@ -1609,10 +1609,10 @@
    "name": "HANG SENG INDEX"
   },
   "^IXIC": {
-   "price": 25164.316,
+   "price": 25164.363,
    "currency": "USD",
    "prevClose": 25437.0,
-   "t": 1793657759,
+   "t": 1793661495,
    "name": "NASDAQ Composite"
   },
   "^KS11": {
