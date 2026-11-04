@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-04T16:26:18+00:00",
+ "updated": "2026-11-04T17:26:41+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.64,
-  "CNY": 5.0421,
-  "HKD": 4.2893,
-  "INR": 0.3552,
-  "JPY": 0.2099,
+  "USD": 33.59,
+  "CNY": 5.0322,
+  "HKD": 4.2818,
+  "INR": 0.3548,
+  "JPY": 0.2098,
   "KRW": 0.0251,
-  "SGD": 26.3096,
-  "TWD": 1.0215,
+  "SGD": 26.2796,
+  "TWD": 1.0216,
   "VND": 0.0013
  },
  "quotes": {
@@ -203,44 +203,44 @@
    "name": "NetEase, Inc."
   },
   "AAPL": {
-   "price": 351.84,
+   "price": 353.38,
    "currency": "USD",
    "prevClose": 331.899994,
-   "t": 1793809292,
+   "t": 1793812911,
    "name": "Apple Inc."
   },
   "ABBV": {
-   "price": 288.16,
+   "price": 289.85,
    "currency": "USD",
    "prevClose": 286.0,
-   "t": 1793809292,
+   "t": 1793812910,
    "name": "AbbVie Inc."
   },
   "ABNB": {
-   "price": 177.69,
+   "price": 179.425,
    "currency": "USD",
    "prevClose": 166.960007,
-   "t": 1793809287,
+   "t": 1793812907,
    "name": "Airbnb, Inc."
   },
   "ABT": {
-   "price": 114.72,
+   "price": 114.765,
    "currency": "USD",
    "prevClose": 109.400002,
-   "t": 1793809295,
+   "t": 1793812915,
    "name": "Abbott Laboratories"
   },
   "ADVANC.BK": {
    "price": 338.0,
    "currency": "THB",
-   "prevClose": 340.0,
+   "prevClose": 337.0,
    "t": 1793784997,
    "name": "Advanced Info Service Public Company Limited"
   },
   "ADVICE.BK": {
    "price": 6.9,
    "currency": "THB",
-   "prevClose": 6.75,
+   "prevClose": 6.8,
    "t": 1793784997,
    "name": "Advice IT Infinite Public Company Limited"
   },
@@ -252,52 +252,52 @@
    "name": "Advanced Information Technology Public Company Limited"
   },
   "AMAT": {
-   "price": 367.91,
+   "price": 369.045,
    "currency": "USD",
    "prevClose": 381.920013,
-   "t": 1793809301,
+   "t": 1793812917,
    "name": "Applied Materials, Inc."
   },
   "AMATA.BK": {
    "price": 26.75,
    "currency": "THB",
-   "prevClose": 25.5,
+   "prevClose": 25.0,
    "t": 1793784997,
    "name": "Amata Corporation Public Company Limited"
   },
   "AMD": {
-   "price": 483.62,
+   "price": 487.53,
    "currency": "USD",
    "prevClose": 483.899994,
-   "t": 1793809304,
+   "t": 1793812921,
    "name": "Advanced Micro Devices, Inc."
   },
   "AMGN": {
-   "price": 474.2,
+   "price": 477.31,
    "currency": "USD",
    "prevClose": 461.26001,
-   "t": 1793809302,
+   "t": 1793812920,
    "name": "Amgen Inc."
   },
   "AMZN": {
-   "price": 266.24,
+   "price": 267.77,
    "currency": "USD",
    "prevClose": 250.690002,
-   "t": 1793809307,
+   "t": 1793812924,
    "name": "Amazon.com, Inc."
   },
   "AOT.BK": {
    "price": 60.5,
    "currency": "THB",
-   "prevClose": 59.5,
+   "prevClose": 60.0,
    "t": 1793784997,
    "name": "Airports of Thailand Public Company Limited"
   },
   "ARM": {
-   "price": 193.47,
+   "price": 196.5,
    "currency": "USD",
    "prevClose": 202.490005,
-   "t": 1793809305,
+   "t": 1793812927,
    "name": "Arm Holdings plc"
   },
   "AS.BK": {
@@ -308,24 +308,24 @@
    "name": "Asphere Innovations Public Company Limited"
   },
   "ASML": {
-   "price": 1495.13,
+   "price": 1508.63,
    "currency": "USD",
    "prevClose": 1552.140015,
-   "t": 1793809310,
+   "t": 1793812927,
    "name": "ASML Holding N.V."
   },
   "ASP.BK": {
    "price": 2.26,
    "currency": "THB",
-   "prevClose": 2.24,
+   "prevClose": 2.26,
    "t": 1793784997,
    "name": "Asia Plus Group Holdings Public Company Limited"
   },
   "AVGO": {
-   "price": 325.225,
+   "price": 327.775,
    "currency": "USD",
    "prevClose": 332.130005,
-   "t": 1793809311,
+   "t": 1793812930,
    "name": "Broadcom Inc."
   },
   "AXTRART.BK": {
@@ -338,15 +338,15 @@
   "BA.BK": {
    "price": 18.6,
    "currency": "THB",
-   "prevClose": 18.4,
+   "prevClose": 17.799999,
    "t": 1793784997,
    "name": "Bangkok Airways Public Company Limited"
   },
   "BAC": {
-   "price": 51.495,
+   "price": 51.4,
    "currency": "USD",
    "prevClose": 49.66,
-   "t": 1793809314,
+   "t": 1793812933,
    "name": "Bank of America Corporation"
   },
   "BAFS.BK": {
@@ -359,175 +359,175 @@
   "BBL.BK": {
    "price": 183.0,
    "currency": "THB",
-   "prevClose": 182.0,
+   "prevClose": 182.5,
    "t": 1793784997,
    "name": "Bangkok Bank Public Company Limited"
   },
   "BCP.BK": {
    "price": 45.25,
    "currency": "THB",
-   "prevClose": 46.25,
+   "prevClose": 46.5,
    "t": 1793784997,
    "name": "Bangchak Corporation Public Company Limited"
   },
   "BDMS.BK": {
    "price": 19.8,
    "currency": "THB",
-   "prevClose": 19.6,
+   "prevClose": 19.5,
    "t": 1793784997,
    "name": "Bangkok Dusit Medical Services Public Company Limited"
   },
   "BEM.BK": {
    "price": 6.2,
    "currency": "THB",
-   "prevClose": 6.25,
+   "prevClose": 6.2,
    "t": 1793784997,
    "name": "Bangkok Expressway and Metro Public Company Limited"
   },
   "BH.BK": {
    "price": 198.5,
    "currency": "THB",
-   "prevClose": 197.0,
+   "prevClose": 198.5,
    "t": 1793784997,
    "name": "Bumrungrad Hospital Public Company Limited"
   },
   "BJC.BK": {
    "price": 20.1,
    "currency": "THB",
-   "prevClose": 19.700001,
+   "prevClose": 20.200001,
    "t": 1793784997,
    "name": "Berli Jucker Public Company Limited"
   },
   "BKD.BK": {
    "price": 1.1,
    "currency": "THB",
-   "prevClose": 1.11,
+   "prevClose": 1.13,
    "t": 1793784997,
    "name": "Buakaew Income"
   },
   "BLK": {
-   "price": 1214.655,
+   "price": 1229.415,
    "currency": "USD",
    "prevClose": 1161.319946,
-   "t": 1793809325,
+   "t": 1793812946,
    "name": "BlackRock, Inc."
   },
   "BRK-A": {
-   "price": 859494.0,
+   "price": 860178.7,
    "currency": "USD",
    "prevClose": 836445.0,
-   "t": 1793809230,
+   "t": 1793812087,
    "name": "Berkshire Hathaway Inc."
   },
   "BRK-B": {
-   "price": 572.655,
+   "price": 573.481,
    "currency": "USD",
    "prevClose": 557.070007,
-   "t": 1793809329,
+   "t": 1793812948,
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 80443.79,
+   "price": 80277.32,
    "currency": "USD",
    "prevClose": 77345.046875,
-   "t": 1793809316,
+   "t": 1793812945,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
    "price": 22.7,
    "currency": "THB",
-   "prevClose": 21.6,
+   "prevClose": 21.700001,
    "t": 1793784997,
    "name": "Betagro Public Company Limited"
   },
   "BTS.BK": {
    "price": 1.82,
    "currency": "THB",
-   "prevClose": 1.82,
+   "prevClose": 1.83,
    "t": 1793784997,
    "name": "BTS Group Holdings Public Company Limited"
   },
   "BZ=F": {
-   "price": 99.2,
+   "price": 94.76,
    "currency": "USD",
    "prevClose": 103.599998,
-   "t": 1793808730,
+   "t": 1793812353,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
-   "price": 125.11,
+   "price": 125.01,
    "currency": "USD",
    "prevClose": 122.709999,
-   "t": 1793809331,
+   "t": 1793812936,
    "name": "Citigroup Inc."
   },
   "CAT": {
-   "price": 583.72,
+   "price": 587.92,
    "currency": "USD",
    "prevClose": 623.940002,
-   "t": 1793809335,
+   "t": 1793812950,
    "name": "Caterpillar Inc."
   },
   "CENTEL.BK": {
    "price": 44.75,
    "currency": "THB",
-   "prevClose": 43.75,
+   "prevClose": 44.5,
    "t": 1793784997,
    "name": "Central Plaza Hotel Public Company Limited"
   },
   "CHAYO.BK": {
    "price": 1.2,
    "currency": "THB",
-   "prevClose": 1.21,
+   "prevClose": 1.25,
    "t": 1793784997,
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 92.18,
+   "price": 88.47,
    "currency": "USD",
    "prevClose": 96.089996,
-   "t": 1793808740,
+   "t": 1793812359,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
-   "price": 305.61,
+   "price": 302.457,
    "currency": "USD",
    "prevClose": 304.059998,
-   "t": 1793809318,
+   "t": 1793812959,
    "name": "CME Group Inc."
   },
   "COHR": {
-   "price": 189.745,
+   "price": 192.1,
    "currency": "USD",
    "prevClose": 207.490005,
-   "t": 1793809341,
+   "t": 1793812961,
    "name": "Coherent Corp."
   },
   "COIN": {
-   "price": 151.048,
+   "price": 151.26,
    "currency": "USD",
    "prevClose": 145.449997,
-   "t": 1793809342,
+   "t": 1793812959,
    "name": "Coinbase Global, Inc."
   },
   "COM7.BK": {
    "price": 33.25,
    "currency": "THB",
-   "prevClose": 33.0,
+   "prevClose": 33.25,
    "t": 1793784997,
    "name": "Com7 Public Company Limited"
   },
   "COST": {
-   "price": 1050.54,
+   "price": 1052.071,
    "currency": "USD",
    "prevClose": 1019.26001,
-   "t": 1793809344,
+   "t": 1793812957,
    "name": "Costco Wholesale Corporation"
   },
   "CPALL.BK": {
    "price": 44.0,
    "currency": "THB",
-   "prevClose": 44.0,
+   "prevClose": 43.75,
    "t": 1793784997,
    "name": "CP ALL Public Company Limited"
   },
@@ -555,7 +555,7 @@
   "CPNCG.BK": {
    "price": 5.15,
    "currency": "THB",
-   "prevClose": 5.1,
+   "prevClose": 5.15,
    "t": 1793784997,
    "name": "CPN Commercial Growth Leasehold Property Fund"
   },
@@ -567,163 +567,163 @@
    "name": "CPN Retail Growth Leasehold REIT"
   },
   "CRWD": {
-   "price": 240.765,
+   "price": 242.395,
    "currency": "USD",
    "prevClose": 244.679993,
-   "t": 1793809346,
+   "t": 1793812970,
    "name": "CrowdStrike Holdings, Inc."
   },
   "CRWV": {
-   "price": 48.52,
+   "price": 49.01,
    "currency": "USD",
    "prevClose": 53.740002,
-   "t": 1793809353,
+   "t": 1793812975,
    "name": "CoreWeave, Inc."
   },
   "CSC.BK": {
    "price": 47.75,
    "currency": "THB",
-   "prevClose": 47.25,
+   "prevClose": 47.0,
    "t": 1793784997,
    "name": "Crown Seal Public Company Limited"
   },
   "CSCO": {
-   "price": 102.45,
+   "price": 102.2,
    "currency": "USD",
    "prevClose": 102.970001,
-   "t": 1793809356,
+   "t": 1793812973,
    "name": "Cisco Systems, Inc."
   },
   "DCC.BK": {
    "price": 1.31,
    "currency": "THB",
-   "prevClose": 1.31,
+   "prevClose": 1.3,
    "t": 1793784997,
    "name": "Dynasty Ceramic Public Company Limited"
   },
   "DELTA.BK": {
    "price": 195.0,
    "currency": "THB",
-   "prevClose": 192.0,
+   "prevClose": 199.5,
    "t": 1793784997,
    "name": "Delta Electronics (Thailand) Public Company Limited"
   },
   "DIS": {
-   "price": 119.745,
+   "price": 119.57,
    "currency": "USD",
    "prevClose": 114.18,
-   "t": 1793809357,
+   "t": 1793812980,
    "name": "The Walt Disney Company"
   },
   "DRT.BK": {
    "price": 5.2,
    "currency": "THB",
-   "prevClose": 5.2,
+   "prevClose": 5.25,
    "t": 1793784997,
    "name": "Diamond Building Products Public Company Limited"
   },
   "E1VFVN3001.BK": {
    "price": 43.5,
    "currency": "THB",
-   "prevClose": 42.25,
+   "prevClose": 42.0,
    "t": 1793784551,
    "name": "DCVFMVN30 ETF"
   },
   "EGCO.BK": {
    "price": 134.5,
    "currency": "THB",
-   "prevClose": 129.5,
+   "prevClose": 130.0,
    "t": 1793784997,
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2434.42,
+   "price": 2428.15,
    "currency": "USD",
    "prevClose": 2272.72583,
-   "t": 1793809365,
+   "t": 1793812980,
    "name": "Ethereum USD"
   },
   "EWJ": {
-   "price": 93.375,
+   "price": 93.865,
    "currency": "USD",
    "prevClose": 92.589996,
-   "t": 1793809358,
+   "t": 1793812981,
    "name": "iShares MSCI Japan ETF"
   },
   "FDX": {
-   "price": 323.18,
+   "price": 324.12,
    "currency": "USD",
    "prevClose": 318.019989,
-   "t": 1793809368,
+   "t": 1793812985,
    "name": "FedEx Corporation"
   },
   "FUEVFVND01.BK": {
    "price": 41.0,
    "currency": "THB",
-   "prevClose": 39.75,
+   "prevClose": 39.5,
    "t": 1793784588,
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4055.9,
+   "price": 4076.4,
    "currency": "USD",
    "prevClose": 3940.399902,
-   "t": 1793808769,
+   "t": 1793812388,
    "name": "Gold Dec 26"
   },
   "GE": {
-   "price": 323.733,
+   "price": 331.585,
    "currency": "USD",
    "prevClose": 320.670013,
-   "t": 1793809367,
+   "t": 1793812982,
    "name": "GE Aerospace"
   },
   "GOOG": {
-   "price": 289.35,
+   "price": 289.9,
    "currency": "USD",
    "prevClose": 278.269989,
-   "t": 1793809373,
+   "t": 1793812991,
    "name": "Alphabet Inc."
   },
   "GPSC.BK": {
    "price": 49.5,
    "currency": "THB",
-   "prevClose": 48.0,
+   "prevClose": 49.0,
    "t": 1793784997,
    "name": "Global Power Synergy Public Company Limited"
   },
   "GRID": {
-   "price": 161.205,
+   "price": 162.215,
    "currency": "USD",
    "prevClose": 167.399994,
-   "t": 1793809280,
+   "t": 1793812969,
    "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund"
   },
   "GS": {
-   "price": 917.36,
+   "price": 932.222,
    "currency": "USD",
    "prevClose": 896.090027,
-   "t": 1793809370,
+   "t": 1793812989,
    "name": "The Goldman Sachs Group, Inc."
   },
   "GULF.BK": {
    "price": 61.0,
    "currency": "THB",
-   "prevClose": 60.0,
+   "prevClose": 60.75,
    "t": 1793784997,
    "name": "Gulf Development Public Company Limited"
   },
   "HD": {
-   "price": 349.805,
+   "price": 351.5,
    "currency": "USD",
    "prevClose": 333.660004,
-   "t": 1793809380,
+   "t": 1793812993,
    "name": "The Home Depot, Inc."
   },
   "HMPRO.BK": {
    "price": 6.45,
    "currency": "THB",
-   "prevClose": 6.4,
+   "prevClose": 6.3,
    "t": 1793784997,
    "name": "Home Product Center Public Company Limited"
   },
@@ -735,73 +735,73 @@
    "name": "IMPACT Growth Real Estate Investment Trust"
   },
   "INTC": {
-   "price": 57.52,
+   "price": 58.99,
    "currency": "USD",
    "prevClose": 60.549999,
-   "t": 1793809384,
+   "t": 1793813001,
    "name": "Intel Corporation"
   },
   "IREN": {
-   "price": 21.54,
+   "price": 22.058,
    "currency": "USD",
    "prevClose": 24.459999,
-   "t": 1793809386,
+   "t": 1793813003,
    "name": "IREN Limited"
   },
   "JAS.BK": {
    "price": 0.66,
    "currency": "THB",
-   "prevClose": 0.65,
+   "prevClose": 0.66,
    "t": 1793784997,
    "name": "Jasmine International Public Company Limited"
   },
   "JMART.BK": {
    "price": 10.3,
    "currency": "THB",
-   "prevClose": 9.9,
+   "prevClose": 9.85,
    "t": 1793784997,
    "name": "Jaymart Group Holdings Public Company Limited"
   },
   "JNJ": {
-   "price": 272.99,
+   "price": 273.66,
    "currency": "USD",
    "prevClose": 266.170013,
-   "t": 1793809386,
+   "t": 1793813005,
    "name": "Johnson & Johnson"
   },
   "JPM": {
-   "price": 350.395,
+   "price": 351.95,
    "currency": "USD",
    "prevClose": 337.980011,
-   "t": 1793809389,
+   "t": 1793813007,
    "name": "JPMorgan Chase & Co."
   },
   "JUBILE.BK": {
    "price": 7.35,
    "currency": "THB",
-   "prevClose": 7.3,
+   "prevClose": 7.25,
    "t": 1793784500,
    "name": "Jubilee Enterprise Public Company Limited"
   },
   "KBANK.BK": {
    "price": 244.0,
    "currency": "THB",
-   "prevClose": 243.0,
+   "prevClose": 242.0,
    "t": 1793784997,
    "name": "Kasikornbank Public Company Limited"
   },
   "KKP.BK": {
    "price": 114.5,
    "currency": "THB",
-   "prevClose": 113.0,
+   "prevClose": 113.5,
    "t": 1793784997,
    "name": "Kiatnakin Phatra Bank Public Company Limited"
   },
   "KO": {
-   "price": 96.11,
+   "price": 95.75,
    "currency": "USD",
    "prevClose": 94.800003,
-   "t": 1793809392,
+   "t": 1793813007,
    "name": "The Coca-Cola Company"
   },
   "KTC.BK": {
@@ -814,7 +814,7 @@
   "KYE.BK": {
    "price": 278.0,
    "currency": "THB",
-   "prevClose": 278.0,
+   "prevClose": 280.0,
    "t": 1793783905,
    "name": "Kang Yong Electric Public Company Limited"
   },
@@ -826,31 +826,31 @@
    "name": "Land and Houses Public Company Limited"
   },
   "LHX": {
-   "price": 257.0,
+   "price": 256.83,
    "currency": "USD",
    "prevClose": 277.670013,
-   "t": 1793809395,
+   "t": 1793813000,
    "name": "L3Harris Technologies, Inc."
   },
   "LITE": {
-   "price": 607.63,
+   "price": 610.5,
    "currency": "USD",
    "prevClose": 680.159973,
-   "t": 1793809399,
+   "t": 1793813017,
    "name": "Lumentum Holdings Inc."
   },
   "LLY": {
-   "price": 1430.55,
+   "price": 1429.4,
    "currency": "USD",
    "prevClose": 1409.380005,
-   "t": 1793809400,
+   "t": 1793813016,
    "name": "Eli Lilly and Company"
   },
   "LMT": {
-   "price": 598.47,
+   "price": 593.0,
    "currency": "USD",
    "prevClose": 639.0,
-   "t": 1793809402,
+   "t": 1793813019,
    "name": "Lockheed Martin Corporation"
   },
   "LTMH.BK": {
@@ -863,43 +863,43 @@
   "M.BK": {
    "price": 20.3,
    "currency": "THB",
-   "prevClose": 20.1,
+   "prevClose": 20.4,
    "t": 1793784997,
    "name": "MK Restaurant Group Public Company Limited"
   },
   "MA": {
-   "price": 669.22,
+   "price": 667.11,
    "currency": "USD",
    "prevClose": 647.179993,
-   "t": 1793809399,
+   "t": 1793813020,
    "name": "Mastercard Incorporated"
   },
   "MAGS": {
-   "price": 70.365,
+   "price": 70.92,
    "currency": "USD",
    "prevClose": 68.739998,
-   "t": 1793809379,
+   "t": 1793813022,
    "name": "Roundhill Magnificent Seven ETF"
   },
   "MCD": {
-   "price": 276.85,
+   "price": 277.17,
    "currency": "USD",
    "prevClose": 263.040009,
-   "t": 1793809400,
+   "t": 1793813021,
    "name": "McDonald's Corporation"
   },
   "MEGA.BK": {
    "price": 35.0,
    "currency": "THB",
-   "prevClose": 35.5,
+   "prevClose": 34.75,
    "t": 1793784997,
    "name": "Mega Lifesciences Public Company Limited"
   },
   "META": {
-   "price": 629.24,
+   "price": 638.54,
    "currency": "USD",
    "prevClose": 621.030029,
-   "t": 1793809400,
+   "t": 1793813027,
    "name": "Meta Platforms, Inc."
   },
   "MINT.BK": {
@@ -917,87 +917,87 @@
    "name": "Major Cineplex Lifestyle Leasehold Property Fund."
   },
   "MMM": {
-   "price": 192.06,
+   "price": 193.175,
    "currency": "USD",
    "prevClose": 177.050003,
-   "t": 1793809410,
+   "t": 1793813028,
    "name": "3M Company"
   },
   "MRDIYT.BK": {
    "price": 8.6,
    "currency": "THB",
-   "prevClose": 8.45,
+   "prevClose": 8.5,
    "t": 1793784997,
    "name": "MR. D.I.Y. Holding (Thailand) Public Company Limited"
   },
   "MRK": {
-   "price": 148.43,
+   "price": 148.245,
    "currency": "USD",
    "prevClose": 144.669998,
-   "t": 1793809414,
+   "t": 1793813019,
    "name": "Merck & Co., Inc."
   },
   "MRNA": {
-   "price": 248.244,
+   "price": 249.86,
    "currency": "USD",
    "prevClose": 228.440002,
-   "t": 1793809414,
+   "t": 1793813033,
    "name": "Moderna, Inc."
   },
   "MS": {
-   "price": 191.075,
+   "price": 192.565,
    "currency": "USD",
    "prevClose": 186.089996,
-   "t": 1793809416,
+   "t": 1793813029,
    "name": "Morgan Stanley"
   },
   "MSFT": {
-   "price": 553.5,
+   "price": 556.12,
    "currency": "USD",
    "prevClose": 520.98999,
-   "t": 1793809417,
+   "t": 1793813036,
    "name": "Microsoft Corporation"
   },
   "MSTR": {
-   "price": 143.73,
+   "price": 144.53,
    "currency": "USD",
    "prevClose": 135.630005,
-   "t": 1793809416,
+   "t": 1793813035,
    "name": "Strategy Inc"
   },
   "MU": {
-   "price": 803.52,
+   "price": 808.503,
    "currency": "USD",
    "prevClose": 855.099976,
-   "t": 1793809421,
+   "t": 1793813039,
    "name": "Micron Technology, Inc."
   },
   "NBIS": {
-   "price": 141.635,
+   "price": 143.71,
    "currency": "USD",
    "prevClose": 151.639999,
-   "t": 1793809416,
+   "t": 1793813038,
    "name": "Nebius Group N.V."
   },
   "NDAQ": {
-   "price": 108.72,
+   "price": 108.51,
    "currency": "USD",
    "prevClose": 106.970001,
-   "t": 1793809417,
+   "t": 1793813013,
    "name": "Nasdaq, Inc."
   },
   "NFLX": {
-   "price": 66.015,
+   "price": 65.9,
    "currency": "USD",
    "prevClose": 63.419998,
-   "t": 1793809424,
+   "t": 1793813041,
    "name": "Netflix, Inc."
   },
   "NVDA": {
-   "price": 202.43,
+   "price": 203.19,
    "currency": "USD",
    "prevClose": 206.690002,
-   "t": 1793809422,
+   "t": 1793813042,
    "name": "NVIDIA Corporation"
   },
   "OR.BK": {
@@ -1008,10 +1008,10 @@
    "name": "PTT Oil and Retail Business Public Company Limited"
   },
   "ORCL": {
-   "price": 125.51,
+   "price": 126.1,
    "currency": "USD",
    "prevClose": 126.190002,
-   "t": 1793809426,
+   "t": 1793813045,
    "name": "Oracle Corporation"
   },
   "OSP.BK": {
@@ -1022,65 +1022,65 @@
    "name": "Osotspa Public Company Limited"
   },
   "OXY": {
-   "price": 57.72,
+   "price": 56.68,
    "currency": "USD",
    "prevClose": 60.43,
-   "t": 1793809426,
+   "t": 1793813047,
    "name": "Occidental Petroleum Corporation"
   },
   "PDG.BK": {
    "price": 3.36,
    "currency": "THB",
-   "prevClose": 3.28,
+   "prevClose": 3.3,
    "t": 1793780156,
    "name": "Prodigy Public Company Limited"
   },
   "PEY": {
-   "price": 25.36,
+   "price": 25.445,
    "currency": "USD",
    "prevClose": 24.559999,
-   "t": 1793809425,
+   "t": 1793813043,
    "name": "Invesco High Yield Equity Dividend Achievers ETF"
   },
   "PFE": {
-   "price": 30.511,
+   "price": 30.535,
    "currency": "USD",
    "prevClose": 30.0,
-   "t": 1793809430,
+   "t": 1793813051,
    "name": "Pfizer Inc."
   },
   "PG": {
-   "price": 167.49,
+   "price": 167.865,
    "currency": "USD",
    "prevClose": 162.059998,
-   "t": 1793809413,
+   "t": 1793813053,
    "name": "The Procter & Gamble Company"
   },
   "PLTR": {
-   "price": 171.2,
+   "price": 170.49,
    "currency": "USD",
    "prevClose": 175.399994,
-   "t": 1793809436,
+   "t": 1793813054,
    "name": "Palantir Technologies Inc."
   },
   "PM": {
-   "price": 211.61,
+   "price": 210.725,
    "currency": "USD",
    "prevClose": 208.029999,
-   "t": 1793809437,
+   "t": 1793813049,
    "name": "Philip Morris International Inc."
   },
   "PM.BK": {
    "price": 10.8,
    "currency": "THB",
-   "prevClose": 10.9,
+   "prevClose": 11.0,
    "t": 1793784997,
    "name": "Premier Marketing Public Company Limited"
   },
   "PRINC.BK": {
    "price": 1.63,
    "currency": "THB",
-   "prevClose": 1.63,
+   "prevClose": 1.62,
    "t": 1793783140,
    "name": "Principal Capital Public Company Limited"
   },
@@ -1094,92 +1094,92 @@
   "PSL.BK": {
    "price": 9.0,
    "currency": "THB",
-   "prevClose": 8.95,
+   "prevClose": 9.25,
    "t": 1793784997,
    "name": "Precious Shipping Public Company Limited"
   },
   "PTT.BK": {
    "price": 40.0,
    "currency": "THB",
-   "prevClose": 40.5,
+   "prevClose": 41.0,
    "t": 1793784997,
    "name": "PTT Public Company Limited"
   },
   "PTTEP.BK": {
    "price": 150.0,
    "currency": "THB",
-   "prevClose": 153.0,
+   "prevClose": 158.0,
    "t": 1793784997,
    "name": "PTT Exploration and Production Public Company Limited"
   },
   "PTTGC.BK": {
    "price": 44.75,
    "currency": "THB",
-   "prevClose": 45.5,
+   "prevClose": 45.75,
    "t": 1793784997,
    "name": "PTT Global Chemical Public Company Limited"
   },
   "QCOM": {
-   "price": 165.53,
+   "price": 169.415,
    "currency": "USD",
    "prevClose": 164.429993,
-   "t": 1793809446,
+   "t": 1793813063,
    "name": "QUALCOMM Incorporated"
   },
   "QQQ": {
-   "price": 690.95,
+   "price": 696.052,
    "currency": "USD",
    "prevClose": 685.280029,
-   "t": 1793809447,
+   "t": 1793813060,
    "name": "Invesco QQQ Trust"
   },
   "RATCH.BK": {
    "price": 37.0,
    "currency": "THB",
-   "prevClose": 36.5,
+   "prevClose": 37.5,
    "t": 1793784997,
    "name": "Ratch Group Public Company Limited"
   },
   "RBLX": {
-   "price": 47.89,
+   "price": 48.46,
    "currency": "USD",
    "prevClose": 45.450001,
-   "t": 1793809447,
+   "t": 1793813068,
    "name": "Roblox Corporation"
   },
   "RCL.BK": {
    "price": 46.75,
    "currency": "THB",
-   "prevClose": 47.0,
+   "prevClose": 49.75,
    "t": 1793784997,
    "name": "Regional Container Lines Public Company Limited"
   },
   "RJH.BK": {
    "price": 16.2,
    "currency": "THB",
-   "prevClose": 15.9,
+   "prevClose": 16.0,
    "t": 1793784997,
    "name": "Rajthanee Hospital Public Company Limited"
   },
   "RKLB": {
-   "price": 50.91,
+   "price": 52.105,
    "currency": "USD",
    "prevClose": 54.43,
-   "t": 1793809452,
+   "t": 1793813068,
    "name": "Rocket Lab Corporation"
   },
   "RTX": {
-   "price": 195.29,
+   "price": 197.325,
    "currency": "USD",
    "prevClose": 203.820007,
-   "t": 1793809449,
+   "t": 1793813056,
    "name": "RTX Corporation"
   },
   "SBUX": {
-   "price": 108.57,
+   "price": 109.03,
    "currency": "USD",
    "prevClose": 104.769997,
-   "t": 1793809454,
+   "t": 1793813071,
    "name": "Starbucks Corporation"
   },
   "SCB.BK": {
@@ -1192,78 +1192,78 @@
   "SCC.BK": {
    "price": 244.0,
    "currency": "THB",
-   "prevClose": 242.0,
+   "prevClose": 248.0,
    "t": 1793784997,
    "name": "The Siam Cement Public Company Limited"
   },
   "SCGP.BK": {
    "price": 27.25,
    "currency": "THB",
-   "prevClose": 26.75,
+   "prevClose": 26.5,
    "t": 1793784997,
    "name": "SCG Packaging Public Company Limited"
   },
   "SCHD": {
-   "price": 36.02,
+   "price": 36.06,
    "currency": "USD",
    "prevClose": 35.549999,
-   "t": 1793809460,
+   "t": 1793813078,
    "name": "Schwab U.S. Dividend Equity ETF"
   },
   "SE": {
-   "price": 80.86,
+   "price": 81.045,
    "currency": "USD",
    "prevClose": 76.769997,
-   "t": 1793809451,
+   "t": 1793813062,
    "name": "Sea Limited"
   },
   "SHY": {
-   "price": 81.46,
+   "price": 81.498,
    "currency": "USD",
    "prevClose": 81.400002,
-   "t": 1793809439,
+   "t": 1793813064,
    "name": "iShares 1-3 Year Treasury Bond ETF"
   },
   "SIS.BK": {
    "price": 23.8,
    "currency": "THB",
-   "prevClose": 23.0,
+   "prevClose": 23.1,
    "t": 1793784997,
    "name": "SiS Distribution (Thailand) Public Company Limited"
   },
   "SNDK": {
-   "price": 1025.405,
+   "price": 1042.0,
    "currency": "USD",
    "prevClose": 1126.52002,
-   "t": 1793809465,
+   "t": 1793813084,
    "name": "Sandisk Corporation"
   },
   "SPCX": {
-   "price": 135.36,
+   "price": 137.46,
    "currency": "USD",
    "prevClose": 141.309998,
-   "t": 1793809466,
+   "t": 1793813085,
    "name": "Space Exploration Technologies Corp."
   },
   "SPOT": {
-   "price": 627.03,
+   "price": 625.768,
    "currency": "USD",
    "prevClose": 600.090027,
-   "t": 1793809462,
+   "t": 1793813084,
    "name": "Spotify Technology S.A."
   },
   "STGT.BK": {
    "price": 9.3,
    "currency": "THB",
-   "prevClose": 9.3,
+   "prevClose": 9.25,
    "t": 1793784997,
    "name": "Sri Trang Gloves (Thailand) Public Company Limited"
   },
   "STX": {
-   "price": 563.45,
+   "price": 567.83,
    "currency": "USD",
    "prevClose": 606.380005,
-   "t": 1793809469,
+   "t": 1793813085,
    "name": "Seagate Technology Holdings plc"
   },
   "SYNEX.BK": {
@@ -1276,56 +1276,56 @@
   "TASCO.BK": {
    "price": 16.8,
    "currency": "THB",
-   "prevClose": 16.5,
+   "prevClose": 17.0,
    "t": 1793784997,
    "name": "Tipco Asphalt Public Company Limited"
   },
   "TDEX.BK": {
    "price": 10.18,
    "currency": "THB",
-   "prevClose": 10.1,
+   "prevClose": 10.2,
    "t": 1793784997,
    "name": "ThaiDEX SET50"
   },
   "TFG.BK": {
    "price": 9.65,
    "currency": "THB",
-   "prevClose": 9.4,
+   "prevClose": 9.55,
    "t": 1793784997,
    "name": "Thaifoods Group Public Company Limited"
   },
   "TFMAMA.BK": {
    "price": 181.0,
    "currency": "THB",
-   "prevClose": 180.0,
+   "prevClose": 181.5,
    "t": 1793783583,
    "name": "Thai President Foods Public Company Limited"
   },
   "TGT": {
-   "price": 161.05,
+   "price": 162.47,
    "currency": "USD",
    "prevClose": 154.399994,
-   "t": 1793809476,
+   "t": 1793813095,
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.64,
+   "price": 33.59,
    "currency": "THB",
    "prevClose": 33.700001,
-   "t": 1793809477,
+   "t": 1793813097,
    "name": "USD/THB"
   },
   "TMUS": {
-   "price": 160.045,
+   "price": 160.45,
    "currency": "USD",
    "prevClose": 154.410004,
-   "t": 1793809470,
+   "t": 1793813088,
    "name": "T-Mobile US, Inc."
   },
   "TOA.BK": {
    "price": 15.3,
    "currency": "THB",
-   "prevClose": 14.8,
+   "prevClose": 14.7,
    "t": 1793784997,
    "name": "TOA Paint (Thailand) Public Company Limited"
   },
@@ -1337,37 +1337,37 @@
    "name": "True Corporation Public Company Limited"
   },
   "TSLA": {
-   "price": 381.7,
+   "price": 387.885,
    "currency": "USD",
    "prevClose": 398.5,
-   "t": 1793809482,
+   "t": 1793813101,
    "name": "Tesla, Inc."
   },
   "TSM": {
-   "price": 394.67,
+   "price": 397.66,
    "currency": "USD",
    "prevClose": 404.799988,
-   "t": 1793809482,
+   "t": 1793813102,
    "name": "Taiwan Semiconductor Manufacturing Company Limited"
   },
   "TTA.BK": {
    "price": 4.76,
    "currency": "THB",
-   "prevClose": 4.68,
+   "prevClose": 4.78,
    "t": 1793784997,
    "name": "Thoresen Thai Agencies Public Company Limited"
   },
   "TTW.BK": {
    "price": 10.1,
    "currency": "THB",
-   "prevClose": 10.1,
+   "prevClose": 10.0,
    "t": 1793784997,
    "name": "TTW Public Company Limited"
   },
   "TU.BK": {
    "price": 13.2,
    "currency": "THB",
-   "prevClose": 13.1,
+   "prevClose": 12.8,
    "t": 1793784997,
    "name": "Thai Union Group Public Company Limited"
   },
@@ -1379,24 +1379,24 @@
    "name": "Thai Vegetable Oil Public Company Limited"
   },
   "U": {
-   "price": 41.23,
+   "price": 42.315,
    "currency": "USD",
    "prevClose": 40.48,
-   "t": 1793809490,
+   "t": 1793813104,
    "name": "Unity Software Inc."
   },
   "UNH": {
-   "price": 403.13,
+   "price": 408.355,
    "currency": "USD",
    "prevClose": 404.440002,
-   "t": 1793809488,
+   "t": 1793813109,
    "name": "UnitedHealth Group Incorporated"
   },
   "V": {
-   "price": 432.52,
+   "price": 431.96,
    "currency": "USD",
    "prevClose": 420.420013,
-   "t": 1793809492,
+   "t": 1793813111,
    "name": "Visa Inc."
   },
   "VAYU1.BK": {
@@ -1406,24 +1406,24 @@
    "name": "Vayupak Fund1"
   },
   "VFS": {
-   "price": 3.3,
+   "price": 3.33,
    "currency": "USD",
    "prevClose": 3.21,
-   "t": 1793809427,
+   "t": 1793812972,
    "name": "VinFast Auto Ltd."
   },
   "VGLT": {
-   "price": 52.215,
+   "price": 52.33,
    "currency": "USD",
    "prevClose": 52.060001,
-   "t": 1793809423,
+   "t": 1793813096,
    "name": "Vanguard Long-Term Treasury Index Fund ETF Shares"
   },
   "VHT": {
-   "price": 348.13,
+   "price": 349.83,
    "currency": "USD",
    "prevClose": 340.799988,
-   "t": 1793809465,
+   "t": 1793813112,
    "name": "Vanguard Health Care Index Fund ETF Shares"
   },
   "VIBHA.BK": {
@@ -1441,164 +1441,164 @@
    "name": "Srivichaivejvivat Public Company Limited"
   },
   "VOO": {
-   "price": 702.7,
+   "price": 706.23,
    "currency": "USD",
    "prevClose": 693.539978,
-   "t": 1793809501,
+   "t": 1793813120,
    "name": "Vanguard S&P 500 ETF"
   },
   "VPU": {
-   "price": 187.145,
+   "price": 188.395,
    "currency": "USD",
    "prevClose": 187.630005,
-   "t": 1793809438,
+   "t": 1793813112,
    "name": "Vanguard Utilities Index Fund ETF Shares"
   },
   "VT": {
-   "price": 157.155,
+   "price": 157.99,
    "currency": "USD",
    "prevClose": 155.160004,
-   "t": 1793809503,
+   "t": 1793813093,
    "name": "Vanguard Total World Stock Index Fund ETF Shares"
   },
   "VTI": {
-   "price": 375.59,
+   "price": 377.68,
    "currency": "USD",
    "prevClose": 371.209991,
-   "t": 1793809501,
+   "t": 1793813120,
    "name": "Vanguard Morningstar Total Stock Market ETF"
   },
   "VZ": {
-   "price": 46.4,
+   "price": 46.39,
    "currency": "USD",
    "prevClose": 45.240002,
-   "t": 1793809501,
+   "t": 1793813123,
    "name": "Verizon Communications Inc."
   },
   "WDC": {
-   "price": 325.745,
+   "price": 328.67,
    "currency": "USD",
    "prevClose": 347.350006,
-   "t": 1793809506,
+   "t": 1793813106,
    "name": "Western Digital Corporation"
   },
   "WFC": {
-   "price": 86.56,
+   "price": 87.055,
    "currency": "USD",
    "prevClose": 85.529999,
-   "t": 1793809506,
+   "t": 1793813125,
    "name": "Wells Fargo & Company"
   },
   "WHA.BK": {
    "price": 4.9,
    "currency": "THB",
-   "prevClose": 4.78,
+   "prevClose": 4.8,
    "t": 1793784997,
    "name": "WHA Corporation Public Company Limited"
   },
   "WMT": {
-   "price": 129.975,
+   "price": 130.645,
    "currency": "USD",
    "prevClose": 124.860001,
-   "t": 1793809510,
+   "t": 1793813127,
    "name": "Walmart Inc."
   },
   "XLB": {
-   "price": 53.525,
+   "price": 53.865,
    "currency": "USD",
    "prevClose": 52.59,
-   "t": 1793809512,
+   "t": 1793813130,
    "name": "State Street Materials Select Sector SPDR ETF"
   },
   "XLC": {
-   "price": 104.96,
+   "price": 105.725,
    "currency": "USD",
    "prevClose": 101.440002,
-   "t": 1793809506,
+   "t": 1793813129,
    "name": "State Street Communication Services Select Sector SPDR ETF"
   },
   "XLE": {
-   "price": 63.6,
+   "price": 62.83,
    "currency": "USD",
    "prevClose": 66.68,
-   "t": 1793809514,
+   "t": 1793813130,
    "name": "State Street Energy Select Sector SPDR ETF"
   },
   "XLF": {
-   "price": 58.655,
+   "price": 58.895,
    "currency": "USD",
    "prevClose": 57.189999,
-   "t": 1793809515,
+   "t": 1793813129,
    "name": "State Street Financial Select Sector SPDR ETF"
   },
   "XLI": {
-   "price": 167.83,
+   "price": 169.54,
    "currency": "USD",
    "prevClose": 171.320007,
-   "t": 1793809517,
+   "t": 1793813129,
    "name": "State Street Industrial Select Sector SPDR ETF"
   },
   "XLK": {
-   "price": 176.37,
+   "price": 177.44,
    "currency": "USD",
    "prevClose": 176.509995,
-   "t": 1793809518,
+   "t": 1793813131,
    "name": "State Street Technology Select Sector SPDR ETF"
   },
   "XLP": {
-   "price": 92.15,
+   "price": 92.322,
    "currency": "USD",
    "prevClose": 88.949997,
-   "t": 1793809518,
+   "t": 1793813135,
    "name": "State Street Consumer Staples Select Sector SPDR ETF"
   },
   "XLRE": {
-   "price": 44.65,
+   "price": 44.9,
    "currency": "USD",
    "prevClose": 43.669998,
-   "t": 1793809516,
+   "t": 1793813126,
    "name": "State Street Real Estate Select Sector SPDR ETF"
   },
   "XLU": {
-   "price": 43.302,
+   "price": 43.615,
    "currency": "USD",
    "prevClose": 43.419998,
-   "t": 1793809518,
+   "t": 1793813123,
    "name": "State Street Utilities Select Sector SPDR ETF"
   },
   "XLV": {
-   "price": 188.17,
+   "price": 188.96,
    "currency": "USD",
    "prevClose": 184.020004,
-   "t": 1793809518,
+   "t": 1793813139,
    "name": "State Street Health Care Select Sector SPDR ETF"
   },
   "XLY": {
-   "price": 121.42,
+   "price": 122.705,
    "currency": "USD",
    "prevClose": 117.330002,
-   "t": 1793809520,
+   "t": 1793813132,
    "name": "State Street Consumer Discretionary Select Sector SPDR ETF"
   },
   "XOM": {
-   "price": 171.03,
+   "price": 167.75,
    "currency": "USD",
    "prevClose": 177.460007,
-   "t": 1793809525,
+   "t": 1793813141,
    "name": "ExxonMobil Holdings Corporation"
   },
   "YUM": {
-   "price": 164.15,
+   "price": 165.86,
    "currency": "USD",
    "prevClose": 157.009995,
-   "t": 1793809519,
+   "t": 1793813138,
    "name": "Yum! Brands, Inc."
   },
   "^GSPC": {
-   "price": 7665.49,
+   "price": 7706.99,
    "currency": "USD",
    "prevClose": 7568.919922,
-   "t": 1793809527,
+   "t": 1793813144,
    "name": "S&P 500"
   },
   "^HSI": {
@@ -1609,10 +1609,10 @@
    "name": "HANG SENG INDEX"
   },
   "^IXIC": {
-   "price": 25706.82,
+   "price": 25894.525,
    "currency": "USD",
    "prevClose": 25372.009766,
-   "t": 1793809527,
+   "t": 1793813145,
    "name": "NASDAQ Composite"
   },
   "^KS11": {
@@ -1644,10 +1644,10 @@
    "name": "STI Index"
   },
   "^TNX": {
-   "price": 4.921,
+   "price": 4.902,
    "currency": "USD",
    "prevClose": 4.952,
-   "t": 1793808633,
+   "t": 1793812243,
    "name": "CBOE Interest Rate 10 Year T Note"
   },
   "^TWII": {
@@ -1667,12 +1667,12 @@
  "valuation": {
   "000660.KS": {
    "cur": "KRW",
-   "mcap": 921308938371072,
+   "mcap": 984421939281920,
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 0.23,
-   "t": 1793767927
+   "dy": 0.21,
+   "t": 1793813167
   },
   "002352.SZ": {
    "cur": "CNY",
@@ -1685,12 +1685,12 @@
   },
   "005930.KS": {
    "cur": "KRW",
-   "mcap": 1360991786893312,
+   "mcap": 1419599165784064,
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 2.83,
-   "t": 1793767927
+   "dy": 2.71,
+   "t": 1793813167
   },
   "0694.HK": {
    "cur": "HKD",
@@ -1856,12 +1856,12 @@
   },
   "9984.T": {
    "cur": "JPY",
-   "mcap": 22796197429248,
-   "pe": 4.66,
-   "pbv": 1.25,
+   "mcap": 24329242804224,
+   "pe": 4.97,
+   "pbv": 1.33,
    "src": "yahoo",
-   "dy": 0.27,
-   "t": 1793767927
+   "dy": 0.26,
+   "t": 1793813167
   },
   "9988.HK": {
    "cur": "HKD",
@@ -2499,11 +2499,11 @@
   "EWJ": {
    "cur": "USD",
    "mcap": null,
-   "pe": 14.51,
+   "pe": 14.71,
    "pbv": 1.37,
    "src": "yahoo",
-   "dy": 3.85,
-   "t": 1793767927
+   "dy": 3.79,
+   "t": 1793813167
   },
   "FDX": {
    "cur": "USD",
@@ -2818,7 +2818,7 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 1.39,
+   "dy": 1.38,
    "t": 1793549841
   },
   "MCD": {
@@ -3567,7 +3567,7 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 4.04,
+   "dy": 4.03,
    "t": 1792684518
   },
   "VHT": {
