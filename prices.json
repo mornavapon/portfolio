@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-05T14:16:34+00:00",
+ "updated": "2026-11-05T15:36:44+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.41,
+  "USD": 33.42,
   "CNY": 5.0127,
-  "HKD": 4.2618,
+  "HKD": 4.2622,
   "INR": 0.3533,
-  "JPY": 0.2086,
-  "KRW": 0.0249,
-  "SGD": 26.1765,
-  "TWD": 1.0136,
+  "JPY": 0.2092,
+  "KRW": 0.0247,
+  "SGD": 26.1796,
+  "TWD": 1.0126,
   "VND": 0.0013
  },
  "quotes": {
@@ -23,7 +23,7 @@
   "000660.KS": {
    "price": 1264000.0,
    "currency": "KRW",
-   "prevClose": 1396000.0,
+   "prevClose": 1398000.0,
    "t": 1793860206,
    "name": "SK hynix Inc."
   },
@@ -37,7 +37,7 @@
   "005930.KS": {
    "price": 201500.0,
    "currency": "KRW",
-   "prevClose": 218000.0,
+   "prevClose": 219500.0,
    "t": 1793860229,
    "name": "Samsung Electronics Co., Ltd."
   },
@@ -88,7 +88,7 @@
    "currency": "HKD",
    "prevClose": 92.480003,
    "t": 1793861790,
-   "name": "Global X China Clean Energy ETF"
+   "name": "Global X ETF Series OFC - Global X China Clean Energy ETF"
   },
   "2828.HK": {
    "price": 86.06,
@@ -109,14 +109,14 @@
    "currency": "HKD",
    "prevClose": 3.854,
    "t": 1793866095,
-   "name": "CSOP Hang Seng TECH Index ETF"
+   "name": "CSOP ETF Series - CSOP Hang Seng TECH Index ETF"
   },
   "3188.HK": {
    "price": 50.94,
    "currency": "HKD",
    "prevClose": 50.200001,
    "t": 1793866095,
-   "name": "ChinaAMC CSI 300 Index ETF"
+   "name": "ChinaAMC ETF Series - ChinaAMC CSI 300 Index ETF"
   },
   "3690.HK": {
    "price": 80.3,
@@ -184,7 +184,7 @@
   "9984.T": {
    "price": 3980.0,
    "currency": "JPY",
-   "prevClose": 4269.0,
+   "prevClose": 4410.0,
    "t": 1793860200,
    "name": "SoftBank Group Corp."
   },
@@ -203,31 +203,31 @@
    "name": "NetEase, Inc."
   },
   "AAPL": {
-   "price": 349.51,
+   "price": 350.49,
    "currency": "USD",
-   "prevClose": 331.899994,
-   "t": 1793826001,
+   "prevClose": 349.51001,
+   "t": 1793892261,
    "name": "Apple Inc."
   },
   "ABBV": {
-   "price": 294.83,
+   "price": 301.35,
    "currency": "USD",
-   "prevClose": 286.0,
-   "t": 1793826003,
+   "prevClose": 294.829987,
+   "t": 1793892259,
    "name": "AbbVie Inc."
   },
   "ABNB": {
-   "price": 176.37,
+   "price": 169.925,
    "currency": "USD",
-   "prevClose": 166.960007,
-   "t": 1793826001,
+   "prevClose": 176.369995,
+   "t": 1793892263,
    "name": "Airbnb, Inc."
   },
   "ABT": {
-   "price": 115.51,
+   "price": 116.725,
    "currency": "USD",
-   "prevClose": 109.400002,
-   "t": 1793826003,
+   "prevClose": 115.510002,
+   "t": 1793892260,
    "name": "Abbott Laboratories"
   },
   "ADVANC.BK": {
@@ -252,10 +252,10 @@
    "name": "Advanced Information Technology Public Company Limited"
   },
   "AMAT": {
-   "price": 369.4,
+   "price": 335.21,
    "currency": "USD",
-   "prevClose": 381.920013,
-   "t": 1793826000,
+   "prevClose": 369.399994,
+   "t": 1793892267,
    "name": "Applied Materials, Inc."
   },
   "AMATA.BK": {
@@ -266,24 +266,24 @@
    "name": "Amata Corporation Public Company Limited"
   },
   "AMD": {
-   "price": 488.78,
+   "price": 416.535,
    "currency": "USD",
-   "prevClose": 483.899994,
-   "t": 1793826000,
+   "prevClose": 488.779999,
+   "t": 1793892266,
    "name": "Advanced Micro Devices, Inc."
   },
   "AMGN": {
-   "price": 478.48,
+   "price": 479.875,
    "currency": "USD",
-   "prevClose": 461.26001,
-   "t": 1793826000,
+   "prevClose": 478.480011,
+   "t": 1793892271,
    "name": "Amgen Inc."
   },
   "AMZN": {
-   "price": 266.03,
+   "price": 257.5,
    "currency": "USD",
-   "prevClose": 250.690002,
-   "t": 1793826001,
+   "prevClose": 266.029999,
+   "t": 1793892272,
    "name": "Amazon.com, Inc."
   },
   "AOT.BK": {
@@ -294,10 +294,10 @@
    "name": "Airports of Thailand Public Company Limited"
   },
   "ARM": {
-   "price": 191.8,
+   "price": 168.09,
    "currency": "USD",
-   "prevClose": 202.490005,
-   "t": 1793826000,
+   "prevClose": 191.800003,
+   "t": 1793892273,
    "name": "Arm Holdings plc"
   },
   "AS.BK": {
@@ -308,10 +308,10 @@
    "name": "Asphere Innovations Public Company Limited"
   },
   "ASML": {
-   "price": 1496.3,
+   "price": 1388.44,
    "currency": "USD",
-   "prevClose": 1552.140015,
-   "t": 1793826001,
+   "prevClose": 1496.300049,
+   "t": 1793892275,
    "name": "ASML Holding N.V."
   },
   "ASP.BK": {
@@ -322,17 +322,17 @@
    "name": "Asia Plus Group Holdings Public Company Limited"
   },
   "AVGO": {
-   "price": 325.48,
+   "price": 301.71,
    "currency": "USD",
-   "prevClose": 332.130005,
-   "t": 1793826001,
+   "prevClose": 325.480011,
+   "t": 1793892279,
    "name": "Broadcom Inc."
   },
   "AXP": {
-   "price": 332.59,
+   "price": 333.665,
    "currency": "USD",
-   "prevClose": 325.5,
-   "t": 1793826156,
+   "prevClose": 332.589996,
+   "t": 1793892278,
    "name": "American Express Company"
   },
   "AXTRART.BK": {
@@ -350,10 +350,10 @@
    "name": "Bangkok Airways Public Company Limited"
   },
   "BAC": {
-   "price": 51.63,
+   "price": 51.45,
    "currency": "USD",
-   "prevClose": 49.66,
-   "t": 1793826003,
+   "prevClose": 51.630001,
+   "t": 1793892282,
    "name": "Bank of America Corporation"
   },
   "BAFS.BK": {
@@ -413,31 +413,31 @@
    "name": "Buakaew Income"
   },
   "BLK": {
-   "price": 1224.37,
+   "price": 1193.03,
    "currency": "USD",
-   "prevClose": 1161.319946,
-   "t": 1793826002,
+   "prevClose": 1224.369995,
+   "t": 1793892292,
    "name": "BlackRock, Inc."
   },
   "BRK-A": {
-   "price": 869301.0,
+   "price": 872708.0,
    "currency": "USD",
-   "prevClose": 836445.0,
-   "t": 1793826125,
+   "prevClose": 869301.0,
+   "t": 1793891288,
    "name": "Berkshire Hathaway Inc."
   },
   "BRK-B": {
-   "price": 579.09,
+   "price": 583.902,
    "currency": "USD",
-   "prevClose": 557.070007,
-   "t": 1793826086,
+   "prevClose": 579.090027,
+   "t": 1793892296,
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 79469.28,
+   "price": 76547.01,
    "currency": "USD",
    "prevClose": 80405.289062,
-   "t": 1793887923,
+   "t": 1793892294,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -455,31 +455,31 @@
    "name": "BTS Group Holdings Public Company Limited"
   },
   "BULL": {
-   "price": 5.39,
+   "price": 4.985,
    "currency": "USD",
-   "prevClose": 5.2,
-   "t": 1793826001,
+   "prevClose": 5.39,
+   "t": 1793892298,
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 96.88,
+   "price": 96.79,
    "currency": "USD",
    "prevClose": 94.620003,
-   "t": 1793887330,
+   "t": 1793891683,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
-   "price": 124.74,
+   "price": 122.0,
    "currency": "USD",
-   "prevClose": 122.709999,
-   "t": 1793826186,
+   "prevClose": 124.739998,
+   "t": 1793892300,
    "name": "Citigroup Inc."
   },
   "CAT": {
-   "price": 591.3,
+   "price": 561.63,
    "currency": "USD",
-   "prevClose": 623.940002,
-   "t": 1793826002,
+   "prevClose": 591.299988,
+   "t": 1793892302,
    "name": "Caterpillar Inc."
   },
   "CENTEL.BK": {
@@ -497,31 +497,31 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 89.4,
+   "price": 89.98,
    "currency": "USD",
    "prevClose": 88.120003,
-   "t": 1793887336,
+   "t": 1793891692,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
-   "price": 308.27,
+   "price": 310.71,
    "currency": "USD",
-   "prevClose": 304.059998,
-   "t": 1793826001,
+   "prevClose": 308.269989,
+   "t": 1793892298,
    "name": "CME Group Inc."
   },
   "COHR": {
-   "price": 195.09,
+   "price": 167.175,
    "currency": "USD",
-   "prevClose": 207.490005,
-   "t": 1793826002,
+   "prevClose": 195.089996,
+   "t": 1793892310,
    "name": "Coherent Corp."
   },
   "COIN": {
-   "price": 151.5,
+   "price": 138.314,
    "currency": "USD",
-   "prevClose": 145.449997,
-   "t": 1793826000,
+   "prevClose": 151.5,
+   "t": 1793892310,
    "name": "Coinbase Global, Inc."
   },
   "COM7.BK": {
@@ -532,10 +532,10 @@
    "name": "Com7 Public Company Limited"
   },
   "COST": {
-   "price": 1046.47,
+   "price": 1079.007,
    "currency": "USD",
-   "prevClose": 1019.26001,
-   "t": 1793826001,
+   "prevClose": 1046.469971,
+   "t": 1793892310,
    "name": "Costco Wholesale Corporation"
   },
   "CPALL.BK": {
@@ -581,17 +581,17 @@
    "name": "CPN Retail Growth Leasehold REIT"
   },
   "CRWD": {
-   "price": 241.0,
+   "price": 216.775,
    "currency": "USD",
-   "prevClose": 244.679993,
-   "t": 1793826000,
+   "prevClose": 241.0,
+   "t": 1793892321,
    "name": "CrowdStrike Holdings, Inc."
   },
   "CRWV": {
-   "price": 48.42,
+   "price": 42.345,
    "currency": "USD",
-   "prevClose": 53.740002,
-   "t": 1793826001,
+   "prevClose": 48.419998,
+   "t": 1793892320,
    "name": "CoreWeave, Inc."
   },
   "CSC.BK": {
@@ -602,10 +602,10 @@
    "name": "Crown Seal Public Company Limited"
   },
   "CSCO": {
-   "price": 103.61,
+   "price": 98.42,
    "currency": "USD",
-   "prevClose": 102.970001,
-   "t": 1793826000,
+   "prevClose": 103.610001,
+   "t": 1793892325,
    "name": "Cisco Systems, Inc."
   },
   "DCC.BK": {
@@ -623,10 +623,10 @@
    "name": "Delta Electronics (Thailand) Public Company Limited"
   },
   "DIS": {
-   "price": 118.95,
+   "price": 118.955,
    "currency": "USD",
-   "prevClose": 114.18,
-   "t": 1793826177,
+   "prevClose": 118.949997,
+   "t": 1793892327,
    "name": "The Walt Disney Company"
   },
   "DRT.BK": {
@@ -651,24 +651,24 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2383.57,
+   "price": 2276.43,
    "currency": "USD",
    "prevClose": 2422.311768,
-   "t": 1793887962,
+   "t": 1793892330,
    "name": "Ethereum USD"
   },
   "EWJ": {
-   "price": 93.86,
+   "price": 90.5,
    "currency": "USD",
-   "prevClose": 92.589996,
-   "t": 1793826000,
+   "prevClose": 93.860001,
+   "t": 1793892325,
    "name": "iShares MSCI Japan ETF"
   },
   "FDX": {
-   "price": 329.4,
+   "price": 324.82,
    "currency": "USD",
-   "prevClose": 318.019989,
-   "t": 1793826002,
+   "prevClose": 329.399994,
+   "t": 1793892331,
    "name": "FedEx Corporation"
   },
   "FUEVFVND01.BK": {
@@ -679,24 +679,24 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4136.0,
+   "price": 4119.2,
    "currency": "USD",
    "prevClose": 4073.0,
-   "t": 1793887364,
+   "t": 1793891721,
    "name": "Gold Dec 26"
   },
   "GE": {
-   "price": 329.45,
+   "price": 318.195,
    "currency": "USD",
-   "prevClose": 320.670013,
-   "t": 1793826002,
+   "prevClose": 329.450012,
+   "t": 1793892339,
    "name": "GE Aerospace"
   },
   "GOOG": {
-   "price": 287.3,
+   "price": 282.18,
    "currency": "USD",
-   "prevClose": 278.269989,
-   "t": 1793826000,
+   "prevClose": 287.299988,
+   "t": 1793892340,
    "name": "Alphabet Inc."
   },
   "GPSC.BK": {
@@ -707,17 +707,17 @@
    "name": "Global Power Synergy Public Company Limited"
   },
   "GRID": {
-   "price": 162.24,
+   "price": 154.33,
    "currency": "USD",
-   "prevClose": 167.399994,
-   "t": 1793826000,
+   "prevClose": 162.240005,
+   "t": 1793892342,
    "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund"
   },
   "GS": {
-   "price": 928.0,
+   "price": 875.47,
    "currency": "USD",
-   "prevClose": 896.090027,
-   "t": 1793826002,
+   "prevClose": 928.0,
+   "t": 1793892344,
    "name": "The Goldman Sachs Group, Inc."
   },
   "GULF.BK": {
@@ -728,10 +728,10 @@
    "name": "Gulf Development Public Company Limited"
   },
   "HD": {
-   "price": 355.44,
+   "price": 355.065,
    "currency": "USD",
-   "prevClose": 333.660004,
-   "t": 1793826002,
+   "prevClose": 355.440002,
+   "t": 1793892342,
    "name": "The Home Depot, Inc."
   },
   "HMPRO.BK": {
@@ -742,10 +742,10 @@
    "name": "Home Product Center Public Company Limited"
   },
   "HOOD": {
-   "price": 87.41,
+   "price": 77.97,
    "currency": "USD",
-   "prevClose": 85.68,
-   "t": 1793826001,
+   "prevClose": 87.410004,
+   "t": 1793892349,
    "name": "Robinhood Markets, Inc."
   },
   "IMPACT.BK": {
@@ -756,17 +756,17 @@
    "name": "IMPACT Growth Real Estate Investment Trust"
   },
   "INTC": {
-   "price": 58.27,
+   "price": 52.72,
    "currency": "USD",
-   "prevClose": 60.549999,
-   "t": 1793826001,
+   "prevClose": 58.27,
+   "t": 1793892352,
    "name": "Intel Corporation"
   },
   "IREN": {
-   "price": 21.71,
+   "price": 18.16,
    "currency": "USD",
-   "prevClose": 24.459999,
-   "t": 1793826001,
+   "prevClose": 21.709999,
+   "t": 1793892353,
    "name": "IREN Limited"
   },
   "JAS.BK": {
@@ -784,17 +784,17 @@
    "name": "Jaymart Group Holdings Public Company Limited"
   },
   "JNJ": {
-   "price": 276.32,
+   "price": 281.75,
    "currency": "USD",
-   "prevClose": 266.170013,
-   "t": 1793826002,
+   "prevClose": 276.320007,
+   "t": 1793892356,
    "name": "Johnson & Johnson"
   },
   "JPM": {
-   "price": 352.11,
+   "price": 344.97,
    "currency": "USD",
-   "prevClose": 337.980011,
-   "t": 1793826002,
+   "prevClose": 352.109985,
+   "t": 1793892355,
    "name": "JPMorgan Chase & Co."
   },
   "JUBILE.BK": {
@@ -819,10 +819,10 @@
    "name": "Kiatnakin Phatra Bank Public Company Limited"
   },
   "KO": {
-   "price": 95.8,
+   "price": 97.0,
    "currency": "USD",
-   "prevClose": 94.800003,
-   "t": 1793826002,
+   "prevClose": 95.800003,
+   "t": 1793892361,
    "name": "The Coca-Cola Company"
   },
   "KTC.BK": {
@@ -847,31 +847,31 @@
    "name": "Land and Houses Public Company Limited"
   },
   "LHX": {
-   "price": 259.74,
+   "price": 260.77,
    "currency": "USD",
-   "prevClose": 277.670013,
-   "t": 1793826002,
+   "prevClose": 259.73999,
+   "t": 1793892353,
    "name": "L3Harris Technologies, Inc."
   },
   "LITE": {
-   "price": 626.75,
+   "price": 540.33,
    "currency": "USD",
-   "prevClose": 680.159973,
-   "t": 1793826001,
+   "prevClose": 626.75,
+   "t": 1793892367,
    "name": "Lumentum Holdings Inc."
   },
   "LLY": {
-   "price": 1417.99,
+   "price": 1437.74,
    "currency": "USD",
-   "prevClose": 1409.380005,
-   "t": 1793826286,
+   "prevClose": 1417.98999,
+   "t": 1793892370,
    "name": "Eli Lilly and Company"
   },
   "LMT": {
-   "price": 595.04,
+   "price": 600.56,
    "currency": "USD",
-   "prevClose": 639.0,
-   "t": 1793826002,
+   "prevClose": 595.039978,
+   "t": 1793892364,
    "name": "Lockheed Martin Corporation"
   },
   "LTMH.BK": {
@@ -889,24 +889,24 @@
    "name": "MK Restaurant Group Public Company Limited"
   },
   "MA": {
-   "price": 672.68,
+   "price": 672.615,
    "currency": "USD",
-   "prevClose": 647.179993,
-   "t": 1793826002,
+   "prevClose": 672.679993,
+   "t": 1793892373,
    "name": "Mastercard Incorporated"
   },
   "MAGS": {
-   "price": 70.28,
+   "price": 67.13,
    "currency": "USD",
-   "prevClose": 68.739998,
-   "t": 1793826000,
+   "prevClose": 70.279999,
+   "t": 1793892373,
    "name": "Roundhill Magnificent Seven ETF"
   },
   "MCD": {
-   "price": 280.22,
+   "price": 281.095,
    "currency": "USD",
-   "prevClose": 263.040009,
-   "t": 1793826002,
+   "prevClose": 280.220001,
+   "t": 1793892367,
    "name": "McDonald's Corporation"
   },
   "MEGA.BK": {
@@ -917,10 +917,10 @@
    "name": "Mega Lifesciences Public Company Limited"
   },
   "META": {
-   "price": 630.0,
+   "price": 594.29,
    "currency": "USD",
-   "prevClose": 621.030029,
-   "t": 1793826000,
+   "prevClose": 630.0,
+   "t": 1793892379,
    "name": "Meta Platforms, Inc."
   },
   "MINT.BK": {
@@ -938,10 +938,10 @@
    "name": "Major Cineplex Lifestyle Leasehold Property Fund."
   },
   "MMM": {
-   "price": 193.95,
+   "price": 192.9,
    "currency": "USD",
-   "prevClose": 177.050003,
-   "t": 1793826002,
+   "prevClose": 193.949997,
+   "t": 1793892381,
    "name": "3M Company"
   },
   "MRDIYT.BK": {
@@ -952,80 +952,80 @@
    "name": "MR. D.I.Y. Holding (Thailand) Public Company Limited"
   },
   "MRK": {
-   "price": 150.36,
+   "price": 152.72,
    "currency": "USD",
-   "prevClose": 144.669998,
-   "t": 1793826273,
+   "prevClose": 150.360001,
+   "t": 1793892381,
    "name": "Merck & Co., Inc."
   },
   "MRNA": {
-   "price": 258.38,
+   "price": 246.205,
    "currency": "USD",
-   "prevClose": 228.440002,
-   "t": 1793826001,
+   "prevClose": 258.380005,
+   "t": 1793892386,
    "name": "Moderna, Inc."
   },
   "MRVL": {
-   "price": 159.8,
+   "price": 140.32,
    "currency": "USD",
-   "prevClose": 171.970001,
-   "t": 1793826001,
+   "prevClose": 159.800003,
+   "t": 1793892388,
    "name": "Marvell Technology, Inc."
   },
   "MS": {
-   "price": 193.97,
+   "price": 184.03,
    "currency": "USD",
-   "prevClose": 186.089996,
-   "t": 1793826274,
+   "prevClose": 193.970001,
+   "t": 1793892387,
    "name": "Morgan Stanley"
   },
   "MSFT": {
-   "price": 555.8,
+   "price": 540.98,
    "currency": "USD",
-   "prevClose": 520.98999,
-   "t": 1793826001,
+   "prevClose": 555.799988,
+   "t": 1793892389,
    "name": "Microsoft Corporation"
   },
   "MSTR": {
-   "price": 142.54,
+   "price": 129.24,
    "currency": "USD",
-   "prevClose": 135.630005,
-   "t": 1793826001,
+   "prevClose": 142.539993,
+   "t": 1793892392,
    "name": "Strategy Inc"
   },
   "MU": {
-   "price": 795.23,
+   "price": 692.802,
    "currency": "USD",
-   "prevClose": 855.099976,
-   "t": 1793826000,
+   "prevClose": 795.22998,
+   "t": 1793892391,
    "name": "Micron Technology, Inc."
   },
   "NBIS": {
-   "price": 141.52,
+   "price": 117.94,
    "currency": "USD",
-   "prevClose": 151.639999,
-   "t": 1793826000,
+   "prevClose": 141.520004,
+   "t": 1793892394,
    "name": "Nebius Group N.V."
   },
   "NDAQ": {
-   "price": 109.7,
+   "price": 109.46,
    "currency": "USD",
-   "prevClose": 106.970001,
-   "t": 1793826000,
+   "prevClose": 109.699997,
+   "t": 1793892380,
    "name": "Nasdaq, Inc."
   },
   "NFLX": {
-   "price": 66.39,
+   "price": 65.67,
    "currency": "USD",
-   "prevClose": 63.419998,
-   "t": 1793826000,
+   "prevClose": 66.389999,
+   "t": 1793892395,
    "name": "Netflix, Inc."
   },
   "NVDA": {
-   "price": 200.13,
+   "price": 184.72,
    "currency": "USD",
-   "prevClose": 206.690002,
-   "t": 1793826001,
+   "prevClose": 200.130005,
+   "t": 1793892398,
    "name": "NVIDIA Corporation"
   },
   "OR.BK": {
@@ -1036,10 +1036,10 @@
    "name": "PTT Oil and Retail Business Public Company Limited"
   },
   "ORCL": {
-   "price": 123.73,
+   "price": 116.63,
    "currency": "USD",
-   "prevClose": 126.190002,
-   "t": 1793826219,
+   "prevClose": 123.730003,
+   "t": 1793892399,
    "name": "Oracle Corporation"
   },
   "OSP.BK": {
@@ -1050,10 +1050,10 @@
    "name": "Osotspa Public Company Limited"
   },
   "OXY": {
-   "price": 57.33,
+   "price": 58.22,
    "currency": "USD",
-   "prevClose": 60.43,
-   "t": 1793826002,
+   "prevClose": 57.330002,
+   "t": 1793892400,
    "name": "Occidental Petroleum Corporation"
   },
   "PDG.BK": {
@@ -1064,38 +1064,38 @@
    "name": "Prodigy Public Company Limited"
   },
   "PEY": {
-   "price": 25.368,
+   "price": 25.515,
    "currency": "USD",
-   "prevClose": 24.559999,
-   "t": 1793826000,
+   "prevClose": 25.370001,
+   "t": 1793892380,
    "name": "Invesco High Yield Equity Dividend Achievers ETF"
   },
   "PFE": {
-   "price": 30.79,
+   "price": 31.3,
    "currency": "USD",
-   "prevClose": 30.0,
-   "t": 1793826147,
+   "prevClose": 30.790001,
+   "t": 1793892393,
    "name": "Pfizer Inc."
   },
   "PG": {
-   "price": 167.32,
+   "price": 169.38,
    "currency": "USD",
-   "prevClose": 162.059998,
-   "t": 1793826272,
+   "prevClose": 167.320007,
+   "t": 1793892400,
    "name": "The Procter & Gamble Company"
   },
   "PLTR": {
-   "price": 171.7,
+   "price": 154.96,
    "currency": "USD",
-   "prevClose": 175.399994,
-   "t": 1793826001,
+   "prevClose": 171.699997,
+   "t": 1793892407,
    "name": "Palantir Technologies Inc."
   },
   "PM": {
-   "price": 211.28,
+   "price": 209.2,
    "currency": "USD",
-   "prevClose": 208.029999,
-   "t": 1793826002,
+   "prevClose": 211.279999,
+   "t": 1793892398,
    "name": "Philip Morris International Inc."
   },
   "PM.BK": {
@@ -1148,24 +1148,24 @@
    "name": "PTT Global Chemical Public Company Limited"
   },
   "PYPL": {
-   "price": 60.2,
+   "price": 59.0,
    "currency": "USD",
-   "prevClose": 58.209999,
-   "t": 1793826000,
+   "prevClose": 60.200001,
+   "t": 1793892414,
    "name": "PayPal Holdings, Inc."
   },
   "QCOM": {
-   "price": 173.19,
+   "price": 155.14,
    "currency": "USD",
-   "prevClose": 164.429993,
-   "t": 1793826000,
+   "prevClose": 173.190002,
+   "t": 1793892419,
    "name": "QUALCOMM Incorporated"
   },
   "QQQ": {
-   "price": 691.95,
+   "price": 657.44,
    "currency": "USD",
-   "prevClose": 685.280029,
-   "t": 1793826001,
+   "prevClose": 691.950012,
+   "t": 1793892419,
    "name": "Invesco QQQ Trust"
   },
   "RATCH.BK": {
@@ -1176,10 +1176,10 @@
    "name": "Ratch Group Public Company Limited"
   },
   "RBLX": {
-   "price": 49.31,
+   "price": 46.67,
    "currency": "USD",
-   "prevClose": 45.450001,
-   "t": 1793826243,
+   "prevClose": 49.310001,
+   "t": 1793892415,
    "name": "Roblox Corporation"
   },
   "RCL.BK": {
@@ -1190,10 +1190,10 @@
    "name": "Regional Container Lines Public Company Limited"
   },
   "RDDT": {
-   "price": 101.89,
+   "price": 94.58,
    "currency": "USD",
-   "prevClose": 96.150002,
-   "t": 1793826233,
+   "prevClose": 101.889999,
+   "t": 1793892421,
    "name": "Reddit, Inc."
   },
   "RJH.BK": {
@@ -1204,24 +1204,24 @@
    "name": "Rajthanee Hospital Public Company Limited"
   },
   "RKLB": {
-   "price": 52.37,
+   "price": 45.015,
    "currency": "USD",
-   "prevClose": 54.43,
-   "t": 1793826000,
+   "prevClose": 52.369999,
+   "t": 1793892425,
    "name": "Rocket Lab Corporation"
   },
   "RTX": {
-   "price": 198.43,
+   "price": 198.4,
    "currency": "USD",
-   "prevClose": 203.820007,
-   "t": 1793826002,
+   "prevClose": 198.429993,
+   "t": 1793892425,
    "name": "RTX Corporation"
   },
   "SBUX": {
-   "price": 109.7,
+   "price": 109.595,
    "currency": "USD",
-   "prevClose": 104.769997,
-   "t": 1793826001,
+   "prevClose": 109.699997,
+   "t": 1793892425,
    "name": "Starbucks Corporation"
   },
   "SCB.BK": {
@@ -1246,24 +1246,24 @@
    "name": "SCG Packaging Public Company Limited"
   },
   "SCHD": {
-   "price": 36.21,
+   "price": 36.22,
    "currency": "USD",
-   "prevClose": 35.549999,
-   "t": 1793826000,
+   "prevClose": 36.209999,
+   "t": 1793892433,
    "name": "Schwab U.S. Dividend Equity ETF"
   },
   "SE": {
-   "price": 80.19,
+   "price": 74.05,
    "currency": "USD",
-   "prevClose": 76.769997,
-   "t": 1793826003,
+   "prevClose": 80.190002,
+   "t": 1793892433,
    "name": "Sea Limited"
   },
   "SHY": {
-   "price": 81.5,
+   "price": 81.549,
    "currency": "USD",
-   "prevClose": 81.400002,
-   "t": 1793826001,
+   "prevClose": 81.5,
+   "t": 1793892434,
    "name": "iShares 1-3 Year Treasury Bond ETF"
   },
   "SIS.BK": {
@@ -1274,31 +1274,31 @@
    "name": "SiS Distribution (Thailand) Public Company Limited"
   },
   "SNDK": {
-   "price": 1037.4,
+   "price": 846.195,
    "currency": "USD",
-   "prevClose": 1126.52002,
-   "t": 1793826001,
+   "prevClose": 1037.400024,
+   "t": 1793892437,
    "name": "Sandisk Corporation"
   },
   "SOXX": {
-   "price": 450.41,
+   "price": 134.9572,
    "currency": "USD",
-   "prevClose": 465.0,
-   "t": 1793826001,
+   "prevClose": 450.410004,
+   "t": 1793892438,
    "name": "iShares Semiconductor ETF"
   },
   "SPCX": {
-   "price": 135.92,
+   "price": 122.749,
    "currency": "USD",
-   "prevClose": 141.309998,
-   "t": 1793826000,
+   "prevClose": 135.919998,
+   "t": 1793892440,
    "name": "Space Exploration Technologies Corp."
   },
   "SPOT": {
-   "price": 627.66,
+   "price": 617.48,
    "currency": "USD",
-   "prevClose": 600.090027,
-   "t": 1793826002,
+   "prevClose": 627.659973,
+   "t": 1793892439,
    "name": "Spotify Technology S.A."
   },
   "STGT.BK": {
@@ -1309,10 +1309,10 @@
    "name": "Sri Trang Gloves (Thailand) Public Company Limited"
   },
   "STX": {
-   "price": 557.06,
+   "price": 475.645,
    "currency": "USD",
-   "prevClose": 606.380005,
-   "t": 1793826000,
+   "prevClose": 557.059998,
+   "t": 1793892441,
    "name": "Seagate Technology Holdings plc"
   },
   "SYNEX.BK": {
@@ -1351,24 +1351,24 @@
    "name": "Thai President Foods Public Company Limited"
   },
   "TGT": {
-   "price": 163.1,
+   "price": 161.59,
    "currency": "USD",
-   "prevClose": 154.399994,
-   "t": 1793826002,
+   "prevClose": 163.100006,
+   "t": 1793892441,
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.41,
+   "price": 33.42,
    "currency": "THB",
    "prevClose": 33.75,
-   "t": 1793888086,
+   "t": 1793892432,
    "name": "USD/THB"
   },
   "TMUS": {
-   "price": 159.17,
+   "price": 162.79,
    "currency": "USD",
-   "prevClose": 154.410004,
-   "t": 1793826001,
+   "prevClose": 159.169998,
+   "t": 1793892450,
    "name": "T-Mobile US, Inc."
   },
   "TOA.BK": {
@@ -1386,17 +1386,17 @@
    "name": "True Corporation Public Company Limited"
   },
   "TSLA": {
-   "price": 385.19,
+   "price": 346.22,
    "currency": "USD",
-   "prevClose": 398.5,
-   "t": 1793826001,
+   "prevClose": 385.190002,
+   "t": 1793892456,
    "name": "Tesla, Inc."
   },
   "TSM": {
-   "price": 395.75,
+   "price": 362.52,
    "currency": "USD",
-   "prevClose": 404.799988,
-   "t": 1793826002,
+   "prevClose": 395.75,
+   "t": 1793892455,
    "name": "Taiwan Semiconductor Manufacturing Company Limited"
   },
   "TTA.BK": {
@@ -1428,24 +1428,24 @@
    "name": "Thai Vegetable Oil Public Company Limited"
   },
   "U": {
-   "price": 42.46,
+   "price": 46.37,
    "currency": "USD",
-   "prevClose": 40.48,
-   "t": 1793826003,
+   "prevClose": 42.459999,
+   "t": 1793892461,
    "name": "Unity Software Inc."
   },
   "UNH": {
-   "price": 409.38,
+   "price": 412.035,
    "currency": "USD",
-   "prevClose": 404.440002,
-   "t": 1793826002,
+   "prevClose": 409.380005,
+   "t": 1793892463,
    "name": "UnitedHealth Group Incorporated"
   },
   "V": {
-   "price": 436.57,
+   "price": 435.15,
    "currency": "USD",
-   "prevClose": 420.420013,
-   "t": 1793826002,
+   "prevClose": 436.570007,
+   "t": 1793892465,
    "name": "Visa Inc."
   },
   "VAYU1.BK": {
@@ -1455,31 +1455,31 @@
    "name": "Vayupak Fund1"
   },
   "VFS": {
-   "price": 3.32,
+   "price": 3.2,
    "currency": "USD",
-   "prevClose": 3.21,
-   "t": 1793826001,
+   "prevClose": 3.32,
+   "t": 1793892313,
    "name": "VinFast Auto Ltd."
   },
   "VGLT": {
-   "price": 52.48,
+   "price": 52.515,
    "currency": "USD",
-   "prevClose": 52.060001,
-   "t": 1793826001,
+   "prevClose": 52.48,
+   "t": 1793892468,
    "name": "Vanguard Long-Term Treasury Index Fund ETF Shares"
   },
   "VGT": {
-   "price": 115.55,
+   "price": 108.79,
    "currency": "USD",
-   "prevClose": 115.279999,
-   "t": 1793826000,
+   "prevClose": 115.550003,
+   "t": 1793892471,
    "name": "Vanguard Information Technology Index Fund ETF Shares"
   },
   "VHT": {
-   "price": 351.23,
+   "price": 352.5,
    "currency": "USD",
-   "prevClose": 340.799988,
-   "t": 1793826000,
+   "prevClose": 351.230011,
+   "t": 1793892455,
    "name": "Vanguard Health Care Index Fund ETF Shares"
   },
   "VIBHA.BK": {
@@ -1497,52 +1497,52 @@
    "name": "Srivichaivejvivat Public Company Limited"
   },
   "VOO": {
-   "price": 704.78,
+   "price": 685.16,
    "currency": "USD",
-   "prevClose": 693.539978,
-   "t": 1793826000,
+   "prevClose": 704.780029,
+   "t": 1793892475,
    "name": "Vanguard S&P 500 ETF"
   },
   "VPU": {
-   "price": 188.38,
+   "price": 189.34,
    "currency": "USD",
-   "prevClose": 187.630005,
-   "t": 1793826000,
+   "prevClose": 188.380005,
+   "t": 1793892443,
    "name": "Vanguard Utilities Index Fund ETF Shares"
   },
   "VT": {
-   "price": 157.81,
+   "price": 153.62,
    "currency": "USD",
-   "prevClose": 155.160004,
-   "t": 1793826000,
+   "prevClose": 157.809998,
+   "t": 1793892477,
    "name": "Vanguard Total World Stock Index Fund ETF Shares"
   },
   "VTI": {
-   "price": 376.92,
+   "price": 366.67,
    "currency": "USD",
-   "prevClose": 371.209991,
-   "t": 1793826000,
+   "prevClose": 376.920013,
+   "t": 1793892478,
    "name": "Vanguard Morningstar Total Stock Market ETF"
   },
   "VZ": {
-   "price": 46.17,
+   "price": 46.685,
    "currency": "USD",
-   "prevClose": 45.240002,
-   "t": 1793826002,
+   "prevClose": 46.169998,
+   "t": 1793892479,
    "name": "Verizon Communications Inc."
   },
   "WDC": {
-   "price": 323.83,
+   "price": 277.02,
    "currency": "USD",
-   "prevClose": 347.350006,
-   "t": 1793826001,
+   "prevClose": 323.829987,
+   "t": 1793892480,
    "name": "Western Digital Corporation"
   },
   "WFC": {
-   "price": 87.43,
+   "price": 87.02,
    "currency": "USD",
-   "prevClose": 85.529999,
-   "t": 1793826168,
+   "prevClose": 87.43,
+   "t": 1793892481,
    "name": "Wells Fargo & Company"
   },
   "WHA.BK": {
@@ -1553,108 +1553,108 @@
    "name": "WHA Corporation Public Company Limited"
   },
   "WMT": {
-   "price": 129.17,
+   "price": 131.455,
    "currency": "USD",
-   "prevClose": 124.860001,
-   "t": 1793826001,
+   "prevClose": 129.169998,
+   "t": 1793892483,
    "name": "Walmart Inc."
   },
   "XLB": {
-   "price": 53.9,
+   "price": 53.19,
    "currency": "USD",
-   "prevClose": 52.59,
-   "t": 1793826000,
+   "prevClose": 53.900002,
+   "t": 1793892484,
    "name": "State Street Materials Select Sector SPDR ETF"
   },
   "XLC": {
-   "price": 104.96,
+   "price": 104.34,
    "currency": "USD",
-   "prevClose": 101.440002,
-   "t": 1793826000,
+   "prevClose": 104.959999,
+   "t": 1793892486,
    "name": "State Street Communication Services Select Sector SPDR ETF"
   },
   "XLE": {
-   "price": 63.52,
+   "price": 64.16,
    "currency": "USD",
-   "prevClose": 66.68,
-   "t": 1793826000,
+   "prevClose": 63.52,
+   "t": 1793892487,
    "name": "State Street Energy Select Sector SPDR ETF"
   },
   "XLF": {
-   "price": 59.2,
+   "price": 58.7,
    "currency": "USD",
-   "prevClose": 57.189999,
-   "t": 1793826000,
+   "prevClose": 59.200001,
+   "t": 1793892488,
    "name": "State Street Financial Select Sector SPDR ETF"
   },
   "XLI": {
-   "price": 169.46,
+   "price": 165.65,
    "currency": "USD",
-   "prevClose": 171.320007,
-   "t": 1793826000,
+   "prevClose": 169.460007,
+   "t": 1793892489,
    "name": "State Street Industrial Select Sector SPDR ETF"
   },
   "XLK": {
-   "price": 176.5,
+   "price": 165.44,
    "currency": "USD",
-   "prevClose": 176.509995,
-   "t": 1793826000,
+   "prevClose": 176.5,
+   "t": 1793892489,
    "name": "State Street Technology Select Sector SPDR ETF"
   },
   "XLP": {
-   "price": 91.94,
+   "price": 93.065,
    "currency": "USD",
-   "prevClose": 88.949997,
-   "t": 1793826000,
+   "prevClose": 91.940002,
+   "t": 1793892492,
    "name": "State Street Consumer Staples Select Sector SPDR ETF"
   },
   "XLRE": {
-   "price": 45.12,
+   "price": 44.815,
    "currency": "USD",
-   "prevClose": 43.669998,
-   "t": 1793826000,
+   "prevClose": 45.119999,
+   "t": 1793892492,
    "name": "State Street Real Estate Select Sector SPDR ETF"
   },
   "XLU": {
-   "price": 43.61,
+   "price": 43.81,
    "currency": "USD",
-   "prevClose": 43.419998,
-   "t": 1793826000,
+   "prevClose": 43.610001,
+   "t": 1793892494,
    "name": "State Street Utilities Select Sector SPDR ETF"
   },
   "XLV": {
-   "price": 189.66,
+   "price": 191.37,
    "currency": "USD",
-   "prevClose": 184.020004,
-   "t": 1793826000,
+   "prevClose": 189.660004,
+   "t": 1793892494,
    "name": "State Street Health Care Select Sector SPDR ETF"
   },
   "XLY": {
-   "price": 122.33,
+   "price": 118.0,
    "currency": "USD",
-   "prevClose": 117.330002,
-   "t": 1793826000,
+   "prevClose": 122.330002,
+   "t": 1793892494,
    "name": "State Street Consumer Discretionary Select Sector SPDR ETF"
   },
   "XOM": {
-   "price": 169.27,
+   "price": 172.21,
    "currency": "USD",
-   "prevClose": 177.460007,
-   "t": 1793826216,
+   "prevClose": 169.270004,
+   "t": 1793892497,
    "name": "ExxonMobil Holdings Corporation"
   },
   "YUM": {
-   "price": 166.31,
+   "price": 167.61,
    "currency": "USD",
-   "prevClose": 157.009995,
-   "t": 1793826003,
+   "prevClose": 166.309998,
+   "t": 1793892485,
    "name": "Yum! Brands, Inc."
   },
   "^GSPC": {
-   "price": 7688.62,
+   "price": 7482.75,
    "currency": "USD",
-   "prevClose": 7568.919922,
-   "t": 1793829071,
+   "prevClose": 7688.620117,
+   "t": 1793892500,
    "name": "S&P 500"
   },
   "^HSI": {
@@ -1665,23 +1665,23 @@
    "name": "HANG SENG INDEX"
   },
   "^IXIC": {
-   "price": 25736.514,
+   "price": 24618.959,
    "currency": "USD",
-   "prevClose": 25372.009766,
-   "t": 1793830559,
+   "prevClose": 25736.509766,
+   "t": 1793892498,
    "name": "NASDAQ Composite"
   },
   "^KS11": {
    "price": 5383.8,
    "currency": "KRW",
-   "prevClose": 5683.799805,
+   "prevClose": 5648.790039,
    "t": 1793876740,
    "name": "KOSPI Composite Index"
   },
   "^N225": {
    "price": 61077.9,
    "currency": "JPY",
-   "prevClose": 62188.628906,
+   "prevClose": 63081.859375,
    "t": 1793861103,
    "name": "Nikkei 225"
   },
@@ -1700,10 +1700,10 @@
    "name": "STI Index"
   },
   "^TNX": {
-   "price": 4.904,
+   "price": 4.863,
    "currency": "USD",
    "prevClose": 4.894,
-   "t": 1793887244,
+   "t": 1793891604,
    "name": "CBOE Interest Rate 10 Year T Note"
   },
   "^TWII": {
@@ -1732,12 +1732,12 @@
   },
   "002352.SZ": {
    "cur": "CNY",
-   "mcap": 175566028800,
-   "pe": 15.85,
-   "pbv": 1.72,
+   "mcap": 176893378560,
+   "pe": 15.89,
+   "pbv": 1.74,
    "src": "yahoo",
-   "dy": 2.67,
-   "t": 1793847136
+   "dy": 2.66,
+   "t": 1793892521
   },
   "005930.KS": {
    "cur": "KRW",
@@ -1750,57 +1750,57 @@
   },
   "0694.HK": {
    "cur": "HKD",
-   "mcap": 7372478464,
+   "mcap": 7280894976,
    "pe": null,
-   "pbv": 0.49,
+   "pbv": 0.48,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "0700.HK": {
    "cur": "HKD",
-   "mcap": 3853971881984,
-   "pe": 14.9,
-   "pbv": 2.89,
+   "mcap": 3875583033344,
+   "pe": 15.15,
+   "pbv": 2.9,
    "src": "yahoo",
-   "dy": 1.25,
-   "t": 1793847136
+   "dy": 1.23,
+   "t": 1793892521
   },
   "0941.HK": {
    "cur": "HKD",
-   "mcap": 1747705790464,
-   "pe": 11.94,
+   "mcap": 1762884583424,
+   "pe": 12.04,
    "pbv": 1.07,
    "src": "yahoo",
-   "dy": 6.72,
-   "t": 1793847136
+   "dy": 6.67,
+   "t": 1793892521
   },
   "1177.HK": {
    "cur": "HKD",
-   "mcap": 99471548416,
-   "pe": 34.94,
-   "pbv": 2.61,
+   "mcap": 100094353408,
+   "pe": 37.5,
+   "pbv": 2.62,
    "src": "yahoo",
-   "dy": 2.15,
-   "t": 1793847136
+   "dy": 2.13,
+   "t": 1793892521
   },
   "1211.HK": {
    "cur": "HKD",
-   "mcap": 698377306112,
-   "pe": 19.49,
-   "pbv": 2.38,
+   "mcap": 690171805696,
+   "pe": 19.21,
+   "pbv": 2.35,
    "src": "yahoo",
    "dy": 0.54,
-   "t": 1793847136
+   "t": 1793892521
   },
   "1810.HK": {
    "cur": "HKD",
-   "mcap": 796723707904,
-   "pe": 22.6,
-   "pbv": 2.51,
+   "mcap": 805473222656,
+   "pe": 23.01,
+   "pbv": 2.54,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "2828.HK": {
    "cur": "HKD",
@@ -1813,102 +1813,102 @@
   },
   "300750.SZ": {
    "cur": "CNY",
-   "mcap": 1258426728448,
-   "pe": 13.93,
-   "pbv": 3.23,
+   "mcap": 1221871534080,
+   "pe": 13.72,
+   "pbv": 3.14,
    "src": "yahoo",
-   "dy": 3.11,
-   "t": 1793847136
+   "dy": 3.17,
+   "t": 1793892521
   },
   "3033.HK": {
    "cur": "HKD",
    "mcap": null,
-   "pe": 17.54,
+   "pe": 17.51,
    "pbv": null,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "3690.HK": {
    "cur": "HKD",
-   "mcap": 507633926144,
+   "mcap": 495598862336,
    "pe": null,
-   "pbv": 2.55,
+   "pbv": 2.49,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "3988.HK": {
    "cur": "HKD",
-   "mcap": 1930052239360,
-   "pe": 7.05,
-   "pbv": 0.59,
+   "mcap": 1962273538048,
+   "pe": 7.25,
+   "pbv": 0.6,
    "src": "yahoo",
-   "dy": 4.27,
-   "t": 1793847136
+   "dy": 4.2,
+   "t": 1793892521
   },
   "600276.SS": {
    "cur": "CNY",
-   "mcap": 329603350528,
-   "pe": 37.34,
-   "pbv": 4.9,
+   "mcap": 333121060864,
+   "pe": 37.46,
+   "pbv": 4.95,
    "src": "yahoo",
    "dy": 0.4,
-   "t": 1793847136
+   "t": 1793892521
   },
   "600941.SS": {
    "cur": "CNY",
-   "mcap": 2145601585152,
-   "pe": 16.77,
-   "pbv": 1.54,
+   "mcap": 2173573660672,
+   "pe": 16.57,
+   "pbv": 1.56,
    "src": "yahoo",
-   "dy": 4.75,
-   "t": 1793847136
+   "dy": 4.7,
+   "t": 1793892521
   },
   "601318.SS": {
    "cur": "CNY",
    "mcap": 974734426112,
-   "pe": 10.9,
-   "pbv": 0.93,
+   "pe": 10.89,
+   "pbv": 0.94,
    "src": "yahoo",
-   "dy": 5.07,
-   "t": 1793847136
+   "dy": 5.02,
+   "t": 1793892521
   },
   "688825.SS": {
    "cur": "CNY",
-   "mcap": 2950921715712,
-   "pe": 16.91,
-   "pbv": 11.49,
+   "mcap": 2887110623232,
+   "pe": 18.82,
+   "pbv": 11.24,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "688981.SS": {
    "cur": "CNY",
-   "mcap": 965322932224,
-   "pe": 113.88,
-   "pbv": 5.75,
+   "mcap": 947770097664,
+   "pe": 121.64,
+   "pbv": 5.64,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "9618.HK": {
    "cur": "HKD",
-   "mcap": 305670684672,
-   "pe": 20.13,
-   "pbv": 1.17,
+   "mcap": 311133962240,
+   "pe": 20.34,
+   "pbv": 1.19,
    "src": "yahoo",
-   "dy": 3.51,
-   "t": 1793847136
+   "dy": 3.44,
+   "t": 1793892521
   },
   "9888.HK": {
    "cur": "HKD",
-   "mcap": 219552399360,
+   "mcap": 219641298944,
    "pe": null,
    "pbv": 0.69,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "9984.T": {
    "cur": "JPY",
@@ -1921,68 +1921,68 @@
   },
   "9988.HK": {
    "cur": "HKD",
-   "mcap": 2147421519872,
-   "pe": 26.51,
-   "pbv": 1.63,
+   "mcap": 2171303886848,
+   "pe": 27.07,
+   "pbv": 1.65,
    "src": "yahoo",
-   "dy": 0.96,
-   "t": 1793847136
+   "dy": 0.94,
+   "t": 1793892521
   },
   "9999.HK": {
    "cur": "HKD",
-   "mcap": 642214920192,
-   "pe": 17.83,
-   "pbv": 3.27,
+   "mcap": 639013486592,
+   "pe": 17.76,
+   "pbv": 3.26,
    "src": "yahoo",
    "dy": 2.3,
-   "t": 1793847136
+   "t": 1793892521
   },
   "AAPL": {
    "cur": "USD",
-   "mcap": 5079143284736,
-   "pe": 38.92,
-   "pbv": 45.31,
+   "mcap": 5080959418368,
+   "pe": 38.93,
+   "pbv": 45.33,
    "src": "yahoo",
    "dy": 0.3,
-   "t": 1793847136
+   "t": 1793892521
   },
   "ABBV": {
    "cur": "USD",
-   "mcap": 520999174144,
-   "pe": 50.66,
-   "pbv": -87.77,
+   "mcap": 532273430528,
+   "pe": 51.74,
+   "pbv": -116.13,
    "src": "yahoo",
-   "dy": 2.35,
-   "t": 1793847136
+   "dy": 2.3,
+   "t": 1793892521
   },
   "ABNB": {
    "cur": "USD",
-   "mcap": 105607823360,
-   "pe": 40.18,
-   "pbv": 13.34,
+   "mcap": 101488189440,
+   "pe": 38.61,
+   "pbv": 12.82,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "ABT": {
    "cur": "USD",
-   "mcap": 201196830720,
-   "pe": 42.94,
-   "pbv": 3.91,
+   "mcap": 201520447488,
+   "pe": 43.29,
+   "pbv": 3.94,
    "src": "yahoo",
-   "dy": 2.18,
-   "t": 1793847136
+   "dy": 2.16,
+   "t": 1793892521
   },
   "ADVANC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1005282890000,
-   "pe": 18.28,
-   "pbv": 25.75,
+   "mcap": 1017179728935,
+   "pe": 18.5,
+   "pbv": 26.05,
    "adj": true,
-   "dy": 10.68,
-   "t": 1793847136
+   "dy": 10.56,
+   "t": 1793892521
   },
   "ADVICE.BK": {
    "cur": "THB",
@@ -1993,125 +1993,125 @@
    "pbv": 3.78,
    "adj": true,
    "dy": 6.01,
-   "t": 1793847136
+   "t": 1793892521
   },
   "AIT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 7221150293,
-   "pe": 12.38,
-   "pbv": 1.81,
+   "mcap": 7251878592,
+   "pe": 12.43,
+   "pbv": 1.82,
    "adj": true,
-   "dy": 7.66,
-   "t": 1793847136
+   "dy": 7.63,
+   "t": 1793892521
   },
   "AMAT": {
    "cur": "USD",
-   "mcap": 293154881536,
-   "pe": 31.87,
-   "pbv": 11.44,
+   "mcap": 264807596032,
+   "pe": 28.79,
+   "pbv": 10.33,
    "src": "yahoo",
-   "dy": 0.54,
-   "t": 1793847136
+   "dy": 0.59,
+   "t": 1793892521
   },
   "AMATA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 30762500000,
-   "pe": 5.98,
-   "pbv": 1.19,
+   "mcap": 31050000000,
+   "pe": 6.04,
+   "pbv": 1.2,
    "adj": true,
-   "dy": 5.05,
-   "t": 1793847136
+   "dy": 5.0,
+   "t": 1793892521
   },
   "AMD": {
    "cur": "USD",
-   "mcap": 797921116160,
-   "pe": 124.69,
-   "pbv": 12.65,
+   "mcap": 691706789888,
+   "pe": 90.12,
+   "pbv": 10.11,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "AMGN": {
    "cur": "USD",
-   "mcap": 258681602048,
-   "pe": 29.72,
-   "pbv": 29.78,
+   "mcap": 257879556096,
+   "pe": 27.64,
+   "pbv": 17.97,
    "src": "yahoo",
-   "dy": 2.08,
-   "t": 1793847136
+   "dy": 2.07,
+   "t": 1793892521
   },
   "AMZN": {
    "cur": "USD",
-   "mcap": 2876619096064,
-   "pe": 21.51,
-   "pbv": 4.69,
+   "mcap": 2782544527360,
+   "pe": 20.8,
+   "pbv": 4.53,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "AOT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 864284850000,
-   "pe": 46.28,
-   "pbv": 6.44,
+   "mcap": 874999125000,
+   "pe": 46.85,
+   "pbv": 6.52,
    "adj": true,
-   "dy": 1.34,
-   "t": 1793847136
+   "dy": 1.32,
+   "t": 1793892521
   },
   "ARM": {
    "cur": "USD",
-   "mcap": 204842139648,
-   "pe": 197.73,
-   "pbv": 23.73,
+   "mcap": 181874819072,
+   "pe": 195.74,
+   "pbv": 21.87,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "AS.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1008480010,
-   "pe": 8.1,
-   "pbv": 0.74,
+   "mcap": 998495059,
+   "pe": 8.02,
+   "pbv": 0.73,
    "adj": true,
-   "dy": 8.91,
-   "t": 1793847136
+   "dy": 9.0,
+   "t": 1793892521
   },
   "ASML": {
    "cur": "USD",
-   "mcap": 576700547072,
-   "pe": 36.82,
-   "pbv": 1284.8,
+   "mcap": 535576477696,
+   "pe": 34.19,
+   "pbv": 1193.18,
    "src": "yahoo",
-   "dy": 0.62,
-   "t": 1793847136
+   "dy": 0.67,
+   "t": 1793892521
   },
   "ASP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 4592180019,
-   "pe": 9.82,
-   "pbv": 0.94,
+   "mcap": 4673457542,
+   "pe": 9.99,
+   "pbv": 0.96,
    "adj": true,
-   "dy": 8.85,
-   "t": 1793847136
+   "dy": 8.7,
+   "t": 1793892521
   },
   "AVGO": {
    "cur": "USD",
-   "mcap": 1553721065472,
-   "pe": 41.57,
-   "pbv": 15.59,
+   "mcap": 1449488809984,
+   "pe": 38.78,
+   "pbv": 14.54,
    "src": "yahoo",
-   "dy": 0.8,
-   "t": 1793847136
+   "dy": 0.86,
+   "t": 1793892521
   },
   "AXP": {
    "cur": "USD",
@@ -2126,178 +2126,178 @@
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 27813670892,
+   "mcap": 28047399218,
    "pe": null,
-   "pbv": 0.94,
+   "pbv": 0.95,
    "adj": true,
-   "dy": 7.3,
-   "t": 1793847136
+   "dy": 7.24,
+   "t": 1793892521
   },
   "BA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 39059999199,
-   "pe": 9.91,
-   "pbv": 2.7,
+   "mcap": 39899999182,
+   "pe": 10.12,
+   "pbv": 2.76,
    "adj": true,
-   "dy": 6.72,
-   "t": 1793847136
+   "dy": 6.58,
+   "t": 1793892521
   },
   "BAC": {
    "cur": "USD",
-   "mcap": 356257792000,
-   "pe": 12.32,
-   "pbv": 1.32,
+   "mcap": 353877229568,
+   "pe": 12.24,
+   "pbv": 1.31,
    "src": "yahoo",
    "dy": 2.25,
-   "t": 1793847136
+   "t": 1793892521
   },
   "BAFS.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 6088089878,
-   "pe": 27.07,
-   "pbv": 1.13,
+   "mcap": 6247463959,
+   "pe": 27.78,
+   "pbv": 1.16,
    "adj": true,
-   "dy": 3.66,
-   "t": 1793847136
+   "dy": 3.57,
+   "t": 1793892521
   },
   "BBL.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 349318250000,
-   "pe": 8.31,
+   "mcap": 352181514344,
+   "pe": 8.38,
    "pbv": 0.6,
    "adj": true,
-   "dy": 5.46,
-   "t": 1793847136
+   "dy": 5.42,
+   "t": 1793892521
   },
   "BCP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 66636990000,
-   "pe": 3.05,
-   "pbv": 0.79,
+   "mcap": 64059868840,
+   "pe": 2.93,
+   "pbv": 0.76,
    "adj": true,
-   "dy": 8.95,
-   "t": 1793847136
+   "dy": 9.31,
+   "t": 1793892521
   },
   "BDMS.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 314661652125,
-   "pe": 20.54,
-   "pbv": 3.05,
+   "mcap": 319429252914,
+   "pe": 20.85,
+   "pbv": 3.1,
    "adj": true,
-   "dy": 5.05,
-   "t": 1793847136
+   "dy": 4.98,
+   "t": 1793892521
   },
   "BEM.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 94767002915,
-   "pe": 24.42,
-   "pbv": 2.5,
+   "mcap": 95531252939,
+   "pe": 24.62,
+   "pbv": 2.52,
    "adj": true,
-   "dy": 2.42,
-   "t": 1793847136
+   "dy": 2.4,
+   "t": 1793892521
   },
   "BH.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 157800870000,
-   "pe": 20.79,
-   "pbv": 5.77,
+   "mcap": 160583253098,
+   "pe": 21.16,
+   "pbv": 5.87,
    "adj": true,
-   "dy": 6.55,
-   "t": 1793847136
+   "dy": 6.44,
+   "t": 1793892521
   },
   "BJC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 80556708471,
-   "pe": 13.73,
+   "mcap": 80957488115,
+   "pe": 13.8,
    "pbv": 0.69,
    "adj": true,
-   "dy": 2.64,
-   "t": 1793847136
+   "dy": 2.62,
+   "t": 1793892521
   },
   "BKD.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1183829974,
-   "pe": 9.49,
-   "pbv": 0.77,
+   "mcap": 1194592065,
+   "pe": 9.58,
+   "pbv": 0.78,
    "adj": true,
-   "dy": 9.09,
-   "t": 1793847136
+   "dy": 9.01,
+   "t": 1793892521
   },
   "BLK": {
    "cur": "USD",
-   "mcap": 198930972672,
-   "pe": 27.88,
-   "pbv": 3.29,
+   "mcap": 193764229120,
+   "pe": 27.15,
+   "pbv": 3.21,
    "src": "yahoo",
-   "dy": 1.83,
-   "t": 1793847136
+   "dy": 1.88,
+   "t": 1793892521
   },
   "BRK-A": {
    "cur": "USD",
-   "mcap": 1240614174720,
-   "pe": 14.58,
-   "pbv": 1.66,
+   "mcap": 1248747454464,
+   "pe": 14.67,
+   "pbv": 1.68,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "BRK-B": {
    "cur": "USD",
-   "mcap": 1239663640576,
-   "pe": 14.56,
+   "mcap": 1243880751104,
+   "pe": 14.61,
    "pbv": 0.0,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "BTC-USD": {
    "cur": "USD",
-   "mcap": 1618578636800,
+   "mcap": 1538805465088,
    "pe": null,
    "pbv": null,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "BTG.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 43919958524,
-   "pe": 11.4,
-   "pbv": 1.41,
+   "mcap": 43726478530,
+   "pe": 11.35,
+   "pbv": 1.4,
    "adj": true,
-   "dy": 6.61,
-   "t": 1793847136
+   "dy": 6.64,
+   "t": 1793892521
   },
   "BTS.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 29290719156,
+   "mcap": 29612595191,
    "pe": null,
-   "pbv": 0.5,
+   "pbv": 0.51,
    "adj": true,
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "BULL": {
    "cur": "USD",
@@ -2310,193 +2310,194 @@
   },
   "C": {
    "cur": "USD",
-   "mcap": 206469644288,
-   "pe": 12.16,
-   "pbv": 1.08,
+   "mcap": 200643346432,
+   "pe": 11.81,
+   "pbv": 1.05,
    "src": "yahoo",
-   "dy": 2.04,
-   "t": 1793847136
+   "dy": 2.08,
+   "t": 1793892521
   },
   "CAT": {
    "cur": "USD",
-   "mcap": 271805743104,
-   "pe": 23.21,
-   "pbv": 12.64,
+   "mcap": 258568159232,
+   "pe": 22.18,
+   "pbv": 12.08,
    "src": "yahoo",
-   "dy": 1.06,
-   "t": 1793847136
+   "dy": 1.12,
+   "t": 1793892521
   },
   "CENTEL.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 60412500000,
-   "pe": 17.54,
-   "pbv": 2.49,
+   "mcap": 61087500000,
+   "pe": 17.74,
+   "pbv": 2.52,
    "adj": true,
-   "dy": 1.5,
-   "t": 1793847136
+   "dy": 1.48,
+   "t": 1793892521
   },
   "CHAYO.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1398739944,
+   "mcap": 1433708443,
    "pe": null,
-   "pbv": 0.44,
+   "pbv": 0.45,
    "adj": true,
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "CME": {
    "cur": "USD",
-   "mcap": 110340276224,
-   "pe": 25.27,
-   "pbv": 4.15,
+   "mcap": 111179628544,
+   "pe": 25.46,
+   "pbv": 4.18,
    "src": "yahoo",
-   "dy": 3.67,
-   "t": 1793847136
+   "dy": 3.64,
+   "t": 1793892521
   },
   "COHR": {
    "cur": "USD",
-   "mcap": 38419300352,
-   "pe": 47.35,
-   "pbv": 3.5,
+   "mcap": 33314844672,
+   "pe": 35.02,
+   "pbv": 3.04,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "COIN": {
    "cur": "USD",
-   "mcap": 40111656960,
+   "mcap": 36587659264,
    "pe": null,
-   "pbv": 2.88,
+   "pbv": 2.62,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "COM7.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 79390980000,
-   "pe": 17.01,
-   "pbv": 7.25,
+   "mcap": 78197130677,
+   "pe": 16.75,
+   "pbv": 7.14,
    "adj": true,
-   "dy": 3.31,
-   "t": 1793847136
+   "dy": 3.36,
+   "t": 1793892521
   },
   "COST": {
    "cur": "USD",
-   "mcap": 463721562112,
-   "pe": 50.41,
-   "pbv": 12.96,
+   "mcap": 475123253248,
+   "pe": 51.65,
+   "pbv": 13.27,
    "src": "yahoo",
-   "dy": 0.55,
-   "t": 1793847136
+   "dy": 0.53,
+   "t": 1793892521
   },
   "CPALL.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 395256460000,
-   "pe": 12.86,
-   "pbv": 2.78,
+   "mcap": 415468438068,
+   "pe": 13.52,
+   "pbv": 2.92,
    "adj": true,
-   "dy": 3.75,
-   "t": 1793847136
+   "dy": 3.57,
+   "t": 1793892521
   },
   "CPAXT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 147030026022,
-   "pe": 16.17,
-   "pbv": 0.49,
+   "mcap": 151201090590,
+   "pe": 16.63,
+   "pbv": 0.5,
    "adj": true,
-   "dy": 5.04,
-   "t": 1793847136
+   "dy": 4.9,
+   "t": 1793892521
   },
   "CPF.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 166509823711,
-   "pe": 10.83,
-   "pbv": 0.66,
+   "mcap": 168158435827,
+   "pe": 10.94,
+   "pbv": 0.67,
    "adj": true,
-   "dy": 3.47,
-   "t": 1793847136
+   "dy": 3.43,
+   "t": 1793892521
   },
   "CPN.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 291720000000,
-   "pe": 14.56,
-   "pbv": 2.68,
+   "mcap": 297330000000,
+   "pe": 14.84,
+   "pbv": 2.73,
    "adj": true,
-   "dy": 3.69,
-   "t": 1793847136
+   "dy": 3.62,
+   "t": 1793892521
   },
   "CPNCG.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 2197190000,
+   "mcap": 2197189959,
    "pe": null,
    "pbv": 0.61,
+   "adj": true,
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "CPNREIT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 47073960000,
+   "mcap": 47798174769,
    "pe": null,
-   "pbv": 1.12,
+   "pbv": 1.14,
    "adj": true,
-   "dy": 8.57,
-   "t": 1793847136
+   "dy": 8.44,
+   "t": 1793892521
   },
   "CRWD": {
    "cur": "USD",
-   "mcap": 246768304128,
-   "pe": 4016.67,
-   "pbv": 48.36,
+   "mcap": 223484018688,
+   "pe": 4365.2,
+   "pbv": 43.8,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "CRWV": {
    "cur": "USD",
-   "mcap": 26705399808,
+   "mcap": 23600250880,
    "pe": null,
-   "pbv": 5.31,
+   "pbv": 4.69,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "CSC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 2483040000,
-   "pe": 7.73,
+   "mcap": 2470039791,
+   "pe": 7.69,
    "pbv": 0.57,
    "adj": true,
-   "dy": 4.71,
-   "t": 1793847136
+   "dy": 4.74,
+   "t": 1793892521
   },
   "CSCO": {
    "cur": "USD",
-   "mcap": 408491425792,
-   "pe": 31.11,
-   "pbv": 8.13,
+   "mcap": 388147675136,
+   "pe": 29.56,
+   "pbv": 7.73,
    "src": "yahoo",
-   "dy": 1.21,
-   "t": 1793847136
+   "dy": 1.27,
+   "t": 1793892521
   },
   "DCC.BK": {
    "cur": "THB",
@@ -2507,38 +2508,38 @@
    "pbv": 1.63,
    "adj": true,
    "dy": 4.96,
-   "t": 1793847136
+   "t": 1793892521
   },
   "DELTA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 2432394150000,
-   "pe": 80.63,
-   "pbv": 21.49,
+   "mcap": 2332603620769,
+   "pe": 77.32,
+   "pbv": 20.61,
    "adj": true,
-   "dy": 0.31,
-   "t": 1793847136
+   "dy": 0.32,
+   "t": 1793892521
   },
   "DIS": {
    "cur": "USD",
-   "mcap": 205389398016,
-   "pe": 24.53,
+   "mcap": 205130399744,
+   "pe": 24.49,
    "pbv": 1.87,
    "src": "yahoo",
    "dy": 1.26,
-   "t": 1793847136
+   "t": 1793892521
   },
   "DRT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 4446170163,
-   "pe": 10.69,
-   "pbv": 1.73,
+   "mcap": 4488921799,
+   "pe": 10.79,
+   "pbv": 1.75,
    "adj": true,
-   "dy": 6.54,
-   "t": 1793847136
+   "dy": 6.48,
+   "t": 1793892521
   },
   "E1VFVN3001.BK": {
    "cur": "THB",
@@ -2547,27 +2548,27 @@
    "pbv": null,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "EGCO.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 70809540000,
-   "pe": 133.35,
-   "pbv": 0.7,
+   "mcap": 71336004981,
+   "pe": 134.34,
+   "pbv": 0.71,
    "adj": true,
-   "dy": 4.83,
-   "t": 1793847136
+   "dy": 4.8,
+   "t": 1793892521
   },
   "ETH-USD": {
    "cur": "USD",
-   "mcap": 296558493696,
+   "mcap": 278243213312,
    "pe": null,
    "pbv": null,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "EWJ": {
    "cur": "USD",
@@ -2580,99 +2581,99 @@
   },
   "FDX": {
    "cur": "USD",
-   "mcap": 77145268224,
-   "pe": 17.76,
-   "pbv": 2.23,
+   "mcap": 75864227840,
+   "pe": 17.46,
+   "pbv": 2.19,
    "src": "yahoo",
-   "dy": 1.45,
-   "t": 1793847136
+   "dy": 1.47,
+   "t": 1793892521
   },
   "FUEVFVND01.BK": {
    "cur": "THB",
-   "mcap": 44279631872,
-   "pe": 53.95,
-   "pbv": 4.3,
+   "mcap": 43739635712,
+   "pe": 54.73,
+   "pbv": 4.25,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "GE": {
    "cur": "USD",
-   "mcap": 341824962560,
-   "pe": 37.65,
-   "pbv": 19.43,
+   "mcap": 331189977088,
+   "pe": 36.48,
+   "pbv": 18.83,
    "src": "yahoo",
-   "dy": 0.54,
-   "t": 1793847136
+   "dy": 0.56,
+   "t": 1793892521
   },
   "GOOG": {
    "cur": "USD",
-   "mcap": 3532065865728,
-   "pe": 15.0,
-   "pbv": 5.36,
+   "mcap": 3481291980800,
+   "pe": 14.79,
+   "pbv": 5.28,
    "src": "yahoo",
    "dy": 0.3,
-   "t": 1793847136
+   "t": 1793892521
   },
   "GPSC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 139576600000,
-   "pe": 20.59,
-   "pbv": 1.32,
+   "mcap": 149445652525,
+   "pe": 22.05,
+   "pbv": 1.41,
    "adj": true,
-   "dy": 3.03,
-   "t": 1793847136
+   "dy": 2.83,
+   "t": 1793892521
   },
   "GRID": {
    "cur": "USD",
    "mcap": null,
-   "pe": 27.58,
+   "pe": 26.36,
    "pbv": null,
    "src": "yahoo",
-   "dy": 0.95,
-   "t": 1793847136
+   "dy": 1.0,
+   "t": 1793892521
   },
   "GS": {
    "cur": "USD",
-   "mcap": 267667308544,
-   "pe": 13.34,
-   "pbv": 2.53,
+   "mcap": 253407100928,
+   "pe": 12.63,
+   "pbv": 2.39,
    "src": "yahoo",
-   "dy": 1.94,
-   "t": 1793847136
+   "dy": 2.06,
+   "t": 1793892521
   },
   "GULF.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 911330100000,
-   "pe": 12.17,
-   "pbv": 2.89,
+   "mcap": 933739856557,
+   "pe": 12.47,
+   "pbv": 2.96,
    "adj": true,
-   "dy": 5.33,
-   "t": 1793847136
+   "dy": 5.2,
+   "t": 1793892521
   },
   "HD": {
    "cur": "USD",
-   "mcap": 354618802176,
-   "pe": 24.87,
-   "pbv": 21.35,
+   "mcap": 352817971200,
+   "pe": 24.75,
+   "pbv": 21.24,
    "src": "yahoo",
-   "dy": 2.61,
-   "t": 1793847136
+   "dy": 2.62,
+   "t": 1793892521
   },
   "HMPRO.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 84825232508,
-   "pe": 14.04,
-   "pbv": 3.33,
+   "mcap": 82852552683,
+   "pe": 13.71,
+   "pbv": 3.25,
    "adj": true,
-   "dy": 5.89,
-   "t": 1793847136
+   "dy": 6.03,
+   "t": 1793892521
   },
   "HOOD": {
    "cur": "USD",
@@ -2687,30 +2688,30 @@
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 18827750283,
+   "mcap": 19272500289,
    "pe": null,
-   "pbv": 1.12,
+   "pbv": 1.15,
    "adj": true,
-   "dy": 5.59,
-   "t": 1793847136
+   "dy": 5.46,
+   "t": 1793892521
   },
   "INTC": {
    "cur": "USD",
-   "mcap": 309705048064,
+   "mcap": 284405628928,
    "pe": null,
-   "pbv": 2.69,
+   "pbv": 2.47,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "IREN": {
    "cur": "USD",
-   "mcap": 8784159744,
+   "mcap": 7463096320,
    "pe": null,
-   "pbv": 1.97,
+   "pbv": 1.68,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "JAS.BK": {
    "cur": "THB",
@@ -2721,89 +2722,89 @@
    "pbv": 1.06,
    "adj": true,
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "JMART.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 15078919721,
+   "mcap": 15664508836,
    "pe": null,
-   "pbv": 0.83,
+   "pbv": 0.86,
    "adj": true,
-   "dy": 2.57,
-   "t": 1793847136
+   "dy": 2.48,
+   "t": 1793892521
   },
   "JNJ": {
    "cur": "USD",
-   "mcap": 665188040704,
-   "pe": 41.93,
-   "pbv": 8.16,
+   "mcap": 676149723136,
+   "pe": 42.62,
+   "pbv": 8.29,
    "src": "yahoo",
-   "dy": 1.91,
-   "t": 1793847136
+   "dy": 1.87,
+   "t": 1793892521
   },
   "JPM": {
    "cur": "USD",
-   "mcap": 935063322624,
-   "pe": 14.77,
-   "pbv": 2.66,
+   "mcap": 915335479296,
+   "pe": 14.46,
+   "pbv": 2.61,
    "src": "yahoo",
-   "dy": 1.75,
-   "t": 1793847136
+   "dy": 1.78,
+   "t": 1793892521
   },
   "JUBILE.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1280910017,
-   "pe": 11.12,
+   "mcap": 1289623690,
+   "pe": 11.2,
    "pbv": 0.72,
    "adj": true,
-   "dy": 3.67,
-   "t": 1793847136
+   "dy": 3.65,
+   "t": 1793892521
   },
   "KBANK.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 578115930000,
-   "pe": 11.2,
-   "pbv": 1.0,
+   "mcap": 585223912746,
+   "pe": 11.34,
+   "pbv": 1.01,
    "adj": true,
-   "dy": 5.74,
-   "t": 1793847136
+   "dy": 5.67,
+   "t": 1793892521
   },
   "KKP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 102526040000,
-   "pe": 13.1,
-   "pbv": 1.43,
+   "mcap": 102078328035,
+   "pe": 13.04,
+   "pbv": 1.42,
    "adj": true,
-   "dy": 6.51,
-   "t": 1793847136
+   "dy": 6.54,
+   "t": 1793892521
   },
   "KO": {
    "cur": "USD",
-   "mcap": 412122251264,
-   "pe": 28.26,
-   "pbv": 11.03,
+   "mcap": 417133953024,
+   "pe": 28.6,
+   "pbv": 11.16,
    "src": "yahoo",
-   "dy": 2.19,
-   "t": 1793847136
+   "dy": 2.16,
+   "t": 1793892521
   },
   "KTC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 90886280000,
-   "pe": 10.79,
-   "pbv": 2.07,
+   "mcap": 92820030638,
+   "pe": 11.02,
+   "pbv": 2.11,
    "adj": true,
-   "dy": 5.02,
-   "t": 1793847136
+   "dy": 4.92,
+   "t": 1793892521
   },
   "KYE.BK": {
    "cur": "THB",
@@ -2814,85 +2815,85 @@
    "pbv": 0.6,
    "adj": true,
    "dy": 5.76,
-   "t": 1793847136
+   "t": 1793892521
   },
   "LH.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 42062990228,
-   "pe": 15.44,
+   "mcap": 42301984491,
+   "pe": 15.53,
    "pbv": 0.82,
    "adj": true,
-   "dy": 5.68,
-   "t": 1793847136
+   "dy": 5.65,
+   "t": 1793892521
   },
   "LHX": {
    "cur": "USD",
-   "mcap": 48363778048,
-   "pe": 24.18,
-   "pbv": 2.39,
+   "mcap": 48853487616,
+   "pe": 24.43,
+   "pbv": 2.41,
    "src": "yahoo",
-   "dy": 1.91,
-   "t": 1793847136
+   "dy": 1.9,
+   "t": 1793892521
   },
   "LITE": {
    "cur": "USD",
-   "mcap": 56836767744,
+   "mcap": 49043308544,
    "pe": null,
-   "pbv": 12.42,
+   "pbv": 10.72,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "LLY": {
    "cur": "USD",
-   "mcap": 1263067463680,
-   "pe": 46.02,
-   "pbv": 31.38,
+   "mcap": 1280539492352,
+   "pe": 46.66,
+   "pbv": 31.81,
    "src": "yahoo",
    "dy": 0.47,
-   "t": 1793847136
+   "t": 1793892521
   },
   "LMT": {
    "cur": "USD",
-   "mcap": 137456992256,
-   "pe": 21.13,
-   "pbv": 13.6,
+   "mcap": 138829168640,
+   "pe": 21.34,
+   "pbv": 13.74,
    "src": "yahoo",
-   "dy": 2.32,
-   "t": 1793847136
+   "dy": 2.3,
+   "t": 1793892521
   },
   "LTMH.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 2259999962,
-   "pe": 110.14,
-   "pbv": 6.38,
+   "mcap": 2279999962,
+   "pe": 111.11,
+   "pbv": 6.44,
    "adj": true,
-   "dy": 1.33,
-   "t": 1793847136
+   "dy": 1.32,
+   "t": 1793892521
   },
   "M.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 18693830703,
-   "pe": 25.71,
-   "pbv": 1.43,
+   "mcap": 18785918539,
+   "pe": 25.84,
+   "pbv": 1.44,
    "adj": true,
-   "dy": 4.43,
-   "t": 1793847136
+   "dy": 4.41,
+   "t": 1793892521
   },
   "MA": {
    "cur": "USD",
-   "mcap": 586022780928,
-   "pe": 35.2,
-   "pbv": 86.88,
+   "mcap": 584972959744,
+   "pe": 35.14,
+   "pbv": 86.72,
    "src": "yahoo",
    "dy": 0.52,
-   "t": 1793847136
+   "t": 1793892521
   },
   "MAGS": {
    "cur": "USD",
@@ -2900,97 +2901,97 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 1.39,
+   "dy": 1.45,
    "t": 1793549841
   },
   "MCD": {
    "cur": "USD",
-   "mcap": 198295306240,
-   "pe": 22.76,
-   "pbv": -111.24,
+   "mcap": 197856575488,
+   "pe": 22.12,
+   "pbv": -111.0,
    "src": "yahoo",
-   "dy": 2.66,
-   "t": 1793847136
+   "dy": 2.65,
+   "t": 1793892521
   },
   "MEGA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 30515430000,
-   "pe": 13.93,
-   "pbv": 2.95,
+   "mcap": 30951364714,
+   "pe": 14.13,
+   "pbv": 2.99,
    "adj": true,
-   "dy": 4.71,
-   "t": 1793847136
+   "dy": 4.65,
+   "t": 1793892521
   },
   "META": {
    "cur": "USD",
-   "mcap": 1610804756480,
-   "pe": 21.49,
-   "pbv": 5.91,
+   "mcap": 1529599754240,
+   "pe": 20.41,
+   "pbv": 5.61,
    "src": "yahoo",
-   "dy": 0.33,
-   "t": 1793847136
+   "dy": 0.35,
+   "t": 1793892521
   },
   "MINT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 117368515674,
-   "pe": 12.3,
-   "pbv": 1.41,
+   "mcap": 121904496956,
+   "pe": 12.78,
+   "pbv": 1.46,
    "adj": true,
-   "dy": 3.38,
-   "t": 1793847136
+   "dy": 3.26,
+   "t": 1793892521
   },
   "MJLF.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1996499937,
+   "mcap": 2012999937,
    "pe": null,
    "pbv": 0.52,
    "adj": true,
-   "dy": 8.89,
-   "t": 1793847136
+   "dy": 8.82,
+   "t": 1793892521
   },
   "MMM": {
    "cur": "USD",
-   "mcap": 100024360960,
-   "pe": 28.95,
-   "pbv": 24.28,
+   "mcap": 99534430208,
+   "pe": 28.81,
+   "pbv": 24.16,
    "src": "yahoo",
-   "dy": 1.58,
-   "t": 1793847136
+   "dy": 1.59,
+   "t": 1793892521
   },
   "MRDIYT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 51747027705,
-   "pe": 17.9,
-   "pbv": 4.96,
+   "mcap": 51145318080,
+   "pe": 17.69,
+   "pbv": 4.9,
    "adj": true,
-   "dy": 2.73,
-   "t": 1793847136
+   "dy": 2.76,
+   "t": 1793892521
   },
   "MRK": {
    "cur": "USD",
-   "mcap": 370963906560,
-   "pe": 151.88,
-   "pbv": 8.85,
+   "mcap": 376613732352,
+   "pe": 154.19,
+   "pbv": 8.99,
    "src": "yahoo",
-   "dy": 2.26,
-   "t": 1793847136
+   "dy": 2.23,
+   "t": 1793892521
   },
   "MRNA": {
    "cur": "USD",
-   "mcap": 103154573312,
+   "mcap": 98707087360,
    "pe": null,
-   "pbv": 15.25,
+   "pbv": 14.59,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "MRVL": {
    "cur": "USD",
@@ -3003,248 +3004,248 @@
   },
   "MS": {
    "cur": "USD",
-   "mcap": 303563046912,
-   "pe": 15.38,
-   "pbv": 2.86,
+   "mcap": 288765968384,
+   "pe": 14.63,
+   "pbv": 2.72,
    "src": "yahoo",
-   "dy": 2.22,
-   "t": 1793847136
+   "dy": 2.34,
+   "t": 1793892521
   },
   "MSFT": {
    "cur": "USD",
-   "mcap": 4127478775808,
-   "pe": 29.01,
-   "pbv": 8.77,
+   "mcap": 4019873382400,
+   "pe": 28.25,
+   "pbv": 8.54,
    "src": "yahoo",
-   "dy": 0.65,
-   "t": 1793847136
+   "dy": 0.67,
+   "t": 1793892521
   },
   "MSTR": {
    "cur": "USD",
-   "mcap": 60334559232,
+   "mcap": 54984282112,
    "pe": null,
-   "pbv": 1.08,
+   "pbv": 0.99,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "MU": {
    "cur": "USD",
-   "mcap": 899741646848,
-   "pe": 10.7,
-   "pbv": 6.5,
+   "mcap": 788330446848,
+   "pe": 9.37,
+   "pbv": 5.69,
    "src": "yahoo",
-   "dy": 0.07,
-   "t": 1793847136
+   "dy": 0.08,
+   "t": 1793892521
   },
   "NBIS": {
    "cur": "USD",
-   "mcap": 35931672576,
-   "pe": 110.56,
-   "pbv": 3.75,
+   "mcap": 30084397056,
+   "pe": 92.57,
+   "pbv": 3.14,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "NDAQ": {
    "cur": "USD",
-   "mcap": 61319811072,
-   "pe": 29.97,
-   "pbv": 5.11,
+   "mcap": 61135351808,
+   "pe": 29.88,
+   "pbv": 5.09,
    "src": "yahoo",
    "dy": 1.06,
-   "t": 1793847136
+   "t": 1793892521
   },
   "NFLX": {
    "cur": "USD",
-   "mcap": 276443955200,
-   "pe": 19.19,
-   "pbv": 9.31,
+   "mcap": 273348050944,
+   "pe": 18.97,
+   "pbv": 9.2,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "NVDA": {
    "cur": "USD",
-   "mcap": 4832539181056,
-   "pe": 25.3,
-   "pbv": 21.1,
+   "mcap": 4520801206272,
+   "pe": 23.67,
+   "pbv": 19.74,
    "src": "yahoo",
-   "dy": 0.26,
-   "t": 1793847136
+   "dy": 0.28,
+   "t": 1793892521
   },
   "OR.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 150000000000,
-   "pe": 28.13,
-   "pbv": 1.36,
+   "mcap": 151200000000,
+   "pe": 28.36,
+   "pbv": 1.37,
    "adj": true,
-   "dy": 4.8,
-   "t": 1793847136
+   "dy": 4.76,
+   "t": 1793892521
   },
   "ORCL": {
    "cur": "USD",
-   "mcap": 375087628288,
-   "pe": 19.39,
-   "pbv": 6.05,
+   "mcap": 365083590656,
+   "pe": 18.35,
+   "pbv": 5.73,
    "src": "yahoo",
-   "dy": 1.62,
-   "t": 1793847136
+   "dy": 1.71,
+   "t": 1793892521
   },
   "OSP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 55569380000,
-   "pe": 15.23,
-   "pbv": 3.36,
+   "mcap": 56770880108,
+   "pe": 15.56,
+   "pbv": 3.43,
    "adj": true,
-   "dy": 4.59,
-   "t": 1793847136
+   "dy": 4.5,
+   "t": 1793892521
   },
   "OXY": {
    "cur": "USD",
-   "mcap": 57309212672,
-   "pe": 16.29,
-   "pbv": 1.71,
+   "mcap": 58373824512,
+   "pe": 16.59,
+   "pbv": 1.74,
    "src": "yahoo",
-   "dy": 1.81,
-   "t": 1793847136
+   "dy": 1.79,
+   "t": 1793892521
   },
   "PDG.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 997920031,
-   "pe": 12.24,
-   "pbv": 1.62,
+   "mcap": 991980031,
+   "pe": 12.17,
+   "pbv": 1.61,
    "adj": true,
-   "dy": 8.33,
-   "t": 1793847136
+   "dy": 8.38,
+   "t": 1793892521
   },
   "PEY": {
    "cur": "USD",
    "mcap": null,
-   "pe": 13.69,
+   "pe": 13.76,
    "pbv": 1.23,
    "src": "yahoo",
-   "dy": 4.14,
-   "t": 1793847136
+   "dy": 4.12,
+   "t": 1793892521
   },
   "PFE": {
    "cur": "USD",
-   "mcap": 175498510336,
-   "pe": 43.99,
-   "pbv": 2.02,
+   "mcap": 178120425472,
+   "pe": 44.64,
+   "pbv": 2.09,
    "src": "yahoo",
-   "dy": 5.59,
-   "t": 1793847136
+   "dy": 5.5,
+   "t": 1793892521
   },
   "PG": {
    "cur": "USD",
-   "mcap": 387811475456,
-   "pe": 25.2,
-   "pbv": 7.14,
+   "mcap": 392562900992,
+   "pe": 25.51,
+   "pbv": 7.22,
    "src": "yahoo",
-   "dy": 2.58,
-   "t": 1793847136
+   "dy": 2.55,
+   "t": 1793892521
   },
   "PLTR": {
    "cur": "USD",
-   "mcap": 413710745600,
-   "pe": 120.92,
-   "pbv": 36.79,
+   "mcap": 377182748672,
+   "pe": 110.24,
+   "pbv": 33.59,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "PM": {
    "cur": "USD",
-   "mcap": 329303818240,
-   "pe": 30.84,
-   "pbv": -41.49,
+   "mcap": 325983993856,
+   "pe": 30.53,
+   "pbv": -41.07,
    "src": "yahoo",
-   "dy": 2.09,
-   "t": 1793847136
+   "dy": 2.11,
+   "t": 1793892521
   },
   "PM.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 6027699894,
-   "pe": 11.48,
-   "pbv": 3.3,
+   "mcap": 5916075821,
+   "pe": 11.27,
+   "pbv": 3.24,
    "adj": true,
-   "dy": 8.61,
-   "t": 1793847136
+   "dy": 8.77,
+   "t": 1793892521
   },
   "PRINC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 6207970018,
+   "mcap": 6246055724,
    "pe": null,
    "pbv": 0.74,
    "adj": true,
-   "dy": 0.74,
-   "t": 1793847136
+   "dy": 0.73,
+   "t": 1793892521
   },
   "PSH.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 8185009979,
+   "mcap": 8272550193,
    "pe": null,
    "pbv": 0.21,
    "adj": true,
-   "dy": 3.74,
-   "t": 1793847136
+   "dy": 3.7,
+   "t": 1793892521
   },
   "PSL.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 14033630000,
-   "pe": 7.86,
-   "pbv": 0.79,
+   "mcap": 13721771556,
+   "pe": 7.69,
+   "pbv": 0.77,
    "adj": true,
-   "dy": 4.44,
-   "t": 1793847136
+   "dy": 4.55,
+   "t": 1793892521
   },
   "PTT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 1132973430000,
-   "pe": 9.17,
-   "pbv": 0.95,
+   "mcap": 1104649094250,
+   "pe": 8.94,
+   "pbv": 0.93,
    "adj": true,
-   "dy": 7.0,
-   "t": 1793847136
+   "dy": 7.18,
+   "t": 1793892521
   },
   "PTTEP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 595497810000,
-   "pe": 8.36,
-   "pbv": 1.05,
+   "mcap": 563737926800,
+   "pe": 7.91,
+   "pbv": 0.99,
    "adj": true,
-   "dy": 6.1,
-   "t": 1793847136
+   "dy": 6.44,
+   "t": 1793892521
   },
   "PTTGC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 201771000000,
-   "pe": 28.73,
-   "pbv": 0.65,
+   "mcap": 184862815642,
+   "pe": 26.32,
+   "pbv": 0.6,
    "adj": true,
-   "dy": 2.46,
-   "t": 1793847136
+   "dy": 2.68,
+   "t": 1793892521
   },
   "PYPL": {
    "cur": "USD",
@@ -3257,21 +3258,21 @@
   },
   "QCOM": {
    "cur": "USD",
-   "mcap": 184939118592,
-   "pe": 20.05,
-   "pbv": 6.62,
+   "mcap": 166155829248,
+   "pe": 12.25,
+   "pbv": 5.95,
    "src": "yahoo",
-   "dy": 2.09,
-   "t": 1793847136
+   "dy": 2.33,
+   "t": 1793892521
   },
   "QQQ": {
    "cur": "USD",
    "mcap": null,
-   "pe": 28.5,
-   "pbv": 1.93,
+   "pe": 27.21,
+   "pbv": 1.85,
    "src": "yahoo",
-   "dy": 0.45,
-   "t": 1793847136
+   "dy": 0.47,
+   "t": 1793892521
   },
   "RATCH.BK": {
    "cur": "THB",
@@ -3282,27 +3283,27 @@
    "pbv": 0.8,
    "adj": true,
    "dy": 4.05,
-   "t": 1793847136
+   "t": 1793892521
   },
   "RBLX": {
    "cur": "USD",
-   "mcap": 35291824128,
+   "mcap": 33581268992,
    "pe": null,
-   "pbv": -49310.0,
+   "pbv": -46920.0,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "RCL.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 38744060000,
-   "pe": 5.0,
+   "mcap": 38536872513,
+   "pe": 4.97,
    "pbv": 0.66,
    "adj": true,
-   "dy": 5.35,
-   "t": 1793847136
+   "dy": 5.38,
+   "t": 1793892521
   },
   "RDDT": {
    "cur": "USD",
@@ -3317,119 +3318,119 @@
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 4859999771,
-   "pe": 12.78,
-   "pbv": 2.1,
+   "mcap": 4889999770,
+   "pe": 12.86,
+   "pbv": 2.11,
    "adj": true,
-   "dy": 4.94,
-   "t": 1793847136
+   "dy": 4.91,
+   "t": 1793892521
   },
   "RKLB": {
    "cur": "USD",
-   "mcap": 33485953024,
+   "mcap": 29169866752,
    "pe": null,
-   "pbv": 8.97,
+   "pbv": 7.81,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "RTX": {
    "cur": "USD",
-   "mcap": 267769462784,
+   "mcap": 267796463616,
    "pe": 32.27,
    "pbv": 3.87,
    "src": "yahoo",
    "dy": 1.42,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SBUX": {
    "cur": "USD",
-   "mcap": 125068959744,
-   "pe": 49.64,
-   "pbv": -16.31,
+   "mcap": 124305096704,
+   "pe": 49.33,
+   "pbv": -16.21,
    "src": "yahoo",
    "dy": 2.26,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SCB.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 510116750000,
-   "pe": 11.72,
+   "mcap": 511800303630,
+   "pe": 11.76,
    "pbv": 1.06,
    "adj": true,
-   "dy": 7.45,
-   "t": 1793847136
+   "dy": 7.42,
+   "t": 1793892521
   },
   "SCC.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 292800000000,
-   "pe": 21.86,
+   "mcap": 291600000000,
+   "pe": 21.77,
    "pbv": 0.81,
    "adj": true,
-   "dy": 2.46,
-   "t": 1793847136
+   "dy": 2.47,
+   "t": 1793892521
   },
   "SCGP.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 116982080000,
-   "pe": 19.4,
-   "pbv": 1.5,
+   "mcap": 115908849908,
+   "pe": 19.22,
+   "pbv": 1.49,
    "adj": true,
-   "dy": 2.75,
-   "t": 1793847136
+   "dy": 2.78,
+   "t": 1793892521
   },
   "SCHD": {
    "cur": "USD",
    "mcap": null,
-   "pe": 20.23,
+   "pe": 19.5,
    "pbv": null,
    "src": "yahoo",
    "dy": 2.91,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SE": {
    "cur": "USD",
-   "mcap": 49115136000,
-   "pe": 30.96,
-   "pbv": 3.95,
+   "mcap": 45458726912,
+   "pe": 28.66,
+   "pbv": 3.66,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SHY": {
    "cur": "USD",
    "mcap": null,
-   "pe": 3704.55,
+   "pe": 3705.03,
    "pbv": 0.95,
    "src": "yahoo",
    "dy": 3.0,
-   "t": 1793837261
+   "t": 1793892521
   },
   "SIS.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 8334730267,
-   "pe": 8.26,
-   "pbv": 1.78,
+   "mcap": 8404770017,
+   "pe": 8.33,
+   "pbv": 1.79,
    "adj": true,
-   "dy": 5.13,
-   "t": 1793847136
+   "dy": 5.08,
+   "t": 1793892521
   },
   "SNDK": {
    "cur": "USD",
-   "mcap": 147610992640,
-   "pe": 8.29,
-   "pbv": 8.24,
+   "mcap": 121230532608,
+   "pe": 6.81,
+   "pbv": 6.77,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SOXX": {
    "cur": "USD",
@@ -3442,63 +3443,63 @@
   },
   "SPCX": {
    "cur": "USD",
-   "mcap": 1845938225152,
-   "pe": 566.33,
-   "pbv": 10.44,
+   "mcap": 1679706030080,
+   "pe": 537.74,
+   "pbv": 9.5,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "SPOT": {
    "cur": "USD",
-   "mcap": 129059487744,
-   "pe": 38.25,
-   "pbv": 13.14,
+   "mcap": 126707187712,
+   "pe": 37.55,
+   "pbv": 12.9,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "STGT.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 26646169454,
-   "pe": 75.07,
-   "pbv": 0.67,
+   "mcap": 26216392527,
+   "pe": 73.86,
+   "pbv": 0.66,
    "adj": true,
-   "dy": 8.06,
-   "t": 1793847136
+   "dy": 8.2,
+   "t": 1793892521
   },
   "STX": {
    "cur": "USD",
-   "mcap": 127879307264,
-   "pe": 29.21,
-   "pbv": 37.06,
+   "mcap": 109691183104,
+   "pe": 25.06,
+   "pbv": 31.79,
    "src": "yahoo",
-   "dy": 0.53,
-   "t": 1793847136
+   "dy": 0.62,
+   "t": 1793892521
   },
   "SYNEX.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 7753360323,
-   "pe": 9.28,
-   "pbv": 1.57,
+   "mcap": 7880464591,
+   "pe": 9.43,
+   "pbv": 1.6,
    "adj": true,
-   "dy": 5.25,
-   "t": 1793847136
+   "dy": 5.16,
+   "t": 1793892521
   },
   "TASCO.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 26516471204,
-   "pe": 22.64,
-   "pbv": 1.83,
+   "mcap": 26989979619,
+   "pe": 23.04,
+   "pbv": 1.86,
    "adj": true,
-   "dy": 5.95,
-   "t": 1793847136
+   "dy": 5.85,
+   "t": 1793892521
   },
   "TDEX.BK": {
    "cur": "THB",
@@ -3513,12 +3514,12 @@
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 57289982265,
-   "pe": 8.99,
-   "pbv": 2.59,
+   "mcap": 57883660837,
+   "pe": 9.08,
+   "pbv": 2.62,
    "adj": true,
-   "dy": 7.36,
-   "t": 1793847136
+   "dy": 7.28,
+   "t": 1793892521
   },
   "TFMAMA.BK": {
    "cur": "THB",
@@ -3529,87 +3530,87 @@
    "pbv": 1.58,
    "adj": true,
    "dy": 2.46,
-   "t": 1793847136
+   "t": 1793892521
   },
   "TGT": {
    "cur": "USD",
-   "mcap": 74094936064,
-   "pe": 16.94,
-   "pbv": 4.15,
+   "mcap": 73227239424,
+   "pe": 16.74,
+   "pbv": 4.1,
    "src": "yahoo",
-   "dy": 2.81,
-   "t": 1793847136
+   "dy": 2.83,
+   "t": 1793892521
   },
   "TMUS": {
    "cur": "USD",
-   "mcap": 168604418048,
-   "pe": 15.35,
-   "pbv": 3.0,
+   "mcap": 171607457792,
+   "pe": 15.62,
+   "pbv": 3.06,
    "src": "yahoo",
-   "dy": 2.56,
-   "t": 1793847136
+   "dy": 2.51,
+   "t": 1793892521
   },
   "TOA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 31043699613,
-   "pe": 9.26,
-   "pbv": 1.91,
+   "mcap": 31449499608,
+   "pe": 9.38,
+   "pbv": 1.93,
    "adj": true,
-   "dy": 5.03,
-   "t": 1793847136
+   "dy": 4.97,
+   "t": 1793892521
   },
   "TRUE.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 449177310000,
-   "pe": 18.86,
-   "pbv": 5.53,
+   "mcap": 459542940231,
+   "pe": 19.3,
+   "pbv": 5.66,
    "adj": true,
-   "dy": 4.62,
-   "t": 1793847136
+   "dy": 4.51,
+   "t": 1793892521
   },
   "TSLA": {
    "cur": "USD",
-   "mcap": 1522552143872,
-   "pe": 423.29,
-   "pbv": 17.05,
+   "mcap": 1378879012864,
+   "pe": 383.34,
+   "pbv": 15.44,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "TSM": {
    "cur": "USD",
-   "mcap": 2052547018752,
-   "pe": 25.65,
-   "pbv": 75.53,
+   "mcap": 1893763252224,
+   "pe": 23.66,
+   "pbv": 69.68,
    "src": "yahoo",
-   "dy": 0.97,
-   "t": 1793847136
+   "dy": 1.06,
+   "t": 1793892521
   },
   "TTA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 8674929583,
-   "pe": 14.83,
+   "mcap": 8711378867,
+   "pe": 14.89,
    "pbv": 0.29,
    "adj": true,
-   "dy": 5.25,
-   "t": 1793847136
+   "dy": 5.23,
+   "t": 1793892521
   },
   "TTW.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 40298998478,
-   "pe": 12.87,
-   "pbv": 2.41,
+   "mcap": 39899998493,
+   "pe": 12.74,
+   "pbv": 2.39,
    "adj": true,
-   "dy": 5.94,
-   "t": 1793847136
+   "dy": 6.0,
+   "t": 1793892521
   },
   "TU.BK": {
    "cur": "THB",
@@ -3620,65 +3621,64 @@
    "pbv": 1.1,
    "adj": true,
    "dy": 5.68,
-   "t": 1793847136
+   "t": 1793892521
   },
   "TVO.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 25794670000,
-   "pe": 9.95,
-   "pbv": 2.13,
+   "mcap": 25349934310,
+   "pe": 9.78,
+   "pbv": 2.09,
    "adj": true,
-   "dy": 7.14,
-   "t": 1793847136
+   "dy": 7.26,
+   "t": 1793892521
   },
   "U": {
    "cur": "USD",
-   "mcap": 18686175232,
+   "mcap": 20703983616,
    "pe": null,
-   "pbv": 6.16,
+   "pbv": 6.82,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "UNH": {
    "cur": "USD",
-   "mcap": 367457370112,
-   "pe": 23.37,
-   "pbv": 3.55,
+   "mcap": 368973152256,
+   "pe": 23.5,
+   "pbv": 3.76,
    "src": "yahoo",
-   "dy": 2.21,
-   "t": 1793847136
+   "dy": 2.2,
+   "t": 1793892521
   },
   "V": {
    "cur": "USD",
-   "mcap": 815951970304,
-   "pe": 35.44,
-   "pbv": 22.41,
+   "mcap": 810774757376,
+   "pe": 35.21,
+   "pbv": 22.26,
    "src": "yahoo",
-   "dy": 0.61,
-   "t": 1793847136
+   "dy": 0.62,
+   "t": 1793892521
   },
   "VAYU1.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 166499994278,
+   "mcap": 166500000000,
    "pe": null,
    "pbv": 1.06,
-   "adj": true,
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "VFS": {
    "cur": "USD",
-   "mcap": 7767259648,
+   "mcap": 7580097024,
    "pe": null,
    "pbv": -0.0,
    "src": "yahoo",
    "dy": null,
-   "t": 1793847136
+   "t": 1793892521
   },
   "VGLT": {
    "cur": "USD",
@@ -3686,7 +3686,7 @@
    "pe": null,
    "pbv": null,
    "src": "yahoo",
-   "dy": 4.02,
+   "dy": 4.01,
    "t": 1792684518
   },
   "VGT": {
@@ -3701,233 +3701,233 @@
   "VHT": {
    "cur": "USD",
    "mcap": null,
-   "pe": 32.74,
+   "pe": 32.85,
    "pbv": 1.54,
    "src": "yahoo",
    "dy": 1.31,
-   "t": 1793847136
+   "t": 1793892521
   },
   "VIBHA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 17665100772,
-   "pe": 9.57,
-   "pbv": 1.55,
+   "mcap": 17530252674,
+   "pe": 9.5,
+   "pbv": 1.54,
    "adj": true,
-   "dy": 4.58,
-   "t": 1793847136
+   "dy": 4.62,
+   "t": 1793892521
   },
   "VIH.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 5080549761,
-   "pe": 11.33,
-   "pbv": 1.3,
+   "mcap": 5111911179,
+   "pe": 11.4,
+   "pbv": 1.31,
    "adj": true,
-   "dy": 4.94,
-   "t": 1793847136
+   "dy": 4.91,
+   "t": 1793892521
   },
   "VOO": {
    "cur": "USD",
    "mcap": null,
-   "pe": 24.34,
-   "pbv": 1.8,
+   "pe": 23.75,
+   "pbv": 1.76,
    "src": "yahoo",
-   "dy": 1.05,
-   "t": 1793847136
+   "dy": 1.08,
+   "t": 1793892521
   },
   "VPU": {
    "cur": "USD",
    "mcap": null,
-   "pe": 19.66,
+   "pe": 19.75,
    "pbv": 1.82,
    "src": "yahoo",
-   "dy": 2.76,
-   "t": 1793847136
+   "dy": 2.75,
+   "t": 1793892521
   },
   "VT": {
    "cur": "USD",
    "mcap": null,
-   "pe": 20.11,
+   "pe": 19.63,
    "pbv": null,
    "src": "yahoo",
-   "dy": 1.53,
-   "t": 1793847136
+   "dy": 1.57,
+   "t": 1793892521
   },
   "VTI": {
    "cur": "USD",
    "mcap": null,
-   "pe": 23.82,
-   "pbv": 2.7,
+   "pe": 23.24,
+   "pbv": 2.64,
    "src": "yahoo",
-   "dy": 1.05,
-   "t": 1793847136
+   "dy": 1.08,
+   "t": 1793892521
   },
   "VZ": {
    "cur": "USD",
-   "mcap": 191356092416,
-   "pe": 11.78,
-   "pbv": 1.81,
+   "mcap": 193262616576,
+   "pe": 11.9,
+   "pbv": 1.82,
    "src": "yahoo",
-   "dy": 6.09,
-   "t": 1793847136
+   "dy": 6.03,
+   "t": 1793892521
   },
   "WDC": {
    "cur": "USD",
-   "mcap": 121217097728,
-   "pe": 11.39,
-   "pbv": 12.96,
+   "mcap": 104522285056,
+   "pe": 9.82,
+   "pbv": 11.17,
    "src": "yahoo",
-   "dy": 0.17,
-   "t": 1793847136
+   "dy": 0.2,
+   "t": 1793892521
   },
   "WFC": {
    "cur": "USD",
-   "mcap": 262451773440,
-   "pe": 12.33,
+   "mcap": 261431132160,
+   "pe": 12.28,
    "pbv": 1.65,
    "src": "yahoo",
-   "dy": 2.12,
-   "t": 1793847136
+   "dy": 2.13,
+   "t": 1793892521
   },
   "WHA.BK": {
    "cur": "THB",
    "src": "set",
    "asof": "2026-11-04",
-   "mcap": 73239488575,
-   "pe": 17.25,
-   "pbv": 1.96,
+   "mcap": 74435235327,
+   "pe": 17.53,
+   "pbv": 1.99,
    "adj": true,
-   "dy": 4.3,
-   "t": 1793847136
+   "dy": 4.23,
+   "t": 1793892521
   },
   "WMT": {
    "cur": "USD",
-   "mcap": 1024801964032,
-   "pe": 46.8,
-   "pbv": 10.44,
+   "mcap": 1040590176256,
+   "pe": 47.52,
+   "pbv": 10.6,
    "src": "yahoo",
-   "dy": 0.76,
-   "t": 1793847136
+   "dy": 0.74,
+   "t": 1793892521
   },
   "XLB": {
    "cur": "USD",
    "mcap": null,
-   "pe": 22.41,
-   "pbv": 0.68,
+   "pe": 22.12,
+   "pbv": 0.67,
    "src": "yahoo",
-   "dy": 1.6,
-   "t": 1793847136
+   "dy": 1.62,
+   "t": 1793892521
   },
   "XLC": {
    "cur": "USD",
    "mcap": null,
-   "pe": 15.4,
+   "pe": 16.62,
    "pbv": null,
    "src": "yahoo",
    "dy": 1.32,
-   "t": 1793847136
+   "t": 1793892521
   },
   "XLE": {
    "cur": "USD",
    "mcap": null,
-   "pe": 15.87,
-   "pbv": 1.22,
+   "pe": 16.06,
+   "pbv": 1.23,
    "src": "yahoo",
-   "dy": 2.4,
-   "t": 1793847136
+   "dy": 2.37,
+   "t": 1793892521
   },
   "XLF": {
    "cur": "USD",
    "mcap": null,
-   "pe": 15.99,
-   "pbv": 1.74,
+   "pe": 15.85,
+   "pbv": 1.73,
    "src": "yahoo",
-   "dy": 1.4,
-   "t": 1793847136
+   "dy": 1.41,
+   "t": 1793892521
   },
   "XLI": {
    "cur": "USD",
    "mcap": null,
-   "pe": 27.18,
-   "pbv": 1.72,
+   "pe": 26.63,
+   "pbv": 1.69,
    "src": "yahoo",
-   "dy": 1.11,
-   "t": 1793847136
+   "dy": 1.14,
+   "t": 1793892521
   },
   "XLK": {
    "cur": "USD",
    "mcap": null,
-   "pe": 31.13,
-   "pbv": 1.18,
+   "pe": 29.39,
+   "pbv": 1.12,
    "src": "yahoo",
-   "dy": 0.47,
-   "t": 1793847136
+   "dy": 0.51,
+   "t": 1793892521
   },
   "XLP": {
    "cur": "USD",
    "mcap": null,
-   "pe": 24.74,
-   "pbv": 1.35,
+   "pe": 25.0,
+   "pbv": 1.36,
    "src": "yahoo",
-   "dy": 2.39,
-   "t": 1793847136
+   "dy": 2.36,
+   "t": 1793892521
   },
   "XLRE": {
    "cur": "USD",
    "mcap": null,
-   "pe": 32.21,
+   "pe": 29.89,
    "pbv": null,
    "src": "yahoo",
-   "dy": 3.2,
-   "t": 1793847136
+   "dy": 3.22,
+   "t": 1793892521
   },
   "XLU": {
    "cur": "USD",
    "mcap": null,
-   "pe": 17.94,
+   "pe": 18.02,
    "pbv": 0.68,
    "src": "yahoo",
-   "dy": 2.78,
-   "t": 1793847136
+   "dy": 2.76,
+   "t": 1793892521
   },
   "XLV": {
    "cur": "USD",
    "mcap": null,
-   "pe": 30.91,
-   "pbv": 1.49,
+   "pe": 31.14,
+   "pbv": 1.5,
    "src": "yahoo",
-   "dy": 1.34,
-   "t": 1793847136
+   "dy": 1.33,
+   "t": 1793892521
   },
   "XLY": {
    "cur": "USD",
    "mcap": null,
-   "pe": 25.6,
-   "pbv": 0.73,
+   "pe": 24.71,
+   "pbv": 0.7,
    "src": "yahoo",
-   "dy": 0.76,
-   "t": 1793847136
+   "dy": 0.79,
+   "t": 1793892521
   },
   "XOM": {
    "cur": "USD",
-   "mcap": 690489982976,
-   "pe": 17.41,
-   "pbv": 2.6,
+   "mcap": 703013191680,
+   "pe": 17.73,
+   "pbv": 2.64,
    "src": "yahoo",
-   "dy": 2.43,
-   "t": 1793847136
+   "dy": 2.39,
+   "t": 1793892521
   },
   "YUM": {
    "cur": "USD",
-   "mcap": 44737388544,
-   "pe": 13.39,
-   "pbv": -6.29,
+   "mcap": 45033291776,
+   "pe": 13.48,
+   "pbv": -7.3,
    "src": "yahoo",
-   "dy": 1.78,
-   "t": 1793847136
+   "dy": 1.77,
+   "t": 1793892521
   }
  }
 }
