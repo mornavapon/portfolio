@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-05T23:42:30+00:00",
+ "updated": "2026-11-06T00:50:39+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.45,
+  "USD": 33.46,
   "CNY": 5.015,
-  "HKD": 4.2663,
+  "HKD": 4.271,
   "INR": 0.3535,
-  "JPY": 0.2101,
+  "JPY": 0.2099,
   "KRW": 0.0247,
-  "SGD": 26.1797,
-  "TWD": 1.0108,
+  "SGD": 26.1957,
+  "TWD": 1.0114,
   "VND": 0.0013
  },
  "quotes": {
@@ -21,10 +21,10 @@
    "name": "SSE Composite Index"
   },
   "000660.KS": {
-   "price": 1264000.0,
+   "price": 1116000.0,
    "currency": "KRW",
-   "prevClose": 1396000.0,
-   "t": 1793860206,
+   "prevClose": 1264000.0,
+   "t": 1793923412,
    "name": "SK hynix Inc."
   },
   "002352.SZ": {
@@ -35,10 +35,10 @@
    "name": "S.F. Holding Co., Ltd."
   },
   "005930.KS": {
-   "price": 201500.0,
+   "price": 181400.0,
    "currency": "KRW",
-   "prevClose": 218000.0,
-   "t": 1793860229,
+   "prevClose": 201500.0,
+   "t": 1793923412,
    "name": "Samsung Electronics Co., Ltd."
   },
   "0694.HK": {
@@ -182,10 +182,10 @@
    "name": "Baidu, Inc."
   },
   "9984.T": {
-   "price": 3980.0,
+   "price": 3525.0,
    "currency": "JPY",
-   "prevClose": 4269.0,
-   "t": 1793860200,
+   "prevClose": 3980.0,
+   "t": 1793925054,
    "name": "SoftBank Group Corp."
   },
   "9988.HK": {
@@ -434,10 +434,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 75804.24,
+   "price": 76234.45,
    "currency": "USD",
    "prevClose": 80405.289062,
-   "t": 1793921897,
+   "t": 1793925991,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -462,10 +462,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 99.44,
+   "price": 99.16,
    "currency": "USD",
    "prevClose": 94.620003,
-   "t": 1793921181,
+   "t": 1793925395,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -497,10 +497,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 91.39,
+   "price": 91.18,
    "currency": "USD",
    "prevClose": 88.120003,
-   "t": 1793921308,
+   "t": 1793925398,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -651,10 +651,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2229.09,
+   "price": 2242.09,
    "currency": "USD",
    "prevClose": 2422.311768,
-   "t": 1793921935,
+   "t": 1793926025,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -679,10 +679,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4103.9,
+   "price": 4109.2,
    "currency": "USD",
    "prevClose": 4073.0,
-   "t": 1793921336,
+   "t": 1793925431,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1360,8 +1360,8 @@
   "THB=X": {
    "price": 33.45,
    "currency": "THB",
-   "prevClose": 33.75,
-   "t": 1793922048,
+   "prevClose": 33.599998,
+   "t": 1793926146,
    "name": "USD/THB"
   },
   "TMUS": {
@@ -1672,17 +1672,17 @@
    "name": "NASDAQ Composite"
   },
   "^KS11": {
-   "price": 5383.8,
+   "price": 4923.47,
    "currency": "KRW",
-   "prevClose": 5648.790039,
-   "t": 1793876740,
+   "prevClose": 5683.799805,
+   "t": 1793924990,
    "name": "KOSPI Composite Index"
   },
   "^N225": {
-   "price": 61077.9,
+   "price": 57711.38,
    "currency": "JPY",
-   "prevClose": 63081.859375,
-   "t": 1793861103,
+   "prevClose": 62188.628906,
+   "t": 1793925295,
    "name": "Nikkei 225"
   },
   "^NSEI": {
