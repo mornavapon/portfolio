@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-06T12:23:13+00:00",
+ "updated": "2026-11-06T13:44:53+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.52,
-  "CNY": 5.0271,
-  "HKD": 4.2802,
+  "USD": 33.53,
+  "CNY": 5.0246,
+  "HKD": 4.2793,
   "INR": 0.3567,
-  "JPY": 0.2094,
+  "JPY": 0.2093,
   "KRW": 0.0247,
-  "SGD": 26.1866,
-  "TWD": 1.0229,
+  "SGD": 26.1687,
+  "TWD": 1.0218,
   "VND": 0.0013
  },
  "quotes": {
@@ -496,10 +496,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 76005.97,
+   "price": 75707.89,
    "currency": "USD",
    "prevClose": 75942.125,
-   "t": 1793967499,
+   "t": 1793972406,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -524,10 +524,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 98.51,
+   "price": 98.71,
    "currency": "USD",
    "prevClose": 98.290001,
-   "t": 1793966907,
+   "t": 1793971814,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -573,10 +573,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 90.92,
+   "price": 91.02,
    "currency": "USD",
    "prevClose": 90.519997,
-   "t": 1793966918,
+   "t": 1793971821,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -734,10 +734,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2239.78,
+   "price": 2229.02,
    "currency": "USD",
    "prevClose": 2234.476318,
-   "t": 1793967541,
+   "t": 1793972441,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -762,10 +762,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4076.8,
+   "price": 4054.9,
    "currency": "USD",
    "prevClose": 4113.5,
-   "t": 1793966945,
+   "t": 1793971849,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -779,7 +779,7 @@
    "price": 41.75,
    "currency": "THB",
    "prevClose": 42.25,
-   "t": 1793957755,
+   "t": 1793969673,
    "name": "GOLDUS19_DR GOLDUS#YUANTA"
   },
   "GOOG": {
@@ -793,7 +793,7 @@
    "price": 4.8,
    "currency": "THB",
    "prevClose": 4.82,
-   "t": 1793957755,
+   "t": 1793970622,
    "name": "Alphabet Inc."
   },
   "GOVT": {
@@ -1073,7 +1073,7 @@
    "price": 15.0,
    "currency": "THB",
    "prevClose": 16.200001,
-   "t": 1793957755,
+   "t": 1793970455,
    "name": "Micron Technology, Inc."
   },
   "MINT.BK": {
@@ -1206,7 +1206,7 @@
    "price": 32.0,
    "currency": "THB",
    "prevClose": 33.25,
-   "t": 1793957755,
+   "t": 1793970697,
    "name": "NVIDIA Corporation"
   },
   "OR.BK": {
@@ -1644,10 +1644,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.53,
+   "price": 33.56,
    "currency": "THB",
    "prevClose": 33.599998,
-   "t": 1793967681,
+   "t": 1793972593,
    "name": "USD/THB"
   },
   "THG.BK": {
@@ -2021,10 +2021,10 @@
    "name": "STI Index"
   },
   "^TNX": {
-   "price": 4.837,
+   "price": 4.868,
    "currency": "USD",
-   "prevClose": 4.894,
-   "t": 1793908794,
+   "prevClose": 4.837,
+   "t": 1793971746,
    "name": "CBOE Interest Rate 10 Year T Note"
   },
   "^TWII": {
