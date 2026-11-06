@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T22:37:32+00:00",
+ "updated": "2026-11-06T23:34:59+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.55,
@@ -496,10 +496,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 75928.37,
+   "price": 75825.48,
    "currency": "USD",
    "prevClose": 75942.125,
-   "t": 1794004354,
+   "t": 1794007814,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -734,10 +734,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2238.18,
+   "price": 2235.05,
    "currency": "USD",
    "prevClose": 2234.476318,
-   "t": 1794004385,
+   "t": 1794007848,
    "name": "Ethereum USD"
   },
   "EWJ": {
