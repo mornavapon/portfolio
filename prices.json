@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-09T22:44:18+00:00",
+ "updated": "2026-11-09T23:37:50+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.39,
-  "CNY": 5.0071,
-  "HKD": 4.2595,
+  "USD": 33.38,
+  "CNY": 5.0031,
+  "HKD": 4.2581,
   "INR": 0.3551,
-  "JPY": 0.2091,
+  "JPY": 0.2089,
   "KRW": 0.0249,
-  "SGD": 26.1356,
-  "TWD": 1.017,
+  "SGD": 26.1195,
+  "TWD": 1.0168,
   "VND": 0.0013
  },
  "quotes": {
@@ -88,7 +88,7 @@
    "currency": "HKD",
    "prevClose": 95.339996,
    "t": 1794210752,
-   "name": "Global X China Clean Energy ETF"
+   "name": "Global X ETF Series OFC - Global X China Clean Energy ETF"
   },
   "2828.HK": {
    "price": 84.88,
@@ -109,14 +109,14 @@
    "currency": "HKD",
    "prevClose": 4.072,
    "t": 1794211683,
-   "name": "CSOP Hang Seng TECH Index ETF"
+   "name": "CSOP ETF Series - CSOP Hang Seng TECH Index ETF"
   },
   "3188.HK": {
    "price": 49.3,
    "currency": "HKD",
    "prevClose": 49.400002,
    "t": 1794211683,
-   "name": "ChinaAMC CSI 300 Index ETF"
+   "name": "ChinaAMC ETF Series - ChinaAMC CSI 300 Index ETF"
   },
   "3690.HK": {
    "price": 75.15,
@@ -496,10 +496,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 75227.08,
+   "price": 75123.65,
    "currency": "USD",
    "prevClose": 74584.648438,
-   "t": 1794263968,
+   "t": 1794267166,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -524,10 +524,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 92.17,
+   "price": 92.11,
    "currency": "USD",
    "prevClose": 98.32,
-   "t": 1794261570,
+   "t": 1794266512,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -573,10 +573,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 86.38,
+   "price": 86.17,
    "currency": "USD",
    "prevClose": 90.830002,
-   "t": 1794261599,
+   "t": 1794266579,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -734,10 +734,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2131.52,
+   "price": 2128.31,
    "currency": "USD",
    "prevClose": 2120.980225,
-   "t": 1794264008,
+   "t": 1794267204,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -762,10 +762,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4149.5,
+   "price": 4151.4,
    "currency": "USD",
    "prevClose": 4074.899902,
-   "t": 1794261600,
+   "t": 1794266603,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1644,10 +1644,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.39,
+   "price": 33.38,
    "currency": "THB",
    "prevClose": 33.431999,
-   "t": 1794264152,
+   "t": 1794267362,
    "name": "USD/THB"
   },
   "THG.BK": {
@@ -2009,7 +2009,7 @@
   "^NSEI": {
    "price": 25044.65,
    "currency": "INR",
-   "prevClose": 24536.599609,
+   "prevClose": 25030.349609,
    "t": 1794218487,
    "name": "NIFTY 50"
   },
