@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-09T10:54:47+00:00",
+ "updated": "2026-11-09T11:53:45+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.52,
-  "CNY": 5.0231,
-  "HKD": 4.275,
+  "USD": 33.48,
+  "CNY": 5.0176,
+  "HKD": 4.27,
   "INR": 0.3566,
-  "JPY": 0.2098,
+  "JPY": 0.2096,
   "KRW": 0.0249,
-  "SGD": 26.2021,
-  "TWD": 1.0197,
+  "SGD": 26.1755,
+  "TWD": 1.0186,
   "VND": 0.0013
  },
  "quotes": {
@@ -496,10 +496,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 74074.17,
+   "price": 74431.29,
    "currency": "USD",
    "prevClose": 74584.648438,
-   "t": 1794221386,
+   "t": 1794224923,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -524,10 +524,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 97.01,
+   "price": 94.83,
    "currency": "USD",
    "prevClose": 98.32,
-   "t": 1794220725,
+   "t": 1794224331,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -573,10 +573,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 89.9,
+   "price": 88.06,
    "currency": "USD",
    "prevClose": 90.830002,
-   "t": 1794220772,
+   "t": 1794224339,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -734,10 +734,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2107.6,
+   "price": 2116.36,
    "currency": "USD",
    "prevClose": 2120.980225,
-   "t": 1794221424,
+   "t": 1794224961,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -762,10 +762,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4105.7,
+   "price": 4118.9,
    "currency": "USD",
    "prevClose": 4074.899902,
-   "t": 1794220833,
+   "t": 1794224369,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1644,10 +1644,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.52,
+   "price": 33.48,
    "currency": "THB",
    "prevClose": 33.431999,
-   "t": 1794221572,
+   "t": 1794225112,
    "name": "USD/THB"
   },
   "THG.BK": {
@@ -1996,7 +1996,7 @@
    "price": 5018.85,
    "currency": "KRW",
    "prevClose": 5059.689941,
-   "t": 1794205970,
+   "t": 1794222340,
    "name": "KOSPI Composite Index"
   },
   "^N225": {
