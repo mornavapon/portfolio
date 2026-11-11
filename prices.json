@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-11T11:30:34+00:00",
+ "updated": "2026-11-11T12:28:30+00:00",
  "fx": {
   "THB": 1.0,
   "USD": 33.64,
-  "CNY": 5.0431,
-  "HKD": 4.2881,
+  "CNY": 5.0445,
+  "HKD": 4.2893,
   "INR": 0.3587,
   "JPY": 0.209,
   "KRW": 0.0252,
-  "SGD": 26.2464,
-  "TWD": 1.0226,
+  "SGD": 26.2506,
+  "TWD": 1.0229,
   "VND": 0.0013
  },
  "quotes": {
@@ -503,10 +503,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 73951.52,
+   "price": 73938.04,
    "currency": "USD",
    "prevClose": 73720.117188,
-   "t": 1794396341,
+   "t": 1794399815,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -531,10 +531,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 92.91,
+   "price": 93.18,
    "currency": "USD",
    "prevClose": 91.489998,
-   "t": 1794395712,
+   "t": 1794399216,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -580,10 +580,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 86.81,
+   "price": 87.19,
    "currency": "USD",
    "prevClose": 86.040001,
-   "t": 1794395749,
+   "t": 1794399219,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -741,10 +741,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2058.54,
+   "price": 2053.27,
    "currency": "USD",
    "prevClose": 2050.180908,
-   "t": 1794396378,
+   "t": 1794399847,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -769,10 +769,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4061.8,
+   "price": 4053.7,
    "currency": "USD",
    "prevClose": 4030.199951,
-   "t": 1794395783,
+   "t": 1794399249,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1661,7 +1661,7 @@
    "price": 33.65,
    "currency": "THB",
    "prevClose": 33.389999,
-   "t": 1794396529,
+   "t": 1794400001,
    "name": "USD/THB"
   },
   "THG.BK": {
