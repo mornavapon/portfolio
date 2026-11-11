@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-11T10:32:11+00:00",
+ "updated": "2026-11-11T11:30:34+00:00",
  "fx": {
   "THB": 1.0,
-  "USD": 33.63,
-  "CNY": 5.0437,
-  "HKD": 4.2885,
+  "USD": 33.64,
+  "CNY": 5.0431,
+  "HKD": 4.2881,
   "INR": 0.3587,
-  "JPY": 0.2092,
+  "JPY": 0.209,
   "KRW": 0.0252,
-  "SGD": 26.2463,
-  "TWD": 1.0227,
+  "SGD": 26.2464,
+  "TWD": 1.0226,
   "VND": 0.0013
  },
  "quotes": {
@@ -503,10 +503,10 @@
    "name": "Berkshire Hathaway Inc."
   },
   "BTC-USD": {
-   "price": 73906.88,
+   "price": 73951.52,
    "currency": "USD",
    "prevClose": 73720.117188,
-   "t": 1794392840,
+   "t": 1794396341,
    "name": "Bitcoin USD"
   },
   "BTG.BK": {
@@ -531,10 +531,10 @@
    "name": "Webull Corporation"
   },
   "BZ=F": {
-   "price": 93.24,
+   "price": 92.91,
    "currency": "USD",
    "prevClose": 91.489998,
-   "t": 1794392241,
+   "t": 1794395712,
    "name": "Brent Crude Oil Last Day Financial Futures"
   },
   "C": {
@@ -580,10 +580,10 @@
    "name": "Chayo Group Public Company Limited"
   },
   "CL=F": {
-   "price": 87.07,
+   "price": 86.81,
    "currency": "USD",
    "prevClose": 86.040001,
-   "t": 1794392251,
+   "t": 1794395749,
    "name": "Crude Oil Dec 26"
   },
   "CME": {
@@ -741,10 +741,10 @@
    "name": "Electricity Generating Public Company Limited"
   },
   "ETH-USD": {
-   "price": 2057.99,
+   "price": 2058.54,
    "currency": "USD",
    "prevClose": 2050.180908,
-   "t": 1794392876,
+   "t": 1794396378,
    "name": "Ethereum USD"
   },
   "EWJ": {
@@ -769,10 +769,10 @@
    "name": "VFMVN Diamond ETF"
   },
   "GC=F": {
-   "price": 4056.4,
+   "price": 4061.8,
    "currency": "USD",
    "prevClose": 4030.199951,
-   "t": 1794392281,
+   "t": 1794395783,
    "name": "Gold Dec 26"
   },
   "GE": {
@@ -1658,10 +1658,10 @@
    "name": "Target Corporation"
   },
   "THB=X": {
-   "price": 33.64,
+   "price": 33.65,
    "currency": "THB",
    "prevClose": 33.389999,
-   "t": 1794393027,
+   "t": 1794396529,
    "name": "USD/THB"
   },
   "THG.BK": {
@@ -2010,7 +2010,7 @@
    "price": 5375.36,
    "currency": "KRW",
    "prevClose": 5239.129883,
-   "t": 1794378780,
+   "t": 1794395140,
    "name": "KOSPI Composite Index"
   },
   "^N225": {
@@ -2643,7 +2643,7 @@
    "pbv": 2.5,
    "src": "yahoo",
    "dy": null,
-   "t": 1794350278
+   "t": 1794396603
   },
   "BJC.BK": {
    "cur": "THB",
@@ -3717,7 +3717,7 @@
    "pbv": 1.67,
    "src": "yahoo",
    "dy": null,
-   "t": 1794350278
+   "t": 1794396603
   },
   "PDG.BK": {
    "cur": "THB",
